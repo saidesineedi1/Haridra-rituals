@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Contact Haridra Rituals — Reach out for skincare inquiries, custom ritual consultations, order support, or locate our flagship studios on our interactive real Google Map." />
+  <meta name="keywords"
+    content="contact Haridra Rituals, organic skincare support, apothecary studio google map, ojai apothecary map, skincare consultation" />
+  <title>Contact Us — Haridra Rituals | Rooted in Nature. Crafted with Care.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="contact.css" />
+</head>
+
+<body>
+
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner container">
+
+      <a href="index.html" class="logo" aria-label="Haridra Rituals Home" id="logo-link">
+        <div class="logo-mark" aria-hidden="true">
+          <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Haridra Rituals</span>
+          <span class="logo-tagline">Rooted in Nature. Crafted with Care.</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li class="nav-item has-dropdown" id="nav-home-item">
+            <a href="index.html" class="nav-link nav-dropdown-trigger" id="nav-home" aria-expanded="false"
+              aria-haspopup="true">
+              <span>Home</span>
+              <i data-lucide="chevron-down" class="dropdown-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="nav-dropdown-menu" role="menu" aria-label="Home versions">
+              <a href="index.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">
+                  <i data-lucide="sparkles" aria-hidden="true"></i>
+                </div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-header">
+                    <span class="dropdown-item-title">Home 1</span>
+                    <span class="dropdown-badge">Current</span>
+                  </div>
+                  <span class="dropdown-item-desc">Haridra Rituals &bull; Organic Skincare</span>
+                </div>
+              </a>
+              <a href="home2.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon icon-ayurveda">
+                  <i data-lucide="leaf" aria-hidden="true"></i>
+                </div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-header">
+                    <span class="dropdown-item-title">Home 2</span>
+                    <span class="dropdown-badge badge-alt">New</span>
+                  </div>
+                  <span class="dropdown-item-desc">GlowVeda &bull; Ayurvedic Formulas</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+          <li><a href="services.html" class="nav-link" id="nav-services">Services</a></li>
+          <li><a href="pricing.html" class="nav-link" id="nav-pricing">Pricing</a></li>
+          <li><a href="journals.html" class="nav-link" id="nav-journal">Journal</a></li>
+          <li><a href="contact.html" class="nav-link active" id="nav-contact">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link" id="nav-dashboard">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions" role="toolbar" aria-label="Site actions">
+        <button class="toggle-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle text direction" aria-pressed="false"
+          title="Switch text direction (RTL / LTR)">
+          <span class="toggle-label">RTL</span></button>
+
+        <button class="toggle-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false"
+          title="Toggle light and dark mode">
+          <span class="theme-icon sun-icon"><i data-lucide="sun" aria-hidden="true"></i></span>
+          <span class="theme-icon moon-icon"><i data-lucide="moon" aria-hidden="true"></i></span>
+        </button>
+
+        <a href="login.html" class="nav-login-btn">Login</a>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Open mobile menu" aria-expanded="false"
+          aria-controls="main-nav">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Search" hidden>
+      <div class="search-inner">
+        <div class="search-input-box">
+          <i data-lucide="search" class="search-input-icon" aria-hidden="true"></i>
+          <input type="search" class="search-input" id="search-input"
+            placeholder="Search soaps, face oils, toners, rituals..." aria-label="Search organic products"
+            autocomplete="off" />
+          <button class="search-close" id="search-close" aria-label="Close search">
+            <i data-lucide="x" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="search-suggestions" id="search-suggestions">
+          <span class="sugg-label">Popular Searches:</span>
+          <button class="sugg-pill" data-query="Lavender">Lavender Soap</button>
+          <button class="sugg-pill" data-query="Rosehip">Rosehip Oil</button>
+          <button class="sugg-pill" data-query="Body Butter">Body Butter</button>
+          <button class="sugg-pill" data-query="Mist">Forest Mist</button>
+        </div>
+        <div class="search-results-list" id="search-results-list"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <span class="logo-name">Haridra Rituals</span>
+      <button class="icon-btn mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item has-dropdown" id="mobile-nav-home-item">
+        <button class="mobile-nav-link mobile-dropdown-btn" id="mobile-home-toggle" aria-expanded="false">
+          <span>Home</span>
+          <i data-lucide="chevron-down" class="mobile-dropdown-chevron" aria-hidden="true"></i>
+        </button>
+        <ul class="mobile-submenu" id="mobile-home-submenu">
+          <li>
+            <a href="index.html" class="mobile-sublink">
+              <i data-lucide="sparkles" aria-hidden="true"></i>
+              <span>Home 1 (Haridra Rituals)</span>
+            </a>
+          </li>
+          <li>
+            <a href="home2.html" class="mobile-sublink">
+              <i data-lucide="leaf" aria-hidden="true"></i>
+              <span>Home 2 (GlowVeda)</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li><a href="journals.html" class="mobile-nav-link">Journal</a></li>
+      <li><a href="contact.html" class="mobile-nav-link active">Contact</a></li>
+      <li><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+    </ul>
+    
+    <div class="mobile-drawer-actions">
+      <div class="mobile-actions-grid">
+        <button class="mobile-action-card cart-action-card" onclick="if(typeof openCartDrawer==='function')openCartDrawer();" aria-label="Open Shopping Bag">
+          <div class="mobile-card-icon-wrap">
+            <i data-lucide="shopping-bag" aria-hidden="true"></i>
+            <span class="mobile-cart-badge cart-count-badge">0</span>
+          </div>
+          <div class="mobile-card-text">
+            <span class="mobile-card-title">Shopping Bag</span>
+            <span class="mobile-card-sub">View Rituals</span>
+          </div>
+        </button>
+        <a href="login.html" class="mobile-action-card account-action-card" aria-label="Go to Member Portal">
+          <div class="mobile-card-icon-wrap user-icon-wrap">
+            <i data-lucide="user" aria-hidden="true"></i>
+          </div>
+          <div class="mobile-card-text">
+            <span class="mobile-card-title">Member Portal</span>
+            <span class="mobile-card-sub">Log In / Sign Up</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <p class="mobile-nav-tagline">“Rooted in Nature. Crafted with Care.”</p>
+    </div>
+  </div>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Bag" hidden>
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <i data-lucide="shopping-bag" aria-hidden="true"></i>
+        <h2>Your Ritual Bag</h2>
+        <span class="cart-drawer-count">(<span id="drawer-item-count">0</span> items)</span>
+      </div>
+      <button class="cart-drawer-close" id="cart-drawer-close" aria-label="Close shopping bag">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="cart-drawer-body" id="cart-drawer-body">
+      <div class="cart-empty" id="cart-empty">
+        <div class="cart-empty-icon">
+          <i data-lucide="flower-2" aria-hidden="true"></i>
+        </div>
+        <p class="cart-empty-text">Your ritual bag is currently empty.</p>
+        <p class="cart-empty-sub">Explore our handcrafted botanical collection and treat your skin.</p>
+        <a href="index.html#shop" class="btn btn-primary btn-sm" id="cart-empty-cta">Discover Collection</a>
+      </div>
+      <div class="cart-items-list" id="cart-items-list"></div>
+    </div>
+
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span class="cart-subtotal" id="cart-subtotal">$0.00</span>
+      </div>
+      <p class="cart-shipping-note">Free standard shipping on all organic rituals over $50.</p>
+      <button class="btn btn-primary btn-full" id="cart-checkout-btn">
+        Proceed to Checkout
+        <i data-lucide="arrow-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </aside>
+  <div class="cart-drawer-backdrop" id="cart-drawer-backdrop" aria-hidden="true"></div>
+
+  <main id="main-content">
+
+    <section class="contact-hero" id="contact-hero" aria-labelledby="contact-hero-heading">
+      
+      <div class="hero-mesh-bg" aria-hidden="true">
+        <div class="hero-glow-blob glow-sage"></div>
+        <div class="hero-glow-blob glow-lavender"></div>
+        <div class="hero-glow-blob glow-cream"></div>
+      </div>
+
+      <div class="container contact-hero-inner">
+        
+        <div class="contact-hero-content">
+
+          <div class="hero-eyebrow-wrapper">
+            <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            <p class="hero-eyebrow">CUSTOMER CARE &bull; HERBALIST CONSULTATIONS</p>
+          </div>
+
+          <h1 class="hero-heading" id="contact-hero-heading">
+            We’re Here for Your<br />
+            <em>Skin &amp; Daily Rituals.</em>
+          </h1>
+
+          <p class="hero-body">
+            Have questions about personalized organic oil formulas, order delivery, or selecting the ideal facial
+            elixir? Our herbalist care team in Ojai is here to guide your skin journey.
+          </p>
+
+          <div class="contact-direct-pills">
+            <a href="mailto:dummy@haridrarituals.com" class="direct-pill-item">
+              <div class="pill-icon-wrap box-lavender"><i data-lucide="mail" aria-hidden="true"></i></div>
+              <div class="pill-text-wrap">
+                <span class="pill-title">Email Care Desk</span>
+                <span class="pill-value">dummy@haridrarituals.com</span>
+              </div>
+            </a>
+
+            <a href="tel:9999988888" class="direct-pill-item">
+              <div class="pill-icon-wrap box-sage"><i data-lucide="phone" aria-hidden="true"></i></div>
+              <div class="pill-text-wrap">
+                <span class="pill-title">Toll-Free Phone</span>
+                <span class="pill-value">9999988888</span>
+              </div>
+            </a>
+          </div>
+
+          <div class="hero-actions-group">
+            <a href="#form-section" class="btn btn-primary btn-hero-glow" id="hero-btn-form">
+              Send Us a Message
+              <i data-lucide="arrow-down" class="btn-icon" aria-hidden="true"></i>
+            </a>
+            <a href="#map-section" class="btn btn-outline" id="hero-btn-map">
+              <i data-lucide="map-pin" class="btn-icon" aria-hidden="true"></i>
+              Find Studio on Map
+            </a>
+          </div>
+        </div>
+
+        <div class="contact-hero-visual">
+          <div class="contact-unique-frame">
+
+            <img src="assets/hero-apothecary.jpg" alt="Organic skincare apothecary consultation"
+              class="contact-frame-img" loading="eager" />
+            <div class="contact-frame-overlay"></div>
+
+            <div class="hero-rating-badge">
+              <div class="stars-row">
+                <i data-lucide="star" aria-hidden="true"></i>
+                <i data-lucide="star" aria-hidden="true"></i>
+                <i data-lucide="star" aria-hidden="true"></i>
+                <i data-lucide="star" aria-hidden="true"></i>
+                <i data-lucide="star" aria-hidden="true"></i>
+              </div>
+              <div class="rating-text">
+                <strong>4.9 / 5.0 Skin Satisfaction</strong>
+                <span>Over 18,000+ Glow Rituals Hand-Delivered</span>
+              </div>
+            </div>
+
+            <div class="hero-desk-status-bar">
+              <span class="status-green-dot"></span>
+              <div class="desk-info">
+                <strong>Live Herbalist Desk Online</strong>
+                <span>Ojai Studio &bull; Mon &ndash; Fri 9:00 AM &ndash; 6:00 PM PST</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-form-section" id="form-section" aria-labelledby="form-section-heading">
+      <div class="container">
+        <div class="contact-grid">
+
+          <div class="contact-form-card">
+            <div class="form-header">
+              <p class="section-eyebrow">
+                <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+                Send Us a Note
+              </p>
+              <h2 class="form-title" id="form-section-heading">Start a <em>Conversation</em></h2>
+              <p class="form-subtitle">Fill in the fields below and our herbalist care team will respond within 24
+                hours.</p>
+            </div>
+
+            <form class="main-contact-form" id="main-contact-form" novalidate>
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Full Name <span class="required">*</span></label>
+                  <div class="input-wrap">
+                    <i data-lucide="user" class="input-icon" aria-hidden="true"></i>
+                    <input type="text" id="contact-name" name="name" class="form-input" placeholder="Enter your name"
+                      required />
+                  </div>
+                  <span class="error-msg" id="name-error">Please enter your name.</span>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Email Address <span class="required">*</span></label>
+                  <div class="input-wrap">
+                    <i data-lucide="mail" class="input-icon" aria-hidden="true"></i>
+                    <input type="email" id="contact-email" name="email" class="form-input"
+                      placeholder="Enter your email" required />
+                  </div>
+                  <span class="error-msg" id="email-error">Please enter a valid email address.</span>
+                </div>
+              </div>
+
+              <div class="form-row-2">
+                <div class="form-group">
+                  <label for="contact-phone" class="form-label">Phone Number <span
+                      class="optional">(Optional)</span></label>
+                  <div class="input-wrap">
+                    <i data-lucide="phone" class="input-icon" aria-hidden="true"></i>
+                    <input type="tel" id="contact-phone" name="phone" class="form-input"
+                      placeholder="Enter your number" />
+                  </div>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-category" class="form-label">Topic / Concern <span
+                      class="required">*</span></label>
+                  <div class="input-wrap select-wrap">
+                    <i data-lucide="help-circle" class="input-icon" aria-hidden="true"></i>
+                    <select id="contact-category" name="category" class="form-select" required>
+                      <option value="" disabled selected>Select an inquiry topic</option>
+                      <option value="skincare-consultation">Organic Skincare Consultation</option>
+                      <option value="order-support">Order &amp; Shipping Support</option>
+                      <option value="custom-soaps">Custom Soap &amp; Batch Orders</option>
+                      <option value="wholesale">Wholesale &amp; Stockist Inquiry</option>
+                      <option value="press">Press &amp; General Feedback</option>
+                    </select>
+                    <i data-lucide="chevron-down" class="select-chevron" aria-hidden="true"></i>
+                  </div>
+                  <span class="error-msg" id="category-error">Please select a topic.</span>
+                </div>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message" class="form-label">Your Message <span class="required">*</span></label>
+                <div class="input-wrap textarea-wrap">
+                  <i data-lucide="message-square" class="input-icon icon-top" aria-hidden="true"></i>
+                  <textarea id="contact-message" name="message" class="form-textarea" rows="5"
+                    placeholder="Enter your message" required></textarea>
+                </div>
+                <span class="error-msg" id="message-error">Please write your message (min. 10 characters).</span>
+              </div>
+
+              <div class="form-checkbox-row">
+                <label class="custom-checkbox">
+                  <input type="checkbox" id="newsletter-opt" name="newsletter" checked />
+                  <span class="checkbox-box"><i data-lucide="check" aria-hidden="true"></i></span>
+                  <span class="checkbox-label">Receive our seasonal herbal journal &amp; exclusive 15% off
+                    your first order.</span>
+                </label>
+              </div>
+
+              <div class="form-submit-row">
+                <button type="submit" class="btn btn-primary btn-submit-contact" id="contact-submit-btn">
+                  Send Message
+                  <i data-lucide="send" aria-hidden="true"></i>
+                </button>
+                <div class="form-reassurance">
+                  <p>Our customer care team will get back to you within 24 business hours.</p>
+                </div>
+              </div>
+
+              <div class="form-success-banner" id="form-success-banner" hidden>
+                <div class="success-icon"><i data-lucide="check-circle-2" aria-hidden="true"></i></div>
+                <div class="success-text">
+                  <strong>Thank You! Your message has been received.</strong>
+                  <p>Our botanical care team will get back to you within 24 business hours.</p>
+                </div>
+              </div>
+            </form>
+          </div>
+
+          <div class="contact-info-column">
+
+            <div class="info-card-box">
+              <h3 class="info-card-title">Direct Studio Contacts</h3>
+              <p class="info-card-desc">Prefer to reach out directly? Connect with our dedicated departments below.</p>
+
+              <div class="contact-methods-list">
+
+                <div class="method-item">
+                  <div class="method-icon-box box-lavender">
+                    <i data-lucide="mail" aria-hidden="true"></i>
+                  </div>
+                  <div class="method-details">
+                    <span class="method-label">Customer Care &amp; Support</span>
+                    <a href="mailto:dummy@haridrarituals.com" class="method-link">dummy@haridrarituals.com</a>
+                    <span class="method-sub">Mon &ndash; Fri &bull; 9 AM &ndash; 6 PM PST</span>
+                  </div>
+                </div>
+
+                <div class="method-item">
+                  <div class="method-icon-box box-sage">
+                    <i data-lucide="phone" aria-hidden="true"></i>
+                  </div>
+                  <div class="method-details">
+                    <span class="method-label">Phone &amp; Live Consultation</span>
+                    <a href="tel:9999988888" class="method-link">9999988888</a>
+                    <span class="method-sub">Toll-free within North America</span>
+                  </div>
+                </div>
+
+                <div class="method-item">
+                  <div class="method-icon-box box-gold">
+                    <i data-lucide="map-pin" aria-hidden="true"></i>
+                  </div>
+                  <div class="method-details">
+                    <span class="method-label">Ojai Flagship Apothecary</span>
+                    <span class="method-text">Online Botanical Apothecary</span>
+                    <span class="method-sub">Studio Visits by Appointment</span>
+                  </div>
+                </div>
+
+                <div class="method-item">
+                  <div class="method-icon-box box-teal">
+                    <i data-lucide="store" aria-hidden="true"></i>
+                  </div>
+                  <div class="method-details">
+                    <span class="method-label">Wholesale &amp; Press Relations</span>
+                    <a href="mailto:partners@haridrarituals.com" class="method-link">partners@haridrarituals.com</a>
+                    <span class="method-sub">Stockist catalogs &amp; sample requests</span>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+
+            <div class="live-status-box">
+              <div class="status-header">
+                <span class="status-indicator-dot"></span>
+                <span class="status-title">Live Herbalist Desk Active</span>
+              </div>
+              <p class="status-text">Our skin specialists are online to help you match products to your skin type.</p>
+              <button class="btn btn-outline btn-sm status-btn" id="start-chat-btn">
+                <i data-lucide="message-square" aria-hidden="true"></i>
+                Start Live Chat
+              </button>
+            </div>
+
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-map-section" id="studio-map" aria-labelledby="map-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-eyebrow">
+            <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            Our Sanctuary
+          </p>
+          <h2 class="section-title" id="map-heading">Visit Our <em>Apothecary Studio</em></h2>
+          <p class="section-subtitle">
+            Located in the serene Ojai Valley, where our organic formulas are crafted and hand-blended daily.
+          </p>
+        </div>
+
+        <div class="map-wrapper">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d52678.89547530612!2d-119.29748255!3d34.4480112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e964b4c7308eb9%3A0x6b4f8a846c4f3461!2sOjai%2C%20CA%2093023!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus" 
+            class="map-iframe"
+            allowfullscreen="" 
+            loading="lazy" 
+            referrerpolicy="no-referrer-when-downgrade"
+            title="Haridra Rituals Location Map">
+          </iframe>
+
+          <div class="map-overlay-card">
+            <div class="map-card-badge">
+              <i data-lucide="map-pin" aria-hidden="true"></i>
+              <span>Haridra Rituals Studio</span>
+            </div>
+            <h3 class="map-card-title">Ojai Botanical Apothecary</h3>
+            <p class="map-card-address">
+              108 Botanical Way, Suite A<br />
+              Ojai Valley, CA 93023
+            </p>
+            <div class="map-card-hours">
+              <i data-lucide="clock" aria-hidden="true"></i>
+              <span>Mon &ndash; Fri &bull; 9 AM &ndash; 6 PM PST</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-faq-section" id="faqs" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-eyebrow">
+            <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            Common Inquiries
+          </p>
+          <h2 class="section-title" id="faq-heading">Frequently Asked <em>Questions</em></h2>
+          <p class="section-subtitle">
+            Find immediate answers regarding our organic ingredients, shipping, custom orders, and skin compatibility.
+          </p>
+        </div>
+
+        <div class="faq-accordion-container">
+
+          <div class="faq-accordion-item open">
+            <button class="faq-accordion-header" aria-expanded="true" aria-controls="faq-ans-1">
+              <span class="faq-question-text">Are all Haridra Rituals products 100% organic and synthetic-free?</span>
+              <span class="faq-icon-toggle"><i data-lucide="chevron-down" aria-hidden="true"></i></span>
+            </button>
+            <div class="faq-accordion-body" id="faq-ans-1">
+              <p class="faq-answer-text">
+                Yes. Every single product in our line is formulated with unrefined plant oils, cold-cured plant
+                extracts, and therapeutic floral hydrosols. We never use parabens, sulfates, synthetic fragrances,
+                phthalates, or artificial colorants.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-header" aria-expanded="false" aria-controls="faq-ans-2">
+              <span class="faq-question-text">How long does shipping take and is standard shipping free?</span>
+              <span class="faq-icon-toggle"><i data-lucide="chevron-down" aria-hidden="true"></i></span>
+            </button>
+            <div class="faq-accordion-body" id="faq-ans-2" hidden>
+              <p class="faq-answer-text">
+                We hand-pack orders within 1-2 business days. Standard eco-shipping takes 3-5 business days across North
+                America. We offer free standard shipping on all orders over $50. International shipping times vary from
+                6-10 business days.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-header" aria-expanded="false" aria-controls="faq-ans-3">
+              <span class="faq-question-text">Can I request a custom soap batch for weddings, events, or gifting?</span>
+              <span class="faq-icon-toggle"><i data-lucide="chevron-down" aria-hidden="true"></i></span>
+            </button>
+            <div class="faq-accordion-body" id="faq-ans-3" hidden>
+              <p class="faq-answer-text">
+                Absolutely! We craft custom cold-process soap batches with custom essential oil blends, organic plant
+                stampings, and personalized seed-paper packaging. Because our traditional saponification requires 6
+                weeks of curing, please inquire at least 8 weeks prior to your event date.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-header" aria-expanded="false" aria-controls="faq-ans-4">
+              <span class="faq-question-text">What is your return policy if a product does not suit my skin?</span>
+              <span class="faq-icon-toggle"><i data-lucide="chevron-down" aria-hidden="true"></i></span>
+            </button>
+            <div class="faq-accordion-body" id="faq-ans-4" hidden>
+              <p class="faq-answer-text">
+                We stand by our 30-Day Skin Happiness Guarantee. If a product does not suit your skin type or meet your
+                expectations, contact our care team for a full refund or complimentary skin consultation and swap.
+              </p>
+            </div>
+          </div>
+
+          <div class="faq-accordion-item">
+            <button class="faq-accordion-header" aria-expanded="false" aria-controls="faq-ans-5">
+              <span class="faq-question-text">What is the shelf life of cold-cured soaps and unrefined face
+                elixirs?</span>
+              <span class="faq-icon-toggle"><i data-lucide="chevron-down" aria-hidden="true"></i></span>
+            </button>
+            <div class="faq-accordion-body" id="faq-ans-5" hidden>
+              <p class="faq-answer-text">
+                Because we use natural vitamin E and amber UV-glass bottles instead of synthetic preservatives, our
+                facial elixirs remain at peak potency for 12 months. Our cold-process soap bars last up to 24 months
+                when stored in a dry, well-drained soap dish.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    
+
+    <section class="contact-cta-section" id="newsletter" aria-labelledby="cta-heading">
+      <div class="container">
+        <div class="contact-cta-banner">
+          <div class="cta-inner-content">
+            <p class="section-eyebrow eyebrow-light">
+              <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+              Botanical Circle
+            </p>
+            <h2 class="cta-title" id="cta-heading">Join Our <em>Herbal Circle</em></h2>
+            <p class="cta-banner-desc">
+              Subscribe to our monthly herbal journal for seasonal skincare recipes, harvest notes, and receive
+              <strong>15% off</strong> your first organic order.
+            </p>
+
+            <form class="cta-newsletter-form" id="cta-newsletter-form">
+              <div class="cta-input-group">
+                <i data-lucide="mail" class="cta-mail-icon" aria-hidden="true"></i>
+                <input type="email" id="newsletter-email" class="cta-email-input"
+                  placeholder="Enter your email address..." required />
+                <button type="submit" class="btn btn-primary cta-submit-btn">
+                  <span>Claim 15% Off</span>
+                  <i data-lucide="arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+              <span class="cta-note">We respect your privacy. Unsubscribe at any time with one click.</span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-top-inner">
+
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Haridra Rituals Home">
+            <div class="logo-mark" aria-hidden="true">
+              <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Haridra Rituals</span>
+              <span class="logo-tagline">Rooted in Nature. Crafted with Care.</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Thoughtfully crafted skincare and handmade soaps inspired by nature, organic plant actives and everyday
+            self-care rituals.
+          </p>
+
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://instagram.com" class="social-link" id="social-instagram" aria-label="Instagram"
+              target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" class="social-link" id="social-facebook" aria-label="Facebook"
+              target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            </a>
+            <a href="https://youtube.com" class="social-link" id="social-youtube" aria-label="YouTube" target="_blank"
+              rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-nav-col" aria-label="Explore navigation">
+          <h3 class="footer-col-title">Explore</h3>
+          <ul role="list">
+            <li><a href="index.html" class="footer-link">Home 1</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="journals.html" class="footer-link">Journals</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav-col" aria-label="Customer care navigation">
+          <h3 class="footer-col-title">Customer Care</h3>
+          <ul role="list">
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="pricing.html#faqs" class="footer-link">Shipping</a></li>
+            <li><a href="pricing.html#faqs" class="footer-link">Returns</a></li>
+            <li><a href="pricing.html#faqs" class="footer-link">FAQs</a></li>
+            <li><a href="#contact-form-section" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav-col" aria-label="Additional information navigation">
+          <h3 class="footer-col-title">Additional Information</h3>
+          <ul role="list">
+            <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+            <li><a href="404.html" class="footer-link">404</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">Contact Details</h3>
+          <ul class="contact-list" role="list">
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span class="contact-text">Online Botanical Apothecary</span>
+            </li>
+            <li class="contact-item">
+              <a href="tel:9999988888" class="contact-link">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="contact-text">9999988888</span>
+              </a>
+            </li>
+            <li class="contact-item">
+              <a href="mailto:dummy@haridrarituals.com" class="contact-link">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </span>
+                <span class="contact-text">dummy@haridrarituals.com</span>
+              </a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </span>
+              <span class="contact-text">Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM PST</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="footer-copy">&copy; 2026 Haridra Rituals. All Rights Reserved.</p>
+        <nav class="footer-legal" aria-label="Legal navigation">
+          <a href="#privacy" class="footer-legal-link">Privacy</a>
+          <span class="legal-dot">&bull;</span>
+          <a href="#terms" class="footer-legal-link">Terms</a>
+          <span class="legal-dot">&bull;</span>
+          <a href="#cookies" class="footer-legal-link">Cookies</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="contact.js" defer></script>
+</body>
+
+</html>

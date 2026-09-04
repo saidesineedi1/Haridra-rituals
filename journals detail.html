@@ -1,0 +1,696 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Haridra Rituals Journal — Deep dive into organic skincare stories, ingredient deep-dives, rituals, and skin wisdom." />
+  <meta name="keywords" content="organic skincare journal article, herbal ingredients, skin ritual, lavender, rosehip" />
+  <title id="jnd-page-title">Journal Article — Haridra Rituals</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="journals detail.css" />
+</head>
+
+<body>
+
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner container">
+      <a href="index.html" class="logo" aria-label="Haridra Rituals Home" id="logo-link">
+        <div class="logo-mark" aria-hidden="true">
+          <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Haridra Rituals</span>
+          <span class="logo-tagline">Rooted in Nature. Crafted with Care.</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li class="nav-item has-dropdown" id="nav-home-item">
+            <a href="index.html" class="nav-link nav-dropdown-trigger" id="nav-home" aria-expanded="false" aria-haspopup="true">
+              <span>Home</span>
+              <i data-lucide="chevron-down" class="dropdown-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="nav-dropdown-menu" role="menu" aria-label="Home versions">
+              <a href="index.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon"><i data-lucide="sparkles" aria-hidden="true"></i></div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-header"><span class="dropdown-item-title">Home 1</span></div>
+                  <span class="dropdown-item-desc">Haridra Rituals &bull; Organic Skincare</span>
+                </div>
+              </a>
+              <a href="home2.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon icon-ayurveda"><i data-lucide="leaf" aria-hidden="true"></i></div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-header">
+                    <span class="dropdown-item-title">Home 2</span>
+                    <span class="dropdown-badge badge-alt">New</span>
+                  </div>
+                  <span class="dropdown-item-desc">GlowVeda &bull; Ayurvedic Formulas</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+          <li><a href="services.html" class="nav-link" id="nav-services">Services</a></li>
+          <li><a href="pricing.html" class="nav-link" id="nav-pricing">Pricing</a></li>
+          <li><a href="journals.html" class="nav-link active" id="nav-journal">Journal</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link" id="nav-dashboard">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions" role="toolbar" aria-label="Site actions">
+        <button class="toggle-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle text direction" aria-pressed="false"
+          title="Switch text direction (RTL / LTR)">
+          <span class="toggle-label">RTL</span></button>
+
+        <button class="toggle-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false"
+          title="Toggle light and dark mode">
+          <span class="theme-icon sun-icon"><i data-lucide="sun" aria-hidden="true"></i></span>
+          <span class="theme-icon moon-icon"><i data-lucide="moon" aria-hidden="true"></i></span>
+        </button>
+
+        <a href="login.html" class="nav-login-btn">Login</a>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Open mobile menu" aria-expanded="false"
+          aria-controls="main-nav">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+    <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Search" hidden>
+      <div class="search-inner">
+        <div class="search-input-box">
+          <i data-lucide="search" class="search-input-icon" aria-hidden="true"></i>
+          <input type="search" class="search-input" id="search-input" placeholder="Search soaps, face oils, toners, rituals..." aria-label="Search organic products" autocomplete="off" />
+          <button class="search-close" id="search-close" aria-label="Close search"><i data-lucide="x" aria-hidden="true"></i></button>
+        </div>
+        <div class="search-suggestions" id="search-suggestions">
+          <span class="sugg-label">Popular Searches:</span>
+          <button class="sugg-pill" data-query="Lavender">Lavender Soap</button>
+          <button class="sugg-pill" data-query="Rosehip">Rosehip Oil</button>
+          <button class="sugg-pill" data-query="Body Butter">Body Butter</button>
+          <button class="sugg-pill" data-query="Mist">Forest Mist</button>
+        </div>
+        <div class="search-results-list" id="search-results-list"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <span class="logo-name">Haridra Rituals</span>
+      <button class="icon-btn mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item has-dropdown" id="mobile-nav-home-item">
+        <button class="mobile-nav-link mobile-dropdown-btn" id="mobile-home-toggle" aria-expanded="false">
+          <span>Home</span>
+          <i data-lucide="chevron-down" class="mobile-dropdown-chevron" aria-hidden="true"></i>
+        </button>
+        <ul class="mobile-submenu" id="mobile-home-submenu">
+          <li><a href="index.html" class="mobile-sublink"><i data-lucide="sparkles" aria-hidden="true"></i><span>Home 1</span></a></li>
+          <li><a href="home2.html" class="mobile-sublink"><i data-lucide="leaf" aria-hidden="true"></i><span>Home 2</span></a></li>
+        </ul>
+      </li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li><a href="journals.html" class="mobile-nav-link active">Journal</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+    </ul>
+    
+    <div class="mobile-drawer-actions">
+      <div class="mobile-actions-grid">
+        <button class="mobile-action-card cart-action-card" onclick="if(typeof openCartDrawer==='function')openCartDrawer();" aria-label="Open Shopping Bag">
+          <div class="mobile-card-icon-wrap">
+            <i data-lucide="shopping-bag" aria-hidden="true"></i>
+            <span class="mobile-cart-badge cart-count-badge">0</span>
+          </div>
+          <div class="mobile-card-text">
+            <span class="mobile-card-title">Shopping Bag</span>
+            <span class="mobile-card-sub">View Rituals</span>
+          </div>
+        </button>
+        <a href="login.html" class="mobile-action-card account-action-card" aria-label="Go to Member Portal">
+          <div class="mobile-card-icon-wrap user-icon-wrap">
+            <i data-lucide="user" aria-hidden="true"></i>
+          </div>
+          <div class="mobile-card-text">
+            <span class="mobile-card-title">Member Portal</span>
+            <span class="mobile-card-sub">Log In / Sign Up</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <p class="mobile-nav-tagline">"Rooted in Nature. Crafted with Care."</p>
+    </div>
+  </div>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+
+  <main id="main-content">
+
+    <section class="jnd-hero" id="article-hero" aria-labelledby="jnd-hero-heading">
+      <div class="jnd-hero-bg" id="jnd-hero-bg" aria-hidden="true">
+        <div class="jnd-hero-gradient"></div>
+        <div class="jnd-hero-pattern"></div>
+      </div>
+      <div class="container jnd-hero-inner">
+        <div class="jnd-hero-content">
+          <div class="jnd-hero-badges">
+            <span class="jnd-category-badge" id="jnd-category-badge">Ingredients</span>
+            <span class="jnd-featured-badge" id="jnd-featured-badge">
+              <i data-lucide="star" aria-hidden="true"></i> Featured
+            </span>
+          </div>
+          <h1 class="jnd-hero-heading" id="jnd-hero-heading">The Lavender Diaries: From Field to Flask</h1>
+          <p class="jnd-hero-excerpt" id="jnd-hero-excerpt">
+            How we source, distill, and bottle the purest lavender essence in the French Alps — a journey of scent, science, and soul.
+          </p>
+          <div class="jnd-hero-meta">
+            <div class="jnd-meta-author">
+              <img src="assets/founder1.jpg" alt="Aria Fontaine" class="jnd-author-avatar-img-hero" id="jnd-author-avatar" />
+              <div class="jnd-author-info">
+                <span class="jnd-author-name" id="jnd-author-name">Aria Fontaine</span>
+                <span class="jnd-author-role">Head Herbal Curator</span>
+              </div>
+            </div>
+            <div class="jnd-meta-details">
+              <span class="jnd-meta-item"><i data-lucide="calendar" aria-hidden="true"></i><span id="jnd-date">Aug 15, 2026</span></span>
+              <span class="jnd-meta-divider" aria-hidden="true">|</span>
+              <span class="jnd-meta-item"><i data-lucide="clock" aria-hidden="true"></i><span id="jnd-read-time">8 min read</span></span>
+              <span class="jnd-meta-divider" aria-hidden="true">|</span>
+              <span class="jnd-meta-item"><i data-lucide="eye" aria-hidden="true"></i><span>2.4k views</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="jnd-hero-actions">
+          <button class="jnd-action-btn" id="jnd-share-btn" onclick="shareArticle()" aria-label="Share article" title="Share">
+            <i data-lucide="share-2" aria-hidden="true"></i><span>Share</span>
+          </button>
+          <button class="jnd-action-btn" id="jnd-bookmark-btn" onclick="toggleBookmark(this)" aria-label="Bookmark article" title="Bookmark">
+            <i data-lucide="bookmark" aria-hidden="true"></i><span>Save</span>
+          </button>
+          <a href="journals.html" class="jnd-action-btn jnd-back-btn" id="jnd-back-btn">
+            <i data-lucide="arrow-left" aria-hidden="true"></i><span>Back</span>
+          </a>
+        </div>
+      </div>
+
+      <div class="jnd-progress-bar" role="progressbar" aria-label="Reading progress" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100">
+        <div class="jnd-progress-fill" id="jnd-progress-fill"></div>
+      </div>
+    </section>
+
+    <section class="jnd-body-section" id="article-body" aria-labelledby="jnd-hero-heading">
+      <div class="container jnd-body-inner">
+
+        <aside class="jnd-toc" id="jnd-toc" aria-label="Table of Contents">
+          <div class="jnd-toc-inner">
+            <h3 class="jnd-toc-title"><i data-lucide="list" aria-hidden="true"></i> Contents</h3>
+            <nav aria-label="Article table of contents">
+              <ol class="jnd-toc-list" id="jnd-toc-list">
+                <li><a href="#section-origin" class="jnd-toc-link jnd-toc-active" onclick="scrollToSection(event,'section-origin')">The Origin of Lavender</a></li>
+                <li><a href="#section-harvest" class="jnd-toc-link" onclick="scrollToSection(event,'section-harvest')">How We Harvest</a></li>
+                <li><a href="#section-distillation" class="jnd-toc-link" onclick="scrollToSection(event,'section-distillation')">The Distillation Process</a></li>
+                <li><a href="#section-skin-benefits" class="jnd-toc-link" onclick="scrollToSection(event,'section-skin-benefits')">Benefits for Your Skin</a></li>
+                <li><a href="#section-ritual" class="jnd-toc-link" onclick="scrollToSection(event,'section-ritual')">Your Lavender Ritual</a></li>
+              </ol>
+            </nav>
+            
+            <div class="jnd-toc-stats">
+              <div class="jnd-toc-stat"><i data-lucide="clock" aria-hidden="true"></i><span id="jnd-toc-read-time">8 min read</span></div>
+              <div class="jnd-toc-stat"><i data-lucide="bar-chart-2" aria-hidden="true"></i><span>2,400 words</span></div>
+            </div>
+
+            <div class="jnd-toc-product-cta-card">
+              <span class="jnd-toc-cta-tag"><i data-lucide="sparkles" aria-hidden="true"></i> FEATURED RITUAL</span>
+              <div class="jnd-toc-cta-img-wrap">
+                <img src="assets/skin-rosehip-face.jpg" alt="Lavender Glow Facial" class="jnd-toc-cta-img" />
+                <span class="jnd-toc-cta-price">$89</span>
+              </div>
+              <div class="jnd-toc-cta-info">
+                <h4 class="jnd-toc-cta-title">Lavender Glow Facial</h4>
+                <p class="jnd-toc-cta-rating"><i data-lucide="star" aria-hidden="true"></i> <span>5.0 (142 Reviews)</span></p>
+                <a href="services.html" class="jnd-toc-cta-btn">
+                  <span>Explore Ritual</span>
+                  <i data-lucide="arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+          </div>
+        </aside>
+
+        <article class="jnd-article-content" id="jnd-article-content" aria-label="Article content">
+
+          <figure class="jnd-content-hero-img-box">
+            <img src="assets/skin-rosehip-face.jpg" alt="Organic lavender extraction" class="jnd-content-real-img" id="jnd-article-hero-img" />
+            <figcaption class="jnd-img-caption">High-altitude wild lavender undergoing copper steam distillation in Haute-Provence, France.</figcaption>
+          </figure>
+
+          <p class="jnd-lead-para">
+            Nestled in the sun-drenched hills of Haute-Provence, at an elevation of 800 to 1,800 meters, grows one of the world's most chemically complex natural treasures. <em>Lavandula angustifolia</em> — true lavender — has been cultivated in this region since the 14th century, its violet blooms swaying in the summer mistral wind.
+          </p>
+
+          <div class="jnd-content-section" id="section-origin">
+            <h2 class="jnd-content-h2">The Origin of Lavender</h2>
+            <p class="jnd-content-p">
+              Unlike its hybrid cousin lavandin (Lavandula × intermedia), which dominates commercial markets for its higher yield, true lavender produces a more delicate, nuanced essential oil. It is richer in linalool and linalyl acetate — the two compounds responsible for its legendary calming, anti-inflammatory, and skin-healing properties.
+            </p>
+
+            <blockquote class="jnd-blockquote">
+              <i data-lucide="quote" aria-hidden="true"></i>
+              <p>"True lavender is not simply a fragrance — it is a complete botanical pharmacy distilled into one blue-purple flower."</p>
+              <cite>— Professeur Henri Dubois, École de Parfumerie de Grasse</cite>
+            </blockquote>
+
+            <p class="jnd-content-p">
+              We partner with a fourth-generation family farm — the Fontaine estate — 40 kilometers north of Manosque. Our contract ensures zero synthetic inputs: no herbicides, no synthetic fertilizers, and harvesting is done only by hand during the peak bloom window of late July.
+            </p>
+          </div>
+
+          <div class="jnd-stats-strip" aria-label="Key ingredient statistics">
+            <div class="jnd-strip-stat">
+              <span class="jnd-strip-num">800m</span>
+              <span class="jnd-strip-label">Altitude sourced</span>
+            </div>
+            <div class="jnd-strip-divider" aria-hidden="true"></div>
+            <div class="jnd-strip-stat">
+              <span class="jnd-strip-num">40+</span>
+              <span class="jnd-strip-label">Active compounds</span>
+            </div>
+            <div class="jnd-strip-divider" aria-hidden="true"></div>
+            <div class="jnd-strip-stat">
+              <span class="jnd-strip-num">100%</span>
+              <span class="jnd-strip-label">Wild-harvest certified</span>
+            </div>
+            <div class="jnd-strip-divider" aria-hidden="true"></div>
+            <div class="jnd-strip-stat">
+              <span class="jnd-strip-num">4th Gen</span>
+              <span class="jnd-strip-label">Family farm partner</span>
+            </div>
+          </div>
+
+          <div class="jnd-content-section" id="section-harvest">
+            <h2 class="jnd-content-h2">How We Harvest</h2>
+            <p class="jnd-content-p">
+              The harvest window lasts no more than two to three weeks, typically between July 15th and August 5th, depending on the year's rainfall and temperature patterns. Our master harvester, Jean-Pierre Fontaine (84 years old and still wielding a sickle), reads the morning dew and the position of the sun before deciding which rows to cut.
+            </p>
+
+            <div class="jnd-info-cards">
+              <div class="jnd-info-card">
+                <div class="jnd-info-card-icon"><i data-lucide="sun" aria-hidden="true"></i></div>
+                <h4>Dawn Harvest</h4>
+                <p>Cut before 9am when essential oil concentration peaks in the flower heads.</p>
+              </div>
+              <div class="jnd-info-card">
+                <div class="jnd-info-card-icon"><i data-lucide="scissors" aria-hidden="true"></i></div>
+                <h4>Hand-Cut Only</h4>
+                <p>Machine cutting bruises stems, releasing grassy notes that dilute floral purity.</p>
+              </div>
+              <div class="jnd-info-card">
+                <div class="jnd-info-card-icon"><i data-lucide="droplets" aria-hidden="true"></i></div>
+                <h4>Same-Day Distill</h4>
+                <p>Bundles reach our copper alembic still within 4 hours of harvest for maximum potency.</p>
+              </div>
+            </div>
+
+            <p class="jnd-content-p">
+              We harvest approximately 300 kilograms of fresh flowers per distillation run, which yields — after the steam distillation process — roughly 1.5 to 2 kilograms of pure essential oil. This 150:1 ratio explains why authentic lavender oil commands such care and reverence.
+            </p>
+          </div>
+
+          <div class="jnd-content-section" id="section-distillation">
+            <h2 class="jnd-content-h2">The Distillation Process</h2>
+            <p class="jnd-content-p">
+              Steam distillation — the process by which plant material is separated into its volatile aromatic compounds — has been practiced in Provence since Catalan monks introduced copper alembic stills in the 1600s. Our still, inherited from the Fontaine family, is a 500-liter hand-hammered copper vessel from 1934.
+            </p>
+            <p class="jnd-content-p">
+              Fresh lavender bundles are layered into the still's chamber. Steam is pumped through from below at a precisely controlled 100°C, carrying the essential oil molecules upward into the swan-neck condenser tube, where cold spring water cools them back into liquid form — a mixture of essential oil and hydrosol (lavender water).
+            </p>
+
+            <div class="jnd-callout jnd-callout-tip">
+              <div class="jnd-callout-icon"><i data-lucide="lightbulb" aria-hidden="true"></i></div>
+              <div class="jnd-callout-body">
+                <h4>Did You Know?</h4>
+                <p>The lavender hydrosol (water) produced during distillation is not waste — it's a gentle, pH-balancing toner we use in our <strong>Forest Mist Hydrosol Toner</strong>. Zero waste, full circle.</p>
+              </div>
+            </div>
+
+            <p class="jnd-content-p">
+              The resulting essential oil floats on the hydrosol surface and is carefully separated using a glass Florentine flask — unchanged in design since its Renaissance-era invention. We then perform three rounds of quality testing: gas chromatography to verify linalool/linalyl acetate ratios, a skin patch test series, and organoleptic testing by our master perfumer.
+            </p>
+          </div>
+
+          <div class="jnd-content-section" id="section-skin-benefits">
+            <h2 class="jnd-content-h2">Benefits for Your Skin</h2>
+            <p class="jnd-content-p">
+              True lavender essential oil has been studied extensively for its dermatological applications. Its primary bioactive compounds — linalool (25–38%), linalyl acetate (25–45%), and camphor (&lt;1% in true lavender) — work synergistically to deliver multiple skin benefits.
+            </p>
+
+            <div class="jnd-benefit-list">
+              <div class="jnd-benefit-item">
+                <div class="jnd-benefit-icon"><i data-lucide="shield-check" aria-hidden="true"></i></div>
+                <div class="jnd-benefit-body">
+                  <h4>Anti-Inflammatory</h4>
+                  <p>Linalool inhibits PGE2 production — the same prostaglandin pathway targeted by ibuprofen — reducing redness and irritation at the cellular level.</p>
+                </div>
+              </div>
+              <div class="jnd-benefit-item">
+                <div class="jnd-benefit-icon"><i data-lucide="zap" aria-hidden="true"></i></div>
+                <div class="jnd-benefit-body">
+                  <h4>Antimicrobial</h4>
+                  <p>Clinical studies show 1–2% lavender oil concentrations are effective against P. acnes bacteria without disrupting the skin's healthy microbiome.</p>
+                </div>
+              </div>
+              <div class="jnd-benefit-item">
+                <div class="jnd-benefit-icon"><i data-lucide="heart" aria-hidden="true"></i></div>
+                <div class="jnd-benefit-body">
+                  <h4>Wound Healing</h4>
+                  <p>Linalyl acetate has been shown to accelerate the migration of skin fibroblasts — the cells responsible for producing collagen and closing wounds.</p>
+                </div>
+              </div>
+              <div class="jnd-benefit-item">
+                <div class="jnd-benefit-icon"><i data-lucide="moon" aria-hidden="true"></i></div>
+                <div class="jnd-benefit-body">
+                  <h4>Stress-Response Modulation</h4>
+                  <p>Topically applied lavender oil has measurable effects on cortisol levels, helping skin in chronic stress states recover its natural barrier function.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="jnd-content-section" id="section-ritual">
+            <h2 class="jnd-content-h2">Your Lavender Ritual</h2>
+            <p class="jnd-content-p">
+              At Haridra Rituals, we believe skincare is not a transaction — it is a daily act of reverence toward your body and the natural world. Here is how we suggest incorporating our Provence lavender into your morning and evening rituals:
+            </p>
+
+            <div class="jnd-ritual-steps">
+              <div class="jnd-ritual-step">
+                <div class="jnd-step-num">01</div>
+                <div class="jnd-step-body">
+                  <h4>Morning Cleanse</h4>
+                  <p>Begin with our Lavender &amp; Oat Soap Bar. Let the lather sit on skin for 30 seconds — breathe deeply. The volatile aromatics begin working before you even rinse.</p>
+                </div>
+              </div>
+              <div class="jnd-ritual-step">
+                <div class="jnd-step-num">02</div>
+                <div class="jnd-step-body">
+                  <h4>Hydrosol Mist</h4>
+                  <p>Spritz lavender hydrosol on damp skin immediately after cleansing. Pat (never rub) to seal in moisture and prep the skin for serums.</p>
+                </div>
+              </div>
+              <div class="jnd-ritual-step">
+                <div class="jnd-step-num">03</div>
+                <div class="jnd-step-body">
+                  <h4>Glow Facial Oil</h4>
+                  <p>Two drops of our Lavender Glow Facial blend, warmed between palms, pressed gently into the skin. Your morning ritual, complete.</p>
+                </div>
+              </div>
+              <div class="jnd-ritual-step">
+                <div class="jnd-step-num">04</div>
+                <div class="jnd-step-body">
+                  <h4>Evening Recovery</h4>
+                  <p>At night, add one drop of pure lavender essential oil to your moisturizer. The overnight hours are when linalyl acetate does its deepest repair work.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="jnd-callout jnd-callout-note">
+              <div class="jnd-callout-icon"><i data-lucide="info" aria-hidden="true"></i></div>
+              <div class="jnd-callout-body">
+                <h4>A Note on Concentration</h4>
+                <p>Always dilute pure essential oil to 0.5–2% for facial use. Our pre-formulated products do this for you — but if you're DIY-ing, remember: a little goes a long way with true Provence lavender.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="jnd-article-footer">
+            <div class="jnd-tags">
+              <span class="jnd-tag"><i data-lucide="tag" aria-hidden="true"></i> Lavender</span>
+              <span class="jnd-tag">Essential Oils</span>
+              <span class="jnd-tag">Ingredients</span>
+              <span class="jnd-tag">France</span>
+              <span class="jnd-tag">Phyto Science</span>
+            </div>
+            <div class="jnd-share-row">
+              <span>Share this story:</span>
+              <button class="jnd-share-btn" onclick="shareToSocial('twitter')" aria-label="Share on X/Twitter">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.748l7.73-8.835L1.254 2.25H8.08l4.259 5.63zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+              </button>
+              <button class="jnd-share-btn" onclick="shareToSocial('facebook')" aria-label="Share on Facebook">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+              </button>
+              <button class="jnd-share-btn" onclick="copyArticleLink()" aria-label="Copy link" id="jnd-copy-link-btn">
+                <i data-lucide="link" aria-hidden="true"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="jnd-author-card" id="jnd-author-card">
+            <img src="assets/founder1.jpg" alt="Aria Fontaine" class="jnd-author-card-avatar-img" id="jnd-author-card-avatar" />
+            <div class="jnd-author-card-info">
+              <span class="jnd-author-card-label">Written by</span>
+              <h3 class="jnd-author-card-name" id="jnd-author-card-name">Aria Fontaine</h3>
+              <p class="jnd-author-card-bio">Head Herbal Curator at Haridra Rituals. A trained ethnobotanist with 12 years of field research across Provence, Morocco, and the Himalayas. She believes every plant has a story worth telling.</p>
+              <div class="jnd-author-card-links">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="jnd-author-social" aria-label="Author on Instagram"><i data-lucide="instagram" aria-hidden="true"></i></a>
+                <a href="journals.html" class="jnd-author-social" aria-label="Author articles"><i data-lucide="book-open" aria-hidden="true"></i></a>
+              </div>
+            </div>
+          </div>
+
+        </article>
+      </div>
+    </section>
+
+    <section class="jnd-related" id="related-articles" aria-labelledby="jnd-related-heading">
+      <div class="container">
+        <div class="jnd-related-header">
+          <p class="section-eyebrow">
+            <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            Continue Reading
+          </p>
+          <h2 class="jnd-related-title" id="jnd-related-heading">More from the Journal</h2>
+        </div>
+        <div class="jnd-related-grid" id="jnd-related-grid">
+
+          <article class="jnd-related-card" onclick="openJournalDetail('rosehip-the-vitamin-c-powerhouse')" tabindex="0" onkeydown="if(event.key==='Enter')openJournalDetail('rosehip-the-vitamin-c-powerhouse')" id="related-card-1" aria-label="Read: Rosehip">
+            <div class="jnd-related-img-wrap">
+              <img src="assets/rosehip-oil.jpg" alt="Rosehip oil bottle" class="jnd-card-real-img" />
+            </div>
+            <div class="jnd-related-body">
+              <span class="jnd-related-category">Skin Science</span>
+              <h3 class="jnd-related-title-card">Rosehip: The Vitamin C Powerhouse Your Skin Needs</h3>
+              <div class="jnd-related-meta">
+                <span><i data-lucide="clock" aria-hidden="true"></i> 6 min</span>
+                <span>Dr. Mara Elise</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="jnd-related-card" onclick="openJournalDetail('the-5-minute-morning-ritual')" tabindex="0" onkeydown="if(event.key==='Enter')openJournalDetail('the-5-minute-morning-ritual')" id="related-card-2" aria-label="Read: Morning Ritual">
+            <div class="jnd-related-img-wrap">
+              <img src="assets/skin-mist-face.jpg" alt="Morning facial mist ritual" class="jnd-card-real-img" />
+            </div>
+            <div class="jnd-related-body">
+              <span class="jnd-related-category">Rituals</span>
+              <h3 class="jnd-related-title-card">The 5-Minute Morning Ritual That Changed Everything</h3>
+              <div class="jnd-related-meta">
+                <span><i data-lucide="clock" aria-hidden="true"></i> 4 min</span>
+                <span>Sage Williams</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="jnd-related-card" onclick="openJournalDetail('shea-butter-ancient-wisdom')" tabindex="0" onkeydown="if(event.key==='Enter')openJournalDetail('shea-butter-ancient-wisdom')" id="related-card-3" aria-label="Read: Shea Butter">
+            <div class="jnd-related-img-wrap">
+              <img src="assets/skin-shea-face.jpg" alt="Shea butter ritual" class="jnd-card-real-img" />
+            </div>
+            <div class="jnd-related-body">
+              <span class="jnd-related-category">Ingredients</span>
+              <h3 class="jnd-related-title-card">Shea Butter: Ancient African Wisdom for Modern Skin</h3>
+              <div class="jnd-related-meta">
+                <span><i data-lucide="clock" aria-hidden="true"></i> 7 min</span>
+                <span>Dr. Mara Elise</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="jnd-mini-nl" id="article-newsletter" aria-labelledby="jnd-mini-nl-heading">
+      <div class="container">
+        
+        <div class="jnd-mini-cta-card">
+          <div class="jnd-mini-cta-bg-orbs" aria-hidden="true">
+            <div class="jnd-mini-orb jnd-mini-orb-1"></div>
+            <div class="jnd-mini-orb jnd-mini-orb-2"></div>
+          </div>
+
+          <div class="jnd-mini-cta-grid">
+            <div class="jnd-mini-nl-content">
+              <p class="section-eyebrow eyebrow-light">
+                <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+                Never Miss a Ritual
+              </p>
+
+              <h2 class="jnd-mini-nl-heading" id="jnd-mini-nl-heading">Enjoyed this story?</h2>
+              <p class="jnd-mini-nl-desc">Get our weekly herbal dispatches — stories, rituals, and ingredient deep-dives like this one, delivered fresh to your inbox every Tuesday.</p>
+              
+              <form class="jnd-mini-nl-form" id="jnd-mini-nl-form" onsubmit="handleMiniNewsletter(event)" novalidate>
+                <div class="jnd-mini-form-group">
+                  <div class="jnd-mini-input-wrap">
+                    <i data-lucide="mail" aria-hidden="true"></i>
+                    <input type="email" class="jnd-mini-nl-input" id="jnd-mini-email" placeholder="Enter your email" aria-label="Email address" required />
+                  </div>
+                  <button type="submit" class="jnd-mini-nl-btn" id="jnd-mini-submit-btn">
+                    <span>Subscribe Free</span> <i data-lucide="arrow-right" aria-hidden="true"></i>
+                  </button>
+                </div>
+                <p class="jnd-mini-nl-note"><i data-lucide="shield-check" aria-hidden="true"></i> Free forever. Unsubscribe anytime.</p>
+                <div class="jnd-mini-nl-success" id="jnd-mini-nl-success" hidden aria-live="polite">
+                  <i data-lucide="check-circle" aria-hidden="true"></i> You're in! Welcome to the ritual.
+                </div>
+              </form>
+            </div>
+
+            <div class="jnd-mini-nl-visual" aria-hidden="true">
+              <div class="jnd-mini-visual-frame">
+                <img src="assets/forest-mist.jpg" alt="Organic mist ritual" class="jnd-mini-visual-img" />
+                <div class="jnd-mini-visual-overlay"></div>
+                <div class="jnd-mini-visual-badge">
+                  <i data-lucide="heart" aria-hidden="true"></i>
+                  <span>12k Readers</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-top-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo" aria-label="Haridra Rituals Home">
+          <div class="logo-mark" aria-hidden="true">
+            <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Haridra Rituals</span>
+            <span class="logo-tagline">Rooted in Nature. Crafted with Care.</span>
+          </div>
+        </a>
+        <p class="footer-desc">Thoughtfully crafted skincare and handmade soaps inspired by nature, organic plant actives and everyday self-care rituals.</p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="https://instagram.com" class="social-link" id="social-instagram" aria-label="Instagram" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+          </a>
+          <a href="https://facebook.com" class="social-link" id="social-facebook" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg>
+          </a>
+          <a href="https://youtube.com" class="social-link" id="social-youtube" aria-label="YouTube" target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path><polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-nav-col" aria-label="Explore navigation">
+        <h3 class="footer-col-title">Explore</h3>
+        <ul role="list">
+          <li><a href="index.html" class="footer-link">Home 1</a></li>
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="services.html" class="footer-link">Services</a></li>
+          <li><a href="journals.html" class="footer-link">Journals</a></li>
+          <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav-col" aria-label="Customer care navigation">
+        <h3 class="footer-col-title">Customer Care</h3>
+        <ul role="list">
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+          <li><a href="pricing.html#faqs" class="footer-link">Shipping</a></li>
+          <li><a href="pricing.html#faqs" class="footer-link">Returns</a></li>
+          <li><a href="pricing.html#faqs" class="footer-link">FAQs</a></li>
+          <li><a href="contact.html" class="footer-link">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav-col" aria-label="Additional information navigation">
+        <h3 class="footer-col-title">Additional Information</h3>
+        <ul role="list">
+          <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+          <li><a href="404.html" class="footer-link">404</a></li>
+          <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h3 class="footer-col-title">Contact Details</h3>
+        <ul class="contact-list" role="list">
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg></span>
+            <span class="contact-text">Online Botanical Apothecary</span>
+          </li>
+          <li class="contact-item">
+            <a href="tel:9999988888" class="contact-link">
+              <span class="contact-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg></span>
+              <span class="contact-text">9999988888</span>
+            </a>
+          </li>
+          <li class="contact-item">
+            <a href="mailto:dummy@haridrarituals.com" class="contact-link">
+              <span class="contact-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></span>
+              <span class="contact-text">dummy@haridrarituals.com</span>
+            </a>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg></span>
+            <span class="contact-text">Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM PST</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="footer-copy">&copy; 2026 Haridra Rituals. All Rights Reserved.</p>
+        <nav class="footer-legal" aria-label="Legal navigation">
+          <a href="#privacy" class="footer-legal-link">Privacy</a>
+          <span class="legal-dot">&bull;</span>
+          <a href="#terms" class="footer-legal-link">Terms</a>
+          <span class="legal-dot">&bull;</span>
+          <a href="#cookies" class="footer-legal-link">Cookies</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="home1.js" defer></script>
+  <script src="journals detail.js" defer></script>
+</body>
+</html>

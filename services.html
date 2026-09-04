@@ -1,0 +1,827 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Haridra Rituals — Explore our full range of premium organic skincare services. Herbal facial rituals, body treatments, and handcrafted soap collections crafted with care." />
+  <meta name="keywords"
+    content="organic skincare services, herbal facial, body treatment, skincare ritual, handmade soap, lavender treatment" />
+  <title>Services — Haridra Rituals | Organic Skincare Collection</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="services.css" />
+</head>
+
+<body>
+
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner container">
+
+      <a href="index.html" class="logo" aria-label="Haridra Rituals Home" id="logo-link">
+        <div class="logo-mark" aria-hidden="true">
+          <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Haridra Rituals</span>
+          <span class="logo-tagline">Rooted in Nature. Crafted with Care.</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li class="nav-item has-dropdown" id="nav-home-item">
+            <a href="index.html" class="nav-link nav-dropdown-trigger" id="nav-home" aria-expanded="false"
+              aria-haspopup="true">
+              <span>Home</span>
+              <i data-lucide="chevron-down" class="dropdown-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="nav-dropdown-menu" role="menu" aria-label="Home versions">
+              <a href="index.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">
+                  <i data-lucide="sparkles" aria-hidden="true"></i>
+                </div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-header">
+                    <span class="dropdown-item-title">Home 1</span>
+                  </div>
+                  <span class="dropdown-item-desc">Haridra Rituals &bull; Organic Skincare</span>
+                </div>
+              </a>
+              <a href="home2.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon icon-ayurveda">
+                  <i data-lucide="leaf" aria-hidden="true"></i>
+                </div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-header">
+                    <span class="dropdown-item-title">Home 2</span>
+                    <span class="dropdown-badge badge-alt">New</span>
+                  </div>
+                  <span class="dropdown-item-desc">GlowVeda &bull; Ayurvedic Formulas</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+          <li><a href="services.html" class="nav-link active" id="nav-services">Services</a></li>
+          <li><a href="pricing.html" class="nav-link" id="nav-pricing">Pricing</a></li>
+          <li><a href="journals.html" class="nav-link" id="nav-journal">Journal</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link" id="nav-dashboard">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions" role="toolbar" aria-label="Site actions">
+        <button class="toggle-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle text direction" aria-pressed="false"
+          title="Switch text direction (RTL / LTR)">
+          <span class="toggle-label">RTL</span></button>
+
+        <button class="toggle-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false"
+          title="Toggle light and dark mode">
+          <span class="theme-icon sun-icon"><i data-lucide="sun" aria-hidden="true"></i></span>
+          <span class="theme-icon moon-icon"><i data-lucide="moon" aria-hidden="true"></i></span>
+        </button>
+
+        <a href="login.html" class="nav-login-btn">Login</a>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Open mobile menu" aria-expanded="false"
+          aria-controls="main-nav">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Search" hidden>
+      <div class="search-inner">
+        <div class="search-input-box">
+          <i data-lucide="search" class="search-input-icon" aria-hidden="true"></i>
+          <input type="search" class="search-input" id="search-input"
+            placeholder="Search soaps, face oils, toners, rituals..." aria-label="Search organic products"
+            autocomplete="off" />
+          <button class="search-close" id="search-close" aria-label="Close search">
+            <i data-lucide="x" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="search-suggestions" id="search-suggestions">
+          <span class="sugg-label">Popular Searches:</span>
+          <button class="sugg-pill" data-query="Lavender">Lavender Soap</button>
+          <button class="sugg-pill" data-query="Rosehip">Rosehip Oil</button>
+          <button class="sugg-pill" data-query="Body Butter">Body Butter</button>
+          <button class="sugg-pill" data-query="Mist">Forest Mist</button>
+        </div>
+        <div class="search-results-list" id="search-results-list"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <span class="logo-name">Haridra Rituals</span>
+      <button class="icon-btn mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item has-dropdown" id="mobile-nav-home-item">
+        <button class="mobile-nav-link mobile-dropdown-btn" id="mobile-home-toggle" aria-expanded="false">
+          <span>Home</span>
+          <i data-lucide="chevron-down" class="mobile-dropdown-chevron" aria-hidden="true"></i>
+        </button>
+        <ul class="mobile-submenu" id="mobile-home-submenu">
+          <li><a href="index.html" class="mobile-sublink"><i data-lucide="sparkles" aria-hidden="true"></i><span>Home
+                1</span></a></li>
+          <li><a href="home2.html" class="mobile-sublink"><i data-lucide="leaf" aria-hidden="true"></i><span>Home
+                2</span></a></li>
+        </ul>
+      </li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="services.html" class="mobile-nav-link active">Services</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li><a href="journals.html" class="mobile-nav-link">Journal</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+    </ul>
+
+    <div class="mobile-drawer-actions">
+      <div class="mobile-actions-grid">
+        <button class="mobile-action-card cart-action-card"
+          onclick="if(typeof openCartDrawer==='function')openCartDrawer();" aria-label="Open Shopping Bag">
+          <div class="mobile-card-icon-wrap">
+            <i data-lucide="shopping-bag" aria-hidden="true"></i>
+            <span class="mobile-cart-badge cart-count-badge">0</span>
+          </div>
+          <div class="mobile-card-text">
+            <span class="mobile-card-title">Shopping Bag</span>
+            <span class="mobile-card-sub">View Rituals</span>
+          </div>
+        </button>
+        <a href="login.html" class="mobile-action-card account-action-card" aria-label="Go to Member Portal">
+          <div class="mobile-card-icon-wrap user-icon-wrap">
+            <i data-lucide="user" aria-hidden="true"></i>
+          </div>
+          <div class="mobile-card-text">
+            <span class="mobile-card-title">Member Portal</span>
+            <span class="mobile-card-sub">Log In / Sign Up</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <p class="mobile-nav-tagline">"Rooted in Nature. Crafted with Care."</p>
+    </div>
+  </div>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+
+  <main id="main-content">
+
+    <section class="sv-hero" id="services-hero" aria-labelledby="sv-hero-heading">
+      <div class="sv-hero-orbs" aria-hidden="true">
+        <div class="sv-orb sv-orb-1"></div>
+        <div class="sv-orb sv-orb-2"></div>
+        <div class="sv-orb sv-orb-3"></div>
+        <div class="sv-orb sv-orb-4"></div>
+      </div>
+      <div class="sv-particles" aria-hidden="true">
+        <span class="sv-particle"></span><span class="sv-particle"></span>
+        <span class="sv-particle"></span><span class="sv-particle"></span>
+        <span class="sv-particle"></span><span class="sv-particle"></span>
+        <span class="sv-particle"></span><span class="sv-particle"></span>
+      </div>
+      <div class="container sv-hero-inner">
+        <div class="sv-hero-content">
+          <div class="hero-eyebrow-wrapper">
+            <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            <p class="hero-eyebrow">ORGANIC SKINCARE &bull; HANDCRAFTED WITH LOVE</p>
+          </div>
+          <h1 class="sv-hero-heading" id="sv-hero-heading">
+            Discover Your<br /><span class="sv-heading-accent">Skin Ritual</span>
+          </h1>
+          <p class="sv-hero-desc">
+            Explore eight exquisite skincare services, each handcrafted with the finest herbal ingredients.
+            From lavender-infused serums to rosehip elixirs — every ritual is a journey back to nature.
+          </p>
+          <div class="sv-hero-actions">
+            <a href="#services-collection" class="btn btn-primary sv-btn-primary" id="sv-hero-explore-btn">
+              Explore Collection <i data-lucide="arrow-down" aria-hidden="true"></i>
+            </a>
+            <a href="contact.html" class="btn btn-outline sv-btn-outline" id="sv-hero-consult-btn">Book Consultation</a>
+          </div>
+          <div class="sv-hero-stats" aria-label="Service statistics">
+            <div class="sv-stat"><span class="sv-stat-num">8+</span><span class="sv-stat-label">Premium Services</span>
+            </div>
+            <div class="sv-stat-divider" aria-hidden="true"></div>
+            <div class="sv-stat"><span class="sv-stat-num">100%</span><span class="sv-stat-label">Organic
+                Certified</span></div>
+            <div class="sv-stat-divider" aria-hidden="true"></div>
+            <div class="sv-stat"><span class="sv-stat-num">4.9&#9733;</span><span class="sv-stat-label">Customer
+                Rating</span></div>
+          </div>
+        </div>
+        <div class="sv-hero-visual" aria-hidden="true">
+          <div class="sv-hero-ring sv-ring-outer"></div>
+          <div class="sv-hero-ring sv-ring-middle"></div>
+          <div class="sv-hero-ring sv-ring-inner"></div>
+          <div class="sv-hero-img-wrap">
+            <img src="assets/spa-facial-treatment.jpg" alt="Organic skincare collection" class="sv-hero-img" />
+          </div>
+          <div class="sv-float-tag sv-float-tag-4">
+            <i data-lucide="sparkles" aria-hidden="true"></i><span>Pure Phyto-Active</span>
+          </div>
+          <div class="sv-float-tag sv-float-tag-1">
+            <i data-lucide="leaf" aria-hidden="true"></i><span>100% Organic</span>
+          </div>
+          <div class="sv-float-tag sv-float-tag-2">
+            <i data-lucide="star" aria-hidden="true"></i><span>Award Winning</span>
+          </div>
+          <div class="sv-float-tag sv-float-tag-3">
+            <i data-lucide="heart" aria-hidden="true"></i><span>Cruelty Free</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sv-collection" id="services-collection" aria-labelledby="sv-collection-heading">
+      <div class="container">
+        <div class="sv-section-header">
+          <div class="hero-eyebrow-wrapper">
+            <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            <p class="hero-eyebrow">PREMIUM COLLECTION</p>
+          </div>
+          <h2 class="sv-section-title" id="sv-collection-heading">Our Artisanal <em>Service Collection</em></h2>
+          <p class="sv-section-desc">Each service is crafted with intention — blending ancient herbal wisdom with
+            modern skincare science to give your skin the ritual it deserves.</p>
+
+          <div class="sv-filter-bar">
+            <button class="sv-filter-btn active" data-filter="all" id="filter-all">All Services</button>
+            <button class="sv-filter-btn" data-filter="facial" id="filter-facial">Facial Rituals</button>
+            <button class="sv-filter-btn" data-filter="body" id="filter-body">Body Treatments</button>
+            <button class="sv-filter-btn" data-filter="soap" id="filter-soap">Handmade Soaps</button>
+            <button class="sv-filter-btn" data-filter="oil" id="filter-oil">Herbal Oils</button>
+          </div>
+        </div>
+        <div class="sv-cards-grid" id="sv-cards-grid" role="list">
+
+          <article class="sv-card" data-category="facial" data-service-id="1" role="listitem" id="sv-card-1">
+            <div class="sv-card-img-wrap">
+              <img src="assets/lavender-glow-facial.jpg" alt="Lavender Glow Facial" class="sv-card-img" loading="lazy" />
+              <div class="sv-card-overlay" aria-hidden="true"></div>
+              <span class="sv-card-badge">Best Seller</span>
+              <div class="sv-card-tag-wrap"><span class="sv-card-tag">Facial</span></div>
+            </div>
+            <div class="sv-card-body">
+              <div class="sv-card-meta"><span class="sv-card-rating">&#9733; 4.9</span><span
+                  class="sv-card-reviews">(142 reviews)</span></div>
+              <h3 class="sv-card-title">Lavender Glow Facial</h3>
+              <p class="sv-card-desc">A calming, antioxidant-rich facial ritual using French lavender extract,
+                hyaluronic-infused plant extracts, and cold-pressed herbal oils — leaving skin radiant and deeply
+                nourished.</p>
+              <div class="sv-card-features">
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> Deep Hydration</span>
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> Anti-Ageing</span>
+              </div>
+              <div class="sv-card-footer">
+                <div class="sv-card-price"><span class="sv-price-from">From</span><span class="sv-price-val">$89</span>
+                </div>
+                <button class="sv-card-btn" id="sv-card-btn-1" data-service-id="1">View Service <i
+                    data-lucide="arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sv-card" data-category="oil" data-service-id="2" role="listitem" id="sv-card-2">
+            <div class="sv-card-img-wrap">
+              <img src="assets/rosehip-elixir.jpg" alt="Rosehip Oil Elixir" class="sv-card-img" loading="lazy" />
+              <div class="sv-card-overlay" aria-hidden="true"></div>
+              <span class="sv-card-badge sv-badge-new">New Formula</span>
+              <div class="sv-card-tag-wrap"><span class="sv-card-tag">Herbal Oil</span></div>
+            </div>
+            <div class="sv-card-body">
+              <div class="sv-card-meta"><span class="sv-card-rating">&#9733; 4.8</span><span class="sv-card-reviews">(98
+                  reviews)</span></div>
+              <h3 class="sv-card-title">Rosehip Oil Elixir</h3>
+              <p class="sv-card-desc">Pure cold-pressed rosehip seed oil blended with vitamin C-rich plant extracts
+                to brighten complexion, fade dark spots, and restore youthful skin elasticity naturally.</p>
+              <div class="sv-card-features">
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> Brightening</span>
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> Vitamin C Rich</span>
+              </div>
+              <div class="sv-card-footer">
+                <div class="sv-card-price"><span class="sv-price-from">From</span><span class="sv-price-val">$64</span>
+                </div>
+                <button class="sv-card-btn" id="sv-card-btn-2" data-service-id="2">View Service <i
+                    data-lucide="arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sv-card" data-category="body" data-service-id="3" role="listitem" id="sv-card-3">
+            <div class="sv-card-img-wrap">
+              <img src="assets/shea-body-butter.jpg" alt="Shea Body Butter Ritual" class="sv-card-img" loading="lazy" />
+              <div class="sv-card-overlay" aria-hidden="true"></div>
+              <div class="sv-card-tag-wrap"><span class="sv-card-tag">Body Treatment</span></div>
+            </div>
+            <div class="sv-card-body">
+              <div class="sv-card-meta"><span class="sv-card-rating">&#9733; 4.9</span><span
+                  class="sv-card-reviews">(211 reviews)</span></div>
+              <h3 class="sv-card-title">Shea Body Butter Ritual</h3>
+              <p class="sv-card-desc">Luxuriously whipped shea butter infused with vanilla, cocoa, and healing herbal
+                extracts. Melts into skin leaving an impossibly soft, deeply moisturized feel for 24 hours.</p>
+              <div class="sv-card-features">
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> 24hr Moisture</span>
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> Vegan Formula</span>
+              </div>
+              <div class="sv-card-footer">
+                <div class="sv-card-price"><span class="sv-price-from">From</span><span class="sv-price-val">$52</span>
+                </div>
+                <button class="sv-card-btn" id="sv-card-btn-3" data-service-id="3">View Service <i
+                    data-lucide="arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sv-card" data-category="soap" data-service-id="4" role="listitem" id="sv-card-4">
+            <div class="sv-card-img-wrap">
+              <img src="assets/soap-lavender-oat.jpg" alt="Lavender Oat Soap Bar" class="sv-card-img" loading="lazy" />
+              <div class="sv-card-overlay" aria-hidden="true"></div>
+              <span class="sv-card-badge sv-badge-organic">100% Organic</span>
+              <div class="sv-card-tag-wrap"><span class="sv-card-tag">Handmade Soap</span></div>
+            </div>
+            <div class="sv-card-body">
+              <div class="sv-card-meta"><span class="sv-card-rating">&#9733; 5.0</span><span
+                  class="sv-card-reviews">(327 reviews)</span></div>
+              <h3 class="sv-card-title">Lavender &amp; Oat Soap Bar</h3>
+              <p class="sv-card-desc">Cold-cured for 6 weeks with French lavender flowers, colloidal oats, and organic
+                olive oil. Gentle for sensitive skin with a creamy, skin-nourishing lather.</p>
+              <div class="sv-card-features">
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> Sensitive Skin</span>
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> Cold Cured</span>
+              </div>
+              <div class="sv-card-footer">
+                <div class="sv-card-price"><span class="sv-price-from">From</span><span class="sv-price-val">$14</span>
+                </div>
+                <button class="sv-card-btn" id="sv-card-btn-4" data-service-id="4">View Service <i
+                    data-lucide="arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sv-card" data-category="facial" data-service-id="5" role="listitem" id="sv-card-5">
+            <div class="sv-card-img-wrap">
+              <img src="assets/lavender-hydrosol-mist.jpg" alt="Forest Mist Hydrosol Toner" class="sv-card-img" loading="lazy" />
+              <div class="sv-card-overlay" aria-hidden="true"></div>
+              <div class="sv-card-tag-wrap"><span class="sv-card-tag">Facial Ritual</span></div>
+            </div>
+            <div class="sv-card-body">
+              <div class="sv-card-meta"><span class="sv-card-rating">&#9733; 4.7</span><span
+                  class="sv-card-reviews">(189 reviews)</span></div>
+              <h3 class="sv-card-title">Forest Mist Hydrosol Toner</h3>
+              <p class="sv-card-desc">A refreshing face mist infused with wild pine hydrosol, witch hazel, and alpine
+                spring water. Balances skin pH, tightens pores, and provides an instant dewy refresh.</p>
+              <div class="sv-card-features">
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> pH Balance</span>
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> Pore Tightening</span>
+              </div>
+              <div class="sv-card-footer">
+                <div class="sv-card-price"><span class="sv-price-from">From</span><span class="sv-price-val">$38</span>
+                </div>
+                <button class="sv-card-btn" id="sv-card-btn-5" data-service-id="5">View Service <i
+                    data-lucide="arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sv-card" data-category="soap" data-service-id="6" role="listitem" id="sv-card-6">
+            <div class="sv-card-img-wrap">
+              <img src="assets/soap-craft.jpg" alt="Artisan Soap Craft Workshop" class="sv-card-img" loading="lazy" />
+              <div class="sv-card-overlay" aria-hidden="true"></div>
+              <span class="sv-card-badge sv-badge-popular">Popular</span>
+              <div class="sv-card-tag-wrap"><span class="sv-card-tag">Workshop</span></div>
+            </div>
+            <div class="sv-card-body">
+              <div class="sv-card-meta"><span class="sv-card-rating">&#9733; 4.9</span><span class="sv-card-reviews">(76
+                  reviews)</span></div>
+              <h3 class="sv-card-title">Artisan Soap Craft Workshop</h3>
+              <p class="sv-card-desc">An immersive hands-on workshop teaching the ancient art of cold-process
+                soap-making using organic herbs, essential oils, and natural colorants. Take home your creations.
+              </p>
+              <div class="sv-card-features">
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> Hands-On</span>
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> Take Home Kit</span>
+              </div>
+              <div class="sv-card-footer">
+                <div class="sv-card-price"><span class="sv-price-from">From</span><span class="sv-price-val">$120</span>
+                </div>
+                <button class="sv-card-btn" id="sv-card-btn-6" data-service-id="6">View Service <i
+                    data-lucide="arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sv-card" data-category="facial" data-service-id="7" role="listitem" id="sv-card-7">
+            <div class="sv-card-img-wrap">
+              <img src="assets/skin-mist-face.jpg" alt="Phyto-Active Serum Treatment" class="sv-card-img" loading="lazy" />
+              <div class="sv-card-overlay" aria-hidden="true"></div>
+              <div class="sv-card-tag-wrap"><span class="sv-card-tag">Serum</span></div>
+            </div>
+            <div class="sv-card-body">
+              <div class="sv-card-meta"><span class="sv-card-rating">&#9733; 4.8</span><span
+                  class="sv-card-reviews">(154 reviews)</span></div>
+              <h3 class="sv-card-title">Phyto-Active Serum Treatment</h3>
+              <p class="sv-card-desc">A concentrated phyto-serum with 12 active plant compounds, retinol
+                alternatives, and peptide-rich herbal extracts. Visibly reduces fine lines and restores natural
+                radiance.</p>
+              <div class="sv-card-features">
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> Anti-Wrinkle</span>
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> 12 Plant Actives</span>
+              </div>
+              <div class="sv-card-footer">
+                <div class="sv-card-price"><span class="sv-price-from">From</span><span class="sv-price-val">$76</span>
+                </div>
+                <button class="sv-card-btn" id="sv-card-btn-7" data-service-id="7">View Service <i
+                    data-lucide="arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+          <article class="sv-card" data-category="body" data-service-id="8" role="listitem" id="sv-card-8">
+            <div class="sv-card-img-wrap">
+              <img src="assets/skin-shea-face.jpg" alt="Shea Radiance Face Treatment" class="sv-card-img"
+                loading="lazy" />
+              <div class="sv-card-overlay" aria-hidden="true"></div>
+              <span class="sv-card-badge sv-badge-luxury">Luxury</span>
+              <div class="sv-card-tag-wrap"><span class="sv-card-tag">Face Treatment</span></div>
+            </div>
+            <div class="sv-card-body">
+              <div class="sv-card-meta"><span class="sv-card-rating">&#9733; 5.0</span><span class="sv-card-reviews">(93
+                  reviews)</span></div>
+              <h3 class="sv-card-title">Shea Radiance Face Treatment</h3>
+              <p class="sv-card-desc">A luxurious shea-based facial treatment enriched with gold-infused plant
+                extracts, hyaluronic acid, and precious plant stem cells. The ultimate anti-ageing herbal ritual.</p>
+              <div class="sv-card-features">
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> Gold Infused</span>
+                <span class="sv-feature-chip"><i data-lucide="check" aria-hidden="true"></i> Stem Cell Active</span>
+              </div>
+              <div class="sv-card-footer">
+                <div class="sv-card-price"><span class="sv-price-from">From</span><span class="sv-price-val">$145</span>
+                </div>
+                <button class="sv-card-btn" id="sv-card-btn-8" data-service-id="8">View Service <i
+                    data-lucide="arrow-right" aria-hidden="true"></i></button>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="sv-ritual-process" id="sv-ritual-process" aria-labelledby="sv-process-heading">
+      <div class="sv-ritual-bg" aria-hidden="true">
+        <div class="sv-ritual-shape sv-shape-1"></div>
+        <div class="sv-ritual-shape sv-shape-2"></div>
+      </div>
+      <div class="container">
+        <div class="sv-section-header">
+          <div class="sv-eyebrow-wrapper sv-eyebrow-light-wrap">
+            <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            <p class="hero-eyebrow sv-eyebrow-light-text">THE ARTISAN EXPERIENCE</p>
+          </div>
+          <h2 class="sv-section-title sv-title-light" id="sv-process-heading">Your Ritual, <em>Our Promise</em></h2>
+          <p class="sv-section-desc sv-desc-light">Every Haridra Rituals service follows a sacred four-step protocol —
+            from earth to skin — ensuring the purest, most effective skin transformation.</p>
+        </div>
+        <div class="sv-process-grid">
+          <div class="sv-process-step" id="sv-step-1">
+            <div class="sv-step-num">01</div>
+            <div class="sv-step-icon-wrap"><i data-lucide="search" aria-hidden="true"></i></div>
+            <h3 class="sv-step-title">Skin Discovery</h3>
+            <p class="sv-step-desc">We begin with a detailed skin analysis to understand your unique skin type,
+              concerns, and goals. Every ritual starts with listening.</p>
+          </div>
+          <div class="sv-process-connector" aria-hidden="true">
+            <div class="sv-connector-line"></div>
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </div>
+          <div class="sv-process-step" id="sv-step-2">
+            <div class="sv-step-num">02</div>
+            <div class="sv-step-icon-wrap"><i data-lucide="flask-conical" aria-hidden="true"></i></div>
+            <h3 class="sv-step-title">Phyto-Active Formulation</h3>
+            <p class="sv-step-desc">Our herbalists hand-select and blend the finest organic herbs specifically for
+              your skin, creating a personalized formula.</p>
+          </div>
+          <div class="sv-process-connector" aria-hidden="true">
+            <div class="sv-connector-line"></div>
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </div>
+          <div class="sv-process-step" id="sv-step-3">
+            <div class="sv-step-num">03</div>
+            <div class="sv-step-icon-wrap"><i data-lucide="sparkles" aria-hidden="true"></i></div>
+            <h3 class="sv-step-title">The Ritual Application</h3>
+            <p class="sv-step-desc">Experience the immersive ritual application — a mindful process designed to nourish
+              your skin and calm your senses simultaneously.</p>
+          </div>
+          <div class="sv-process-connector" aria-hidden="true">
+            <div class="sv-connector-line"></div>
+            <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </div>
+          <div class="sv-process-step" id="sv-step-4">
+            <div class="sv-step-num">04</div>
+            <div class="sv-step-icon-wrap"><i data-lucide="sun" aria-hidden="true"></i></div>
+            <h3 class="sv-step-title">Radiant Results</h3>
+            <p class="sv-step-desc">Walk away with visibly transformed skin and a personalized aftercare ritual guide to
+              maintain your glow at home.</p>
+          </div>
+        </div>
+        <div class="sv-trust-bar">
+          <div class="sv-trust-item"><i data-lucide="shield-check" aria-hidden="true"></i><span>Certified Organic</span>
+          </div>
+          <div class="sv-trust-item"><i data-lucide="heart" aria-hidden="true"></i><span>Cruelty Free</span></div>
+          <div class="sv-trust-item"><i data-lucide="recycle" aria-hidden="true"></i><span>Eco Packaged</span></div>
+          <div class="sv-trust-item"><i data-lucide="award" aria-hidden="true"></i><span>Award Winning</span></div>
+          <div class="sv-trust-item"><i data-lucide="leaf" aria-hidden="true"></i><span>100% Plant-Active</span></div>
+          <div class="sv-trust-item"><i data-lucide="truck" aria-hidden="true"></i><span>Free Shipping $50+</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sv-heritage" id="sv-heritage" aria-labelledby="sv-heritage-heading">
+      <div class="container sv-heritage-inner">
+        <div class="sv-heritage-content">
+          <div class="hero-eyebrow-wrapper">
+            <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            <p class="hero-eyebrow">OUR HERBAL HERITAGE</p>
+          </div>
+          <h2 class="sv-heritage-title" id="sv-heritage-heading">Ancient Wisdom Meets <em>Modern Science</em></h2>
+          <p class="sv-heritage-para">For centuries, whole-plant ingredients have been at the heart of the world's most
+            powerful skincare rituals. At Haridra Rituals, we honour these time-tested traditions while harnessing the
+            precision of modern green science.</p>
+          <div class="sv-ingredient-list">
+            <div class="sv-ingredient-item">
+              <div class="sv-ingredient-icon"><img src="assets/aloe vera.webp" alt="Aloe Vera" /></div>
+              <div class="sv-ingredient-info"><span class="sv-ingredient-name">Aloe Vera</span><span
+                  class="sv-ingredient-desc">Soothing &amp; Hydrating</span></div>
+            </div>
+            <div class="sv-ingredient-item">
+              <div class="sv-ingredient-icon"><img src="assets/ingredient-neem.jpg" alt="Neem" /></div>
+              <div class="sv-ingredient-info"><span class="sv-ingredient-name">Neem Leaf</span><span
+                  class="sv-ingredient-desc">Purifying &amp; Anti-bacterial</span></div>
+            </div>
+            <div class="sv-ingredient-item">
+              <div class="sv-ingredient-icon"><img src="assets/ingredient-sandalwood.jpg" alt="Sandalwood" /></div>
+              <div class="sv-ingredient-info"><span class="sv-ingredient-name">Sandalwood</span><span
+                  class="sv-ingredient-desc">Calming &amp; Brightening</span></div>
+            </div>
+            <div class="sv-ingredient-item">
+              <div class="sv-ingredient-icon"><img src="assets/ingredient-turmeric.jpg" alt="Turmeric" /></div>
+              <div class="sv-ingredient-info"><span class="sv-ingredient-name">Turmeric</span><span
+                  class="sv-ingredient-desc">Anti-inflammatory &amp; Glow</span></div>
+            </div>
+          </div>
+          <a href="#services-cards" class="btn btn-primary sv-heritage-cta" id="sv-heritage-cta">
+            Explore All Services <i data-lucide="arrow-right" aria-hidden="true"></i>
+          </a>
+        </div>
+        <div class="sv-heritage-visual">
+          <div class="sv-heritage-img-grid">
+            <div class="sv-heritage-img-card sv-img-main">
+              <img src="assets/hero-apothecary.jpg" alt="Organic skincare ingredients" loading="lazy" />
+              <div class="sv-heritage-img-label"><i data-lucide="flower-2"></i> Clean Ingredients</div>
+            </div>
+            <div class="sv-heritage-img-card sv-img-sm-1">
+              <img src="assets/soap-craft.jpg" alt="Handcrafted soap process" loading="lazy" />
+              <div class="sv-heritage-img-label"><i data-lucide="sparkles"></i> Small Batch</div>
+            </div>
+            <div class="sv-heritage-img-card sv-img-sm-2">
+              <img src="assets/organic-face-cream-ritual.jpg" alt="Body butter ritual" loading="lazy" />
+            </div>
+          </div>
+          <div class="sv-heritage-badge">
+            <div class="sv-heritage-badge-inner">
+              <div class="sv-heritage-badge-ring" aria-hidden="true"></div>
+              <span class="sv-heritage-badge-num">20+</span>
+              <span class="sv-heritage-badge-label">Years of<br />Herbal Craft</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sv-cta-strip" id="sv-cta-strip" aria-labelledby="sv-cta-heading">
+      <div class="container">
+        <div class="sv-cta-card">
+
+          <div class="sv-cta-card-bg" aria-hidden="true">
+            <div class="sv-cta-glow sv-cta-glow-1"></div>
+            <div class="sv-cta-glow sv-cta-glow-2"></div>
+          </div>
+
+          <div class="sv-cta-inner">
+            <div class="sv-cta-content">
+              <div class="hero-eyebrow-wrapper sv-eyebrow-light-wrap">
+                <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+                <p class="hero-eyebrow sv-eyebrow-light-text">START YOUR RITUAL TODAY</p>
+              </div>
+              <h2 class="sv-cta-heading" id="sv-cta-heading">
+                Ready to Transform<br /><em>Your Skin Ritual?</em>
+              </h2>
+              <p class="sv-cta-desc">
+                Book a complimentary consultation with our expert botanists and discover the perfect ritual tailored for
+                your skin.
+              </p>
+              <div class="sv-cta-actions">
+                <a href="contact.html" class="btn sv-cta-btn-primary" id="sv-cta-book-btn">
+                  Book Free Consultation <i data-lucide="calendar" aria-hidden="true"></i>
+                </a>
+                <a href="#services-collection" class="btn sv-cta-btn-outline" id="sv-cta-browse-btn">
+                  Browse Services <i data-lucide="arrow-right" aria-hidden="true"></i>
+                </a>
+              </div>
+            </div>
+
+            <div class="sv-cta-visual">
+              <div class="sv-cta-img-wrap">
+                <div class="sv-cta-img-frame">
+                  <img src="assets/skin-rosehip-face.jpg" alt="Organic skincare ritual application" class="sv-cta-img" />
+                </div>
+                <div class="sv-cta-float-badge">
+                  <div class="sv-cta-badge-icon">
+                    <i data-lucide="sparkles" aria-hidden="true"></i>
+                  </div>
+                  <div class="sv-cta-badge-text">
+                    <strong>Complimentary Gift</strong>
+                    <span>With 1st Consultation</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-top-inner">
+
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo" aria-label="Haridra Rituals Home">
+          <div class="logo-mark" aria-hidden="true">
+            <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Haridra Rituals</span>
+            <span class="logo-tagline">Rooted in Nature. Crafted with Care.</span>
+          </div>
+        </a>
+        <p class="footer-desc">
+          Thoughtfully crafted skincare and handmade soaps inspired by nature, organic plant actives and everyday
+          self-care rituals.
+        </p>
+
+        <div class="footer-social" aria-label="Social media links">
+          <a href="https://instagram.com" class="social-link" id="social-instagram" aria-label="Instagram"
+            target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://facebook.com" class="social-link" id="social-facebook" aria-label="Facebook" target="_blank"
+            rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          </a>
+          <a href="https://youtube.com" class="social-link" id="social-youtube" aria-label="YouTube" target="_blank"
+            rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+              </path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <nav class="footer-nav-col" aria-label="Explore navigation">
+        <h3 class="footer-col-title">Explore</h3>
+        <ul role="list">
+          <li><a href="index.html" class="footer-link">Home 1</a></li>
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="services.html" class="footer-link">Services</a></li>
+          <li><a href="journals.html" class="footer-link">Journals</a></li>
+          <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav-col" aria-label="Customer care navigation">
+        <h3 class="footer-col-title">Customer Care</h3>
+        <ul role="list">
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+          <li><a href="pricing.html#faqs" class="footer-link">Shipping</a></li>
+          <li><a href="pricing.html#faqs" class="footer-link">Returns</a></li>
+          <li><a href="pricing.html#faqs" class="footer-link">FAQs</a></li>
+          <li><a href="contact.html" class="footer-link">Privacy Policy</a></li>
+        </ul>
+      </nav>
+
+      <nav class="footer-nav-col" aria-label="Additional information navigation">
+        <h3 class="footer-col-title">Additional Information</h3>
+        <ul role="list">
+          <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+          <li><a href="404.html" class="footer-link">404</a></li>
+          <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+        </ul>
+      </nav>
+
+      <div class="footer-contact">
+        <h3 class="footer-col-title">Contact Details</h3>
+        <ul class="contact-list" role="list">
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg>
+            </span>
+            <span class="contact-text">Online Botanical Apothecary</span>
+          </li>
+          <li class="contact-item">
+            <a href="tel:9999988888" class="contact-link">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg>
+              </span>
+              <span class="contact-text">9999988888</span>
+            </a>
+          </li>
+          <li class="contact-item">
+            <a href="mailto:dummy@haridrarituals.com" class="contact-link">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </span>
+              <span class="contact-text">dummy@haridrarituals.com</span>
+            </a>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg>
+            </span>
+            <span class="contact-text">Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM PST</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="footer-copy">&copy; 2026 Haridra Rituals. All Rights Reserved.</p>
+        <nav class="footer-legal" aria-label="Legal navigation">
+          <a href="#privacy" class="footer-legal-link">Privacy</a>
+          <span class="legal-dot">&bull;</span>
+          <a href="#terms" class="footer-legal-link">Terms</a>
+          <span class="legal-dot">&bull;</span>
+          <a href="#cookies" class="footer-legal-link">Cookies</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="home1.js" defer></script>
+  <script src="services.js" defer></script>
+</body>
+
+</html>

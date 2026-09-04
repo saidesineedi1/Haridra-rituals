@@ -1,0 +1,122 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Coming Soon — Haridra Rituals Organic Skincare. A sacred new botanical formula is blooming soon. Subscribe for exclusive early access." />
+  <title>Coming Soon — Haridra Rituals | Botanical Skincare</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="coming-soon.css" />
+</head>
+
+<body class="cs-body">
+
+  <div class="cs-orbs-bg" aria-hidden="true">
+    <div class="cs-orb cs-orb-1"></div>
+    <div class="cs-orb cs-orb-2"></div>
+    <div class="cs-orb cs-orb-3"></div>
+  </div>
+
+  <header class="cs-top-bar" role="banner">
+    <div class="cs-top-inner">
+      
+      <a href="index.html" class="cs-brand-logo" title="Redirect to Haridra Rituals Home 1">
+        <div class="logo-mark" aria-hidden="true">
+          <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+        </div>
+        <div class="cs-brand-text">
+          <span class="cs-brand-title">Haridra Rituals</span>
+          <span class="cs-brand-sub">Rooted in Nature</span>
+        </div>
+      </a>
+
+      <div class="cs-toggles">
+        
+        <button class="toggle-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle text direction" aria-pressed="false" title="Switch text direction (RTL / LTR)">
+          <span class="toggle-label">RTL</span></button>
+
+        <button class="toggle-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle light and dark mode">
+          <span class="theme-icon sun-icon"><i data-lucide="sun" aria-hidden="true"></i></span>
+          <span class="theme-icon moon-icon"><i data-lucide="moon" aria-hidden="true"></i></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="cs-main">
+    <div class="cs-container">
+      
+      <div class="cs-card">
+        
+        <div class="cs-eyebrow-wrapper">
+          <span class="cs-sparkle-icon"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+          <p class="cs-eyebrow">UNVEILING SOON &bull; BOTANICAL ESSENCE</p>
+        </div>
+
+        <h1 class="cs-title">A Sacred Botanical Ritual is Blooming</h1>
+        <p class="cs-desc">
+          Our master herbalists in Provence &amp; the French Alps are hand-churning our newest cold-pressed organic elixir. Prepare your skin for pure radiance.
+        </p>
+
+        <div class="cs-countdown-grid" id="cs-countdown" role="timer" aria-live="polite">
+          <div class="cs-timer-box">
+            <span class="cs-timer-num" id="cd-days">24</span>
+            <span class="cs-timer-unit">Days</span>
+          </div>
+          <div class="cs-timer-sep">:</div>
+          <div class="cs-timer-box">
+            <span class="cs-timer-num" id="cd-hours">18</span>
+            <span class="cs-timer-unit">Hours</span>
+          </div>
+          <div class="cs-timer-sep">:</div>
+          <div class="cs-timer-box">
+            <span class="cs-timer-num" id="cd-mins">42</span>
+            <span class="cs-timer-unit">Minutes</span>
+          </div>
+          <div class="cs-timer-sep">:</div>
+          <div class="cs-timer-box">
+            <span class="cs-timer-num" id="cd-secs">59</span>
+            <span class="cs-timer-unit">Seconds</span>
+          </div>
+        </div>
+
+        <form class="cs-subscribe-form" onsubmit="handleCsSubscribe(event)">
+          <div class="cs-input-group">
+            <i data-lucide="mail" class="cs-input-icon" aria-hidden="true"></i>
+            <input type="email" id="cs-email" class="cs-input" placeholder="Enter your email for early access..." required />
+            <button type="submit" class="btn btn-primary cs-submit-btn">
+              <span>Join Waitlist</span>
+              <i data-lucide="arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+          <p class="cs-form-note"><i data-lucide="shield-check" aria-hidden="true"></i> Receive a 20% launch voucher &bull; Zero spam</p>
+        </form>
+
+        <div class="cs-actions">
+          <a href="index.html" class="btn btn-secondary cs-btn-store">
+            <i data-lucide="shopping-bag" aria-hidden="true"></i>
+            <span>Back to Store</span>
+          </a>
+        </div>
+
+      </div>
+
+    </div>
+  </main>
+
+  <script src="home1.js" defer></script>
+  <script src="coming-soon.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,884 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="About Haridra Rituals — Discover our story, 6 core values, leadership team, and milestone timeline. Handcrafted organic skincare rooted in nature." />
+  <meta name="keywords"
+    content="about Haridra Rituals, organic skincare brand story, team cards, botanical skincare timeline, natural beauty founders" />
+  <title>About Us — Haridra Rituals | Rooted in Nature. Crafted with Care.</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="about.css" />
+</head>
+
+<body>
+
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner container">
+
+      <a href="index.html" class="logo" aria-label="Haridra Rituals Home" id="logo-link">
+        <div class="logo-mark" aria-hidden="true">
+          <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Haridra Rituals</span>
+          <span class="logo-tagline">Rooted in Nature. Crafted with Care.</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li class="nav-item has-dropdown" id="nav-home-item">
+            <a href="index.html" class="nav-link nav-dropdown-trigger" id="nav-home" aria-expanded="false"
+              aria-haspopup="true">
+              <span>Home</span>
+              <i data-lucide="chevron-down" class="dropdown-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="nav-dropdown-menu" role="menu" aria-label="Home versions">
+              <a href="index.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">
+                  <i data-lucide="sparkles" aria-hidden="true"></i>
+                </div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-header">
+                    <span class="dropdown-item-title">Home 1</span>
+                    <span class="dropdown-badge">Current</span>
+                  </div>
+                  <span class="dropdown-item-desc">Haridra Rituals &bull; Botanical Skincare</span>
+                </div>
+              </a>
+              <a href="home2.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon icon-ayurveda">
+                  <i data-lucide="leaf" aria-hidden="true"></i>
+                </div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-header">
+                    <span class="dropdown-item-title">Home 2</span>
+                    <span class="dropdown-badge badge-alt">New</span>
+                  </div>
+                  <span class="dropdown-item-desc">GlowVeda &bull; Ayurvedic Formulas</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li><a href="about.html" class="nav-link active" id="nav-about">About</a></li>
+          <li><a href="services.html" class="nav-link" id="nav-services">Services</a></li>
+          <li><a href="pricing.html" class="nav-link" id="nav-pricing">Pricing</a></li>
+          <li><a href="journals.html" class="nav-link" id="nav-journal">Journal</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link" id="nav-dashboard">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions" role="toolbar" aria-label="Site actions">
+        <button class="toggle-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle text direction" aria-pressed="false"
+          title="Switch text direction (RTL / LTR)">
+          <span class="toggle-label">RTL</span></button>
+
+        <button class="toggle-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false"
+          title="Toggle light and dark mode">
+          <span class="theme-icon sun-icon"><i data-lucide="sun" aria-hidden="true"></i></span>
+          <span class="theme-icon moon-icon"><i data-lucide="moon" aria-hidden="true"></i></span>
+        </button>
+
+        <a href="login.html" class="nav-login-btn">Login</a>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Open mobile menu" aria-expanded="false"
+          aria-controls="main-nav">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Search" hidden>
+      <div class="search-inner">
+        <div class="search-input-box">
+          <i data-lucide="search" class="search-input-icon" aria-hidden="true"></i>
+          <input type="search" class="search-input" id="search-input"
+            placeholder="Search soaps, face oils, toners, rituals..." aria-label="Search botanical products"
+            autocomplete="off" />
+          <button class="search-close" id="search-close" aria-label="Close search">
+            <i data-lucide="x" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="search-suggestions" id="search-suggestions">
+          <span class="sugg-label">Popular Searches:</span>
+          <button class="sugg-pill" data-query="Lavender">Lavender Soap</button>
+          <button class="sugg-pill" data-query="Rosehip">Rosehip Oil</button>
+          <button class="sugg-pill" data-query="Body Butter">Body Butter</button>
+          <button class="sugg-pill" data-query="Mist">Forest Mist</button>
+        </div>
+        <div class="search-results-list" id="search-results-list"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <span class="logo-name">Haridra Rituals</span>
+      <button class="icon-btn mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item has-dropdown" id="mobile-nav-home-item">
+        <button class="mobile-nav-link mobile-dropdown-btn" id="mobile-home-toggle" aria-expanded="false">
+          <span>Home</span>
+          <i data-lucide="chevron-down" class="mobile-dropdown-chevron" aria-hidden="true"></i>
+        </button>
+        <ul class="mobile-submenu" id="mobile-home-submenu">
+          <li>
+            <a href="index.html" class="mobile-sublink">
+              <i data-lucide="sparkles" aria-hidden="true"></i>
+              <span>Home 1 (Haridra Rituals)</span>
+            </a>
+          </li>
+          <li>
+            <a href="home2.html" class="mobile-sublink">
+              <i data-lucide="leaf" aria-hidden="true"></i>
+              <span>Home 2 (GlowVeda)</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="about.html" class="mobile-nav-link active">About</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li><a href="journals.html" class="mobile-nav-link">Journal</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+    </ul>
+    
+    <div class="mobile-drawer-actions">
+      <div class="mobile-actions-grid">
+        <button class="mobile-action-card cart-action-card" onclick="if(typeof openCartDrawer==='function')openCartDrawer();" aria-label="Open Shopping Bag">
+          <div class="mobile-card-icon-wrap">
+            <i data-lucide="shopping-bag" aria-hidden="true"></i>
+            <span class="mobile-cart-badge cart-count-badge">0</span>
+          </div>
+          <div class="mobile-card-text">
+            <span class="mobile-card-title">Shopping Bag</span>
+            <span class="mobile-card-sub">View Rituals</span>
+          </div>
+        </button>
+        <a href="login.html" class="mobile-action-card account-action-card" aria-label="Go to Member Portal">
+          <div class="mobile-card-icon-wrap user-icon-wrap">
+            <i data-lucide="user" aria-hidden="true"></i>
+          </div>
+          <div class="mobile-card-text">
+            <span class="mobile-card-title">Member Portal</span>
+            <span class="mobile-card-sub">Log In / Sign Up</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <p class="mobile-nav-tagline">“Rooted in Nature. Crafted with Care.”</p>
+    </div>
+  </div>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+
+  <aside class="cart-drawer" id="cart-drawer" role="dialog" aria-modal="true" aria-label="Shopping Bag" hidden>
+    <div class="cart-drawer-header">
+      <div class="cart-drawer-title">
+        <i data-lucide="shopping-bag" aria-hidden="true"></i>
+        <h2>Your Ritual Bag</h2>
+        <span class="cart-drawer-count">(<span id="drawer-item-count">0</span> items)</span>
+      </div>
+      <button class="cart-drawer-close" id="cart-drawer-close" aria-label="Close shopping bag">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+
+    <div class="cart-drawer-body" id="cart-drawer-body">
+      <div class="cart-empty" id="cart-empty">
+        <div class="cart-empty-icon">
+          <i data-lucide="flower-2" aria-hidden="true"></i>
+        </div>
+        <p class="cart-empty-text">Your ritual bag is currently empty.</p>
+        <p class="cart-empty-sub">Explore our handcrafted botanical collection and treat your skin.</p>
+        <a href="index.html#shop" class="btn btn-primary btn-sm" id="cart-empty-cta">Discover Collection</a>
+      </div>
+      <div class="cart-items-list" id="cart-items-list"></div>
+    </div>
+
+    <div class="cart-drawer-footer" id="cart-drawer-footer">
+      <div class="cart-summary-row">
+        <span>Subtotal</span>
+        <span class="cart-subtotal" id="cart-subtotal">$0.00</span>
+      </div>
+      <p class="cart-shipping-note">Free standard shipping on all organic rituals over $50.</p>
+      <button class="btn btn-primary btn-full" id="cart-checkout-btn">
+        Proceed to Checkout
+        <i data-lucide="arrow-right" aria-hidden="true"></i>
+      </button>
+    </div>
+  </aside>
+  <div class="cart-drawer-backdrop" id="cart-drawer-backdrop" aria-hidden="true"></div>
+
+  <main id="main-content">
+
+    <section class="about-hero" id="about-hero" aria-labelledby="about-hero-heading">
+      
+      <div class="hero-mesh-bg" aria-hidden="true">
+        <div class="hero-glow-blob glow-sage"></div>
+        <div class="hero-glow-blob glow-lavender"></div>
+        <div class="hero-glow-blob glow-cream"></div>
+      </div>
+
+      <div class="container about-hero-inner">
+        
+        <div class="about-hero-content">
+          <nav class="breadcrumb-trail" aria-label="Breadcrumb">
+          </nav>
+
+          <div class="hero-eyebrow-wrapper">
+            <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            <p class="hero-eyebrow">ORGANIC SKINCARE &bull; SANCTUARY OF NATURE</p>
+          </div>
+
+          <h1 class="hero-heading" id="about-hero-heading">
+            Rooted in Purity.<br />
+            <em>Crafted with Intent.</em>
+          </h1>
+
+          <p class="hero-body">
+            We are a small-batch organic studio born in the mountain air of Ojai, crafting living herbal elixirs,
+            cold-cured soaps, and restorative rituals that nourish your physical barrier while grounding your daily
+            life.
+          </p>
+
+          <div class="about-hero-pills">
+            <div class="hero-pill-badge">
+              <i data-lucide="sun" aria-hidden="true"></i>
+              <span>100% Organic Sourced</span>
+            </div>
+            <div class="hero-pill-badge">
+              <i data-lucide="heart" aria-hidden="true"></i>
+              <span>Leaping Bunny Cruelty-Free</span>
+            </div>
+          </div>
+
+          <div class="hero-actions-group">
+            <a href="#story" class="btn btn-primary" id="hero-btn-story">
+              Discover Our Journey
+              <i data-lucide="arrow-down" class="btn-icon" aria-hidden="true"></i>
+            </a>
+            <a href="index.html#shop" class="btn btn-outline" id="hero-btn-shop">
+              Explore Formulations
+            </a>
+          </div>
+        </div>
+
+        <div class="about-hero-visual">
+          <div class="unique-visual-stack">
+
+            <div class="hero-main-card">
+              <img src="assets/soap-craft.jpg" alt="Artisan hand-crafting organic herbal soaps" class="hero-main-img"
+                loading="eager" />
+              <div class="hero-main-overlay"></div>
+              <div class="hero-live-tag">
+                <span class="live-dot"></span>
+                <span>Ojai Organic Apothecary &bull; Handcrafted Daily</span>
+              </div>
+            </div>
+
+            <div class="hero-sub-card">
+              <img src="assets/hero-apothecary.jpg" alt="Pure lavender oils and herbal creams" class="hero-sub-img"
+                loading="lazy" />
+            </div>
+
+            <div class="hero-rotating-badge" aria-label="Artisan Heritage Craft">
+              <div class="badge-ring-box">
+                <svg viewBox="0 0 130 130" class="badge-svg-ring" aria-hidden="true">
+                  <path id="unique-badge-path" d="M 65,65 m -44,0 a 44,44 0 1,1 88,0 a 44,44 0 1,1 -88,0" fill="none" />
+                  <text font-size="9.2" font-family="'Plus Jakarta Sans', sans-serif" letter-spacing="3.0"
+                    fill="currentColor" font-weight="600">
+                    <textPath href="#unique-badge-path" startOffset="0%">
+                      ARTISAN &bull; HERITAGE &bull; CRAFTED &bull;
+                    </textPath>
+                  </text>
+                </svg>
+                <div class="badge-center-icon">
+                  <i data-lucide="flower-2" aria-hidden="true"></i>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-story-section" id="story" aria-labelledby="story-heading">
+      <div class="container">
+        <div class="story-grid">
+          <div class="story-visual-col">
+            <div class="story-card-composition">
+              <div class="story-img-main-wrap">
+                <img src="assets/hero2-elixir.jpg" alt="Cold-pressed organic lavender oil in amber bottle"
+                  class="story-img-main" loading="lazy" />
+              </div>
+              <div class="story-img-sub-wrap">
+                <img src="assets/hero2-cream.jpg" alt="Pure whipped shea body butter jar" class="story-img-sub"
+                  loading="lazy" />
+              </div>
+              <div class="story-floating-card">
+                <div class="story-float-icon"><i data-lucide="sprout" aria-hidden="true"></i></div>
+                <div class="story-float-text">
+                  <strong>6-Week Cold Process</strong>
+                  <span>Traditional Curing Method</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="story-content-col">
+            <p class="section-eyebrow">
+              <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+              Our Origin Story
+            </p>
+            <h2 class="section-title" id="story-heading">From a Mountain Studio to <em>Your Daily Ritual</em></h2>
+
+            <p class="about-body">
+              Haridra Rituals began in a sunlit studio surrounded by lavender fields in Ojai, California. Frustrated
+              by synthetic fillers and harsh chemical preservatives hidden behind "clean" labels, our founders set out
+              to return skincare back to its purest roots.
+            </p>
+            <p class="about-body">
+              We started with a single wooden soap mold, cold-pressed extra virgin olive oil, and organic French
+              lavender buds harvested at peak bloom. Today, our philosophy remains unchanged: every single product is
+              formulated with living plant actives that feed your skin while bringing quiet mindfulness to your
+              everyday routine.
+            </p>
+
+            <div class="story-highlights">
+              <div class="story-highlight-item">
+                <div class="highlight-num">2018</div>
+                <div class="highlight-label">Founded with 3 Signature Bar Soaps</div>
+              </div>
+              <div class="story-highlight-item">
+                <div class="highlight-num">100%</div>
+                <div class="highlight-label">Biodegradable Plant Formulas</div>
+              </div>
+              <div class="story-highlight-item">
+                <div class="highlight-num">18K+</div>
+                <div class="highlight-label">Glow Rituals Delivered</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-timeline-section" id="timeline" aria-labelledby="timeline-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-eyebrow">
+            <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            Our Journey &amp; Growth
+          </p>
+          <h2 class="section-title" id="timeline-heading">Milestones of <em>Artisan Crafting</em></h2>
+          <p class="section-subtitle">
+            From humble beginnings in a wooden cottage studio to a globally cherished organic skincare brand.
+          </p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-track-line" aria-hidden="true"></div>
+
+          <div class="timeline-nodes-list">
+
+            <article class="timeline-card-item timeline-left">
+              <div class="timeline-year-node">
+                <span>2018</span>
+              </div>
+              <div class="timeline-content-box">
+                <div class="timeline-meta-row">
+                  <span class="timeline-tag">Foundation</span>
+                  <span class="timeline-location"><i data-lucide="map-pin" aria-hidden="true"></i> Ojai, CA</span>
+                </div>
+                <h3 class="timeline-title">The Mountain Cottage Kitchen</h3>
+                <p class="timeline-desc">
+                  Haridra Rituals is born with three handcrafted bar soaps: Lavender &amp; Oat, Rosehip Clay, and
+                  Golden Calendula. Cured in wooden boxes for 6 weeks.
+                </p>
+                <div class="timeline-highlights-pills">
+                  <span>3 Signature Soaps</span>
+                  <span>Hand-poured Oils</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-card-item timeline-right">
+              <div class="timeline-year-node">
+                <span>2020</span>
+              </div>
+              <div class="timeline-content-box">
+                <div class="timeline-meta-row">
+                  <span class="timeline-tag">Expansion</span>
+                  <span class="timeline-location"><i data-lucide="sun" aria-hidden="true"></i> Ojai Studio</span>
+                </div>
+                <h3 class="timeline-title">Facial Elixirs &amp; Hydrosol Mists</h3>
+                <p class="timeline-desc">
+                  Expanded beyond artisanal soaps into cold-pressed rosehip facial oils and steam-distilled French
+                  lavender hydrosol balancing mists.
+                </p>
+                <div class="timeline-highlights-pills">
+                  <span>Rosehip Elixir</span>
+                  <span>Lavender Hydrosol</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-card-item timeline-left">
+              <div class="timeline-year-node">
+                <span>2022</span>
+              </div>
+              <div class="timeline-content-box">
+                <div class="timeline-meta-row">
+                  <span class="timeline-tag">Certification</span>
+                  <span class="timeline-location"><i data-lucide="shield-check" aria-hidden="true"></i> Certified
+                    Clean</span>
+                </div>
+                <h3 class="timeline-title">USDA Organic &amp; Leaping Bunny</h3>
+                <p class="timeline-desc">
+                  Official Leaping Bunny cruelty-free verification and 100% plastic-free packaging transition using
+                  recyclable amber glass and plant-seed paper boxes.
+                </p>
+                <div class="timeline-highlights-pills">
+                  <span>100% Plastic-Free</span>
+                  <span>Leaping Bunny</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-card-item timeline-right">
+              <div class="timeline-year-node">
+                <span>2024</span>
+              </div>
+              <div class="timeline-content-box">
+                <div class="timeline-meta-row">
+                  <span class="timeline-tag">Recognition</span>
+                  <span class="timeline-location"><i data-lucide="award" aria-hidden="true"></i> Award Winner</span>
+                </div>
+                <h3 class="timeline-title">Clean Beauty Brand of the Year</h3>
+                <p class="timeline-desc">
+                  Awarded Best Artisanal Skincare Brand 2024. Reached over 18,000 active daily skincare glow rituals
+                  across 32 countries.
+                </p>
+                <div class="timeline-highlights-pills">
+                  <span>#1 Soap Winner</span>
+                  <span>18,000+ Rituals</span>
+                </div>
+              </div>
+            </article>
+
+            <article class="timeline-card-item timeline-left">
+              <div class="timeline-year-node node-highlight">
+                <span>2026</span>
+              </div>
+              <div class="timeline-content-box box-highlight">
+                <div class="timeline-meta-row">
+                  <span class="timeline-tag tag-green">Earth Pledge</span>
+                  <span class="timeline-location"><i data-lucide="leaf" aria-hidden="true"></i> Global Impact</span>
+                </div>
+                <h3 class="timeline-title">Regenerative Farming Fund</h3>
+                <p class="timeline-desc">
+                  Pledged 1% of total sales to native re-wilding and smallholder organic herb farming cooperatives,
+                  planting 24,500+ trees worldwide.
+                </p>
+                <div class="timeline-highlights-pills">
+                  <span>1% For The Planet</span>
+                  <span>24,500 Trees</span>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-team-section" id="team" aria-labelledby="team-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-eyebrow">
+            <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            Our Leadership &amp; Founders
+          </p>
+          <h2 class="section-title" id="team-heading">Meet Our <em>3 Team Members</em></h2>
+          <p class="section-subtitle">
+            The visionary minds leading our herbal research, formulation standards, and green operations.
+          </p>
+        </div>
+
+        <div class="team-grid-3">
+
+          <article class="team-card-photo">
+            <div class="team-photo-wrap">
+              <img src="assets/founder1.jpg" alt="Amara Silva - Co-Founder & Head Botanist" class="team-photo-img"
+                loading="lazy" />
+              <div class="team-photo-overlay"></div>
+              <span class="team-badge-tag"><i data-lucide="leaf" aria-hidden="true"></i> Co-Founder &amp; Head
+                Botanist</span>
+            </div>
+            <div class="team-details">
+              <h3 class="team-person-name">Amara Silva</h3>
+              <p class="team-person-title">Head of Plant Sourcing &amp; Herbalism</p>
+              <p class="team-person-bio">
+                With 15+ years studying ethnobotany, Amara hand-selects every lavender farm and cold-press oil partner
+                across France and California.
+              </p>
+              <div class="team-specialty-tags">
+                <span>Ethnobotany</span>
+                <span>Oil Sourcing</span>
+                <span>Wild Herbs</span>
+              </div>
+              <div class="team-social-links">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Amara's Instagram">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Amara's LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="mailto:amara@haridrarituals.com" aria-label="Email Amara">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card-photo">
+            <div class="team-photo-wrap">
+              <img src="assets/founder2.jpg" alt="Nadia Chen - Co-Founder & Master Cosmetic Chemist"
+                class="team-photo-img" loading="lazy" />
+              <div class="team-photo-overlay"></div>
+              <span class="team-badge-tag badge-sage"><i data-lucide="flask-conical" aria-hidden="true"></i> Master
+                Cosmetic Chemist</span>
+            </div>
+            <div class="team-details">
+              <h3 class="team-person-name">Nadia Chen</h3>
+              <p class="team-person-title">Co-Founder &amp; Chief Formulator</p>
+              <p class="team-person-bio">
+                A cosmetic chemist with 12 years of R&amp;D experience, Nadia translates natural bio-actives into
+                stable, pH-balanced skincare formulas.
+              </p>
+              <div class="team-specialty-tags">
+                <span>Green Chemistry</span>
+                <span>R&amp;D Science</span>
+                <span>pH Balance</span>
+              </div>
+              <div class="team-social-links">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Nadia's Instagram">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Nadia's LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="mailto:nadia@haridrarituals.com" aria-label="Email Nadia">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <article class="team-card-photo">
+            <div class="team-photo-wrap">
+              <img src="assets/founder3.jpg" alt="Aria Thorne - Director of Sustainable Operations"
+                class="team-photo-img" loading="lazy" />
+              <div class="team-photo-overlay"></div>
+              <span class="team-badge-tag badge-gold"><i data-lucide="flower" aria-hidden="true"></i> Sustainability
+                Director</span>
+            </div>
+            <div class="team-details">
+              <h3 class="team-person-name">Aria Thorne</h3>
+              <p class="team-person-title">Director of Sustainable Operations</p>
+              <p class="team-person-bio">
+                Oversees our zero-waste supply chain, eco-friendly glass packaging, and traditional 6-week cold-process
+                soap curing protocols.
+              </p>
+              <div class="team-specialty-tags">
+                <span>Zero-Waste</span>
+                <span>Supply Chain</span>
+                <span>Cold Process</span>
+              </div>
+              <div class="team-social-links">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Aria's Instagram">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/></svg>
+                </a>
+                <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="Aria's LinkedIn">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                </a>
+                <a href="mailto:aria@haridrarituals.com" aria-label="Email Aria">
+                  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="about-values-section" id="values" aria-labelledby="values-heading">
+      <div class="container">
+        <div class="section-header text-center">
+          <p class="section-eyebrow">
+            <span class="eyebrow-sparkle"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            Guiding Principles &amp; Standards
+          </p>
+          <h2 class="section-title" id="values-heading">Our 6 Core Commitments <em>to You &amp; Earth</em></h2>
+          <p class="section-subtitle">
+            We operate with zero compromise across formulation purity, ethical sourcing, and environmental
+            accountability.
+          </p>
+        </div>
+
+        <div class="values-grid-6">
+          
+          <div class="value-card">
+            <div class="value-icon-box box-sage">
+              <i data-lucide="leaf" aria-hidden="true"></i>
+            </div>
+            <span class="value-number">01</span>
+            <h3 class="value-title">Wildcrafted &amp; Organic</h3>
+            <p class="value-desc">
+              We source unrefined, cold-pressed plant oils, floral hydrosols, and wildcrafted herbs directly from
+              ethical organic farms.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon-box box-lavender">
+              <i data-lucide="flask-conical" aria-hidden="true"></i>
+            </div>
+            <span class="value-number">02</span>
+            <h3 class="value-title">Small-Batch Potency</h3>
+            <p class="value-desc">
+              Each batch is cured for 6 full weeks to preserve vital vitamins, antioxidants, and cellular bio-actives
+              without chemical preservatives.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon-box box-gold">
+              <i data-lucide="heart" aria-hidden="true"></i>
+            </div>
+            <span class="value-number">03</span>
+            <h3 class="value-title">Cruelty-Free Ethics</h3>
+            <p class="value-desc">
+              Certified by Leaping Bunny. We never test on animals, nor do we partner with ingredient suppliers who do.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon-box box-blue">
+              <i data-lucide="package-check" aria-hidden="true"></i>
+            </div>
+            <span class="value-number">04</span>
+            <h3 class="value-title">Earth-First Packaging</h3>
+            <p class="value-desc">
+              Housed in recyclable UV amber glass and compostable plant-seed paper boxes printed with non-toxic soy
+              inks.
+            </p>
+          </div>
+
+          <div class="value-card">
+            <div class="value-icon-box box-rose">
+              <i data-lucide="sparkles" aria-hidden="true"></i>
+            </div>
+            <span class="value-number">05</span>
+            <h3 class="value-title">Mindful Self-Care</h3>
+            <p class="value-desc">
+              Designed to elevate daily hygiene into therapeutic rituals of sensory calm, skin restoration, and inner
+              grounding.
+            </p>
+          </div>
+
+          <div class="value-card value-card-6">
+            <div class="value-icon-box box-teal">
+              <i data-lucide="globe" aria-hidden="true"></i>
+            </div>
+            <span class="value-number">06</span>
+            <h3 class="value-title">Fair-Trade Sourcing</h3>
+            <p class="value-desc">
+              Direct partnerships with smallholder farming cooperatives, guaranteeing fair living wages and supporting
+              local biodiversity habitats.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" id="contact" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-top-inner">
+
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Haridra Rituals Home">
+            <div class="logo-mark" aria-hidden="true">
+              <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Haridra Rituals</span>
+              <span class="logo-tagline">Rooted in Nature. Crafted with Care.</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Thoughtfully crafted skincare and handmade soaps inspired by nature, organic plant actives and everyday
+            self-care rituals.
+          </p>
+
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://instagram.com" class="social-link" id="social-instagram" aria-label="Instagram"
+              target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" class="social-link" id="social-facebook" aria-label="Facebook"
+              target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            </a>
+            <a href="https://youtube.com" class="social-link" id="social-youtube" aria-label="YouTube" target="_blank"
+              rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-nav-col" aria-label="Explore navigation">
+          <h3 class="footer-col-title">Explore</h3>
+          <ul role="list">
+            <li><a href="index.html" class="footer-link">Home 1</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="journals.html" class="footer-link">Journals</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav-col" aria-label="Customer care navigation">
+          <h3 class="footer-col-title">Customer Care</h3>
+          <ul role="list">
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="pricing.html#faqs" class="footer-link">Shipping</a></li>
+            <li><a href="pricing.html#faqs" class="footer-link">Returns</a></li>
+            <li><a href="pricing.html#faqs" class="footer-link">FAQs</a></li>
+            <li><a href="contact.html" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav-col" aria-label="Additional information navigation">
+          <h3 class="footer-col-title">Additional Information</h3>
+          <ul role="list">
+            <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+            <li><a href="404.html" class="footer-link">404</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">Contact Details</h3>
+          <ul class="contact-list" role="list">
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span class="contact-text">Online Botanical Apothecary</span>
+            </li>
+            <li class="contact-item">
+              <a href="tel:9999988888" class="contact-link">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="contact-text">9999988888</span>
+              </a>
+            </li>
+            <li class="contact-item">
+              <a href="mailto:dummy@haridrarituals.com" class="contact-link">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </span>
+                <span class="contact-text">dummy@haridrarituals.com</span>
+              </a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </span>
+              <span class="contact-text">Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM PST</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="footer-copy">&copy; 2026 Haridra Rituals. All Rights Reserved.</p>
+        <nav class="footer-legal" aria-label="Legal navigation">
+          <a href="#privacy" class="footer-legal-link">Privacy</a>
+          <span class="legal-dot">&bull;</span>
+          <a href="#terms" class="footer-legal-link">Terms</a>
+          <span class="legal-dot">&bull;</span>
+          <a href="#cookies" class="footer-legal-link">Cookies</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="about.js" defer></script>
+</body>
+
+</html>

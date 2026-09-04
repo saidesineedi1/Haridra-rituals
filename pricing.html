@@ -1,0 +1,880 @@
+﻿<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Haridra Rituals — Explore our flexible organic skincare membership plans and subscriptions. Handmade lavender soaps, face oils, and bespoke herbal rituals delivered to your door." />
+  <meta name="keywords"
+    content="organic skincare pricing, skincare subscription, organic membership, handmade soap subscription, lavender facial ritual, Haridra Rituals plans" />
+  <title>Pricing &amp; Memberships — Haridra Rituals | Organic Skincare</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="pricing.css" />
+</head>
+
+<body>
+
+<header class="site-header" id="site-header" role="banner">
+    <div class="header-inner container">
+
+      <a href="index.html" class="logo" aria-label="Haridra Rituals Home" id="logo-link">
+        <div class="logo-mark" aria-hidden="true">
+          <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Haridra Rituals</span>
+          <span class="logo-tagline">Rooted in Nature. Crafted with Care.</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li class="nav-item has-dropdown" id="nav-home-item">
+            <a href="index.html" class="nav-link nav-dropdown-trigger" id="nav-home" aria-expanded="false"
+              aria-haspopup="true">
+              <span>Home</span>
+              <i data-lucide="chevron-down" class="dropdown-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="nav-dropdown-menu" role="menu" aria-label="Home versions">
+              <a href="index.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon">
+                  <i data-lucide="sparkles" aria-hidden="true"></i>
+                </div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-header">
+                    <span class="dropdown-item-title">Home 1</span>
+                  </div>
+                  <span class="dropdown-item-desc">Haridra Rituals &bull; Organic Skincare</span>
+                </div>
+              </a>
+              <a href="home2.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon icon-ayurveda">
+                  <i data-lucide="leaf" aria-hidden="true"></i>
+                </div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-header">
+                    <span class="dropdown-item-title">Home 2</span>
+                    <span class="dropdown-badge badge-alt">New</span>
+                  </div>
+                  <span class="dropdown-item-desc">GlowVeda &bull; Ayurvedic Formulas</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+          <li><a href="services.html" class="nav-link" id="nav-services">Services</a></li>
+          <li><a href="pricing.html" class="nav-link active" id="nav-pricing">Pricing</a></li>
+          <li><a href="journals.html" class="nav-link" id="nav-journal">Journal</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link" id="nav-dashboard">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions" role="toolbar" aria-label="Site actions">
+        <button class="toggle-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle text direction" aria-pressed="false"
+          title="Switch text direction (RTL / LTR)">
+          <span class="toggle-label">RTL</span></button>
+
+        <button class="toggle-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false"
+          title="Toggle light and dark mode">
+          <span class="theme-icon sun-icon"><i data-lucide="sun" aria-hidden="true"></i></span>
+          <span class="theme-icon moon-icon"><i data-lucide="moon" aria-hidden="true"></i></span>
+        </button>
+
+        <a href="login.html" class="nav-login-btn">Login</a>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Open mobile menu" aria-expanded="false"
+          aria-controls="main-nav">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+
+    <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Search" hidden>
+      <div class="search-inner">
+        <div class="search-input-box">
+          <i data-lucide="search" class="search-input-icon" aria-hidden="true"></i>
+          <input type="search" class="search-input" id="search-input"
+            placeholder="Search soaps, face oils, toners, rituals..." aria-label="Search organic products"
+            autocomplete="off" />
+          <button class="search-close" id="search-close" aria-label="Close search">
+            <i data-lucide="x" aria-hidden="true"></i>
+          </button>
+        </div>
+        <div class="search-suggestions" id="search-suggestions">
+          <span class="sugg-label">Popular Searches:</span>
+          <button class="sugg-pill" data-query="Lavender">Lavender Soap</button>
+          <button class="sugg-pill" data-query="Rosehip">Rosehip Oil</button>
+          <button class="sugg-pill" data-query="Body Butter">Body Butter</button>
+          <button class="sugg-pill" data-query="Mist">Forest Mist</button>
+        </div>
+        <div class="search-results-list" id="search-results-list"></div>
+      </div>
+    </div>
+  </header>
+
+<div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <span class="logo-name">Haridra Rituals</span>
+      <button class="icon-btn mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item has-dropdown" id="mobile-nav-home-item">
+        <button class="mobile-nav-link mobile-dropdown-btn" id="mobile-home-toggle" aria-expanded="false">
+          <span>Home</span>
+          <i data-lucide="chevron-down" class="mobile-dropdown-chevron" aria-hidden="true"></i>
+        </button>
+        <ul class="mobile-submenu" id="mobile-home-submenu">
+          <li>
+            <a href="index.html" class="mobile-sublink">
+              <i data-lucide="sparkles" aria-hidden="true"></i>
+              <span>Home 1 (Haridra Rituals)</span>
+            </a>
+          </li>
+          <li>
+            <a href="home2.html" class="mobile-sublink">
+              <i data-lucide="leaf" aria-hidden="true"></i>
+              <span>Home 2 (GlowVeda)</span>
+            </a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link active">Pricing</a></li>
+      <li><a href="journals.html" class="mobile-nav-link">Journal</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+    </ul>
+
+    <div class="mobile-drawer-actions">
+      <div class="mobile-actions-grid">
+        <button class="mobile-action-card cart-action-card"
+          onclick="if(typeof openCartDrawer==='function')openCartDrawer();" aria-label="Open Shopping Bag">
+          <div class="mobile-card-icon-wrap">
+            <i data-lucide="shopping-bag" aria-hidden="true"></i>
+            <span class="mobile-cart-badge cart-count-badge">0</span>
+          </div>
+          <div class="mobile-card-text">
+            <span class="mobile-card-title">Shopping Bag</span>
+            <span class="mobile-card-sub">View Rituals</span>
+          </div>
+        </button>
+        <a href="login.html" class="mobile-action-card account-action-card" aria-label="Go to Member Portal">
+          <div class="mobile-card-icon-wrap user-icon-wrap">
+            <i data-lucide="user" aria-hidden="true"></i>
+          </div>
+          <div class="mobile-card-text">
+            <span class="mobile-card-title">Member Portal</span>
+            <span class="mobile-card-sub">Log In / Sign Up</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <main id="main-content">
+
+<section class="pr-hero" aria-labelledby="pr-hero-title">
+      <div class="pr-hero-orbs" aria-hidden="true">
+        <div class="pr-orb pr-orb-1"></div>
+        <div class="pr-orb pr-orb-2"></div>
+        <div class="pr-orb pr-orb-3"></div>
+      </div>
+      <div class="container pr-hero-inner">
+        <div class="pr-eyebrow-badge">
+          <i data-lucide="sparkles" aria-hidden="true"></i>
+          <span>Organic Memberships &amp; Ritual Plans</span>
+        </div>
+
+        <h1 class="pr-hero-title" id="pr-hero-title">
+          Tailored Skincare Rituals,<br />
+          <span class="pr-heading-accent">Rooted in Pure Organic Beauty</span>
+        </h1>
+
+        <p class="pr-hero-desc">
+          Subscribe to your preferred organic skincare package and enjoy fresh, handcrafted lavender soaps,
+          restorative herbal face oils, and luxury herbal toners delivered directly to your doorstep.
+        </p>
+
+<div class="pr-billing-wrapper">
+          <div class="pr-billing-toggle" role="group" aria-label="Billing frequency selection">
+            <button class="pr-toggle-btn active" data-cycle="monthly" id="toggle-monthly">
+              Monthly Billing
+            </button>
+            <button class="pr-toggle-btn" data-cycle="annual" id="toggle-annual">
+              Annual Billing
+            </button>
+          </div>
+          <div class="pr-discount-badge">
+            <i data-lucide="sparkles" aria-hidden="true"></i>
+            <span>Save 20% on Annual Membership</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<section class="pr-cards-section" aria-labelledby="pr-plans-heading">
+      <div class="container">
+        <h2 class="sr-only" id="pr-plans-heading">Subscription Tiers and Pricing</h2>
+
+        <div class="pr-cards-grid">
+
+<article class="pr-card" data-monthly-price="29" data-annual-price="23">
+            <div class="pr-card-img-banner">
+              <img src="assets/soap-lavender-oat.jpg" alt="Essentials Ritual Package" class="pr-card-img" />
+            </div>
+            <div class="pr-card-badge">
+              <i data-lucide="droplet" aria-hidden="true"></i>
+              <span>Starter Ritual</span>
+            </div>
+
+            <div class="pr-card-header">
+              <div class="pr-card-icon">
+                <i data-lucide="droplet" aria-hidden="true"></i>
+              </div>
+              <h3 class="pr-card-title">Essentials Ritual</h3>
+              <p class="pr-card-subtitle">Perfect for daily gentle cleansing and light moisture maintenance.</p>
+            </div>
+
+            <div class="pr-card-price-box">
+              <div class="pr-price-display">
+                <span class="pr-currency">&dollar;</span>
+                <span class="pr-amount">29</span>
+                <span class="pr-period">/ month</span>
+              </div>
+              <div class="pr-billed-note">Billed monthly</div>
+            </div>
+
+            <div class="pr-card-body">
+              <p class="pr-features-title">What&apos;s Included:</p>
+              <ul class="pr-feature-list" role="list">
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>2 Handcrafted Organic Soap Bars</span>
+                </li>
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>1 Lavender Herbal hydrosol mist (100ml)</span>
+                </li>
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>10% Member discount on store items</span>
+                </li>
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>Free Standard Shipping</span>
+                </li>
+                <li class="pr-feature-item muted">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="x"></i></span>
+                  <span>Cold-pressed Rosehip face oil</span>
+                </li>
+                <li class="pr-feature-item muted">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="x"></i></span>
+                  <span>Quarterly VIP seasonal gift box</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pr-card-footer">
+              <button class="btn btn-outline pr-card-btn pr-select-plan-btn" data-plan-name="Essentials Ritual"
+                data-plan-price="$29.00">
+                Choose Essentials Plan
+              </button>
+            </div>
+          </article>
+
+<article class="pr-card pr-card-featured" data-monthly-price="59" data-annual-price="47">
+            <div class="pr-card-img-banner">
+              <img src="assets/rosehip-elixir.jpg" alt="Signature Herbal Package" class="pr-card-img" />
+            </div>
+            <div class="pr-card-badge pr-card-badge-popular">
+              <i data-lucide="star" aria-hidden="true"></i>
+              <span>Most Popular Choice</span>
+            </div>
+
+            <div class="pr-card-header">
+              <div class="pr-card-icon">
+                <i data-lucide="sparkles" aria-hidden="true"></i>
+              </div>
+              <h3 class="pr-card-title">Signature Herbal</h3>
+              <p class="pr-card-subtitle">Our complete daily face and body restoration ritual package.</p>
+            </div>
+
+            <div class="pr-card-price-box">
+              <div class="pr-price-display">
+                <span class="pr-currency">&dollar;</span>
+                <span class="pr-amount">59</span>
+                <span class="pr-period">/ month</span>
+              </div>
+              <div class="pr-billed-note">Billed monthly</div>
+            </div>
+
+            <div class="pr-card-body">
+              <p class="pr-features-title">Everything in Essentials, Plus:</p>
+              <ul class="pr-feature-list" role="list">
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>3 Handcrafted Organic Soaps (Custom Scents)</span>
+                </li>
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>1 Pure Rosehip Renewal Face Oil (30ml)</span>
+                </li>
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>1 Forest Mist Hydrosol Toner (150ml)</span>
+                </li>
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>15% Member discount on all orders</span>
+                </li>
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>Quarterly VIP Seasonal Gift Box (&dollar;45 value)</span>
+                </li>
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>Free Express Worldwide Shipping</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pr-card-footer">
+              <button class="btn btn-primary pr-card-btn pr-select-plan-btn" data-plan-name="Signature Herbal"
+                data-plan-price="$59.00">
+                Begin Signature Ritual
+              </button>
+            </div>
+          </article>
+
+<article class="pr-card" data-monthly-price="99" data-annual-price="79">
+            <div class="pr-card-img-banner">
+              <img src="assets/hero-apothecary.jpg" alt="Luxury Alchemy VIP Package" class="pr-card-img" />
+            </div>
+            <div class="pr-card-badge">
+              <i data-lucide="crown" aria-hidden="true"></i>
+              <span>VIP Membership</span>
+            </div>
+
+            <div class="pr-card-header">
+              <div class="pr-card-icon">
+                <i data-lucide="crown" aria-hidden="true"></i>
+              </div>
+              <h3 class="pr-card-title">Luxury Alchemy VIP</h3>
+              <p class="pr-card-subtitle">Bespoke holistic skincare formulated specifically for your skin type.</p>
+            </div>
+
+            <div class="pr-card-price-box">
+              <div class="pr-price-display">
+                <span class="pr-currency">&dollar;</span>
+                <span class="pr-amount">99</span>
+                <span class="pr-period">/ month</span>
+              </div>
+              <div class="pr-billed-note">Billed monthly</div>
+            </div>
+
+            <div class="pr-card-body">
+              <p class="pr-features-title">Ultimate VIP Perks:</p>
+              <ul class="pr-feature-list" role="list">
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>Full 5-Piece Custom Monthly Skincare Kit</span>
+                </li>
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>1-on-1 Skin Consultation with Herbal Specialist</span>
+                </li>
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>25% Member discount on store purchases</span>
+                </li>
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>Custom Lavender &amp; Herbal Scent Blending</span>
+                </li>
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>Early access to limited edition harvests</span>
+                </li>
+                <li class="pr-feature-item">
+                  <span class="pr-feature-icon" aria-hidden="true"><i data-lucide="check"></i></span>
+                  <span>Priority 24/7 Concierge Support</span>
+                </li>
+              </ul>
+            </div>
+
+            <div class="pr-card-footer">
+              <button class="btn btn-outline pr-card-btn pr-select-plan-btn" data-plan-name="Luxury Alchemy VIP"
+                data-plan-price="$99.00">
+                Join Luxury VIP
+              </button>
+            </div>
+          </article>
+
+        </div>
+
+<div class="pr-wholesale-card">
+          <div class="pr-wholesale-info">
+            <span class="pr-wholesale-tag">
+              <i data-lucide="building" aria-hidden="true"></i> Spa &amp; Corporate Wholesale
+            </span>
+            <h3 class="pr-wholesale-title">Need Custom Herbal Gifting or Spa Wholesale?</h3>
+            <p class="pr-wholesale-desc">
+              We partner with boutique hotels, eco-resorts, luxury spas, and special events to provide hand-stamped,
+              custom-scented organic soaps and custom skin ritual boxes in bulk quantities.
+            </p>
+          </div>
+          <a href="contact.html" class="btn pr-wholesale-btn">
+            Request Wholesale Quote
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+<section class="pr-compare-section" aria-labelledby="pr-compare-title">
+      <div class="container">
+        <div class="pr-section-header">
+          <div class="pr-eyebrow-badge">
+            <i data-lucide="sparkles" aria-hidden="true"></i>
+            <span>Features At A Glance</span>
+          </div>
+          <h2 class="pr-section-title" id="pr-compare-title">Compare Subscription Benefits</h2>
+          <p class="pr-section-desc">
+            Review detailed plan features side-by-side to choose the perfect organic ritual for your skin.
+          </p>
+        </div>
+
+        <div class="pr-compare-wrapper">
+          <table class="pr-compare-table" aria-label="Pricing plan feature comparison table">
+            <thead>
+              <tr>
+                <th scope="col">Plan Features</th>
+                <th scope="col">Essentials Bar</th>
+                <th scope="col" class="featured-col">Signature Herbal</th>
+                <th scope="col">Luxury Alchemy VIP</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Handcrafted Soaps / Mo</th>
+                <td>2 Bars</td>
+                <td>3 Custom Bars</td>
+                <td>4 Custom Bars</td>
+              </tr>
+              <tr>
+                <th scope="row">Herbal Hydrosol Toner</th>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i> 100ml</span></td>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i> 150ml</span></td>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i> 200ml Premium</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Rosehip Renewal Face Oil</th>
+                <td><span class="pr-dash" aria-label="Not included">&mdash;</span></td>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i> 30ml</span></td>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i> 50ml Custom</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Member Shop Discount</th>
+                <td>10% Off</td>
+                <td>15% Off</td>
+                <td>25% Off</td>
+              </tr>
+              <tr>
+                <th scope="row">Quarterly VIP Gift Box</th>
+                <td><span class="pr-dash" aria-label="Not included">&mdash;</span></td>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i></span></td>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i></span></td>
+              </tr>
+              <tr>
+                <th scope="row">1-on-1 Skin Consultation</th>
+                <td><span class="pr-dash" aria-label="Not included">&mdash;</span></td>
+                <td><span class="pr-dash" aria-label="Not included">&mdash;</span></td>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i> Unlimited</span></td>
+              </tr>
+              <tr>
+                <th scope="row">Custom Herbal Scenting</th>
+                <td><span class="pr-dash" aria-label="Not included">&mdash;</span></td>
+                <td><span class="pr-dash" aria-label="Not included">&mdash;</span></td>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i></span></td>
+              </tr>
+              <tr>
+                <th scope="row">Free Express Shipping</th>
+                <td>Standard Free</td>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i> Express</span></td>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i> Priority Express</span>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Pause or Cancel Anytime</th>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i></span></td>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i></span></td>
+                <td><span class="pr-check" aria-label="Included"><i data-lucide="check"></i></span></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+<section class="pr-faq-section" aria-labelledby="pr-faq-heading">
+      <div class="container">
+        <div class="pr-section-header">
+          <div class="pr-eyebrow-badge">
+            <i data-lucide="help-circle" aria-hidden="true"></i>
+            <span>Common Questions</span>
+          </div>
+          <h2 class="pr-section-title" id="pr-faq-heading">Frequently Asked Questions</h2>
+          <p class="pr-section-desc">
+            Everything you need to know about our organic skincare subscriptions, shipping, and ingredients.
+          </p>
+        </div>
+
+<div class="pr-faq-tabs" role="tablist" aria-label="FAQ Topic Categories">
+          <button class="pr-faq-tab active" data-category="all" role="tab" aria-selected="true">All Questions</button>
+          <button class="pr-faq-tab" data-category="subscriptions" role="tab"
+            aria-selected="false">Subscriptions</button>
+          <button class="pr-faq-tab" data-category="ingredients" role="tab" aria-selected="false">Ingredients &amp;
+            Formula</button>
+          <button class="pr-faq-tab" data-category="shipping" role="tab" aria-selected="false">Shipping &amp;
+            Delivery</button>
+        </div>
+
+<div class="pr-faq-accordion">
+
+<div class="pr-faq-item active" data-category="subscriptions">
+            <button class="pr-faq-trigger" aria-expanded="true" aria-controls="faq-ans-1" id="faq-q-1">
+              <span>How does the monthly organic ritual subscription work?</span>
+              <i data-lucide="chevron-down" class="pr-faq-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="pr-faq-content" id="faq-ans-1" role="region" aria-labelledby="faq-q-1">
+              <div class="pr-faq-inner">
+                <div class="pr-faq-body">
+                  When you select a membership plan, your first ritual box is freshly packed and shipped
+                  within 24 hours. Each subsequent month, your curated box automaticallyrenews on the same day,
+                  featuring seasonal harvests and freshly cured soap bars.
+                </div>
+              </div>
+            </div>
+          </div>
+
+<div class="pr-faq-item" data-category="subscriptions">
+            <button class="pr-faq-trigger" aria-expanded="false" aria-controls="faq-ans-2" id="faq-q-2">
+              <span>Can I pause, skip, or cancel my subscription at any time?</span>
+              <i data-lucide="chevron-down" class="pr-faq-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="pr-faq-content" id="faq-ans-2" role="region" aria-labelledby="faq-q-2">
+              <div class="pr-faq-inner">
+                <div class="pr-faq-body">
+                  Yes, absolutely! There are no long-term contracts or hidden cancellation fees. You can pause your
+                  delivery for a month, skip a scheduled order, or cancel directly from your Member Dashboard with a
+                  single click.
+                </div>
+              </div>
+            </div>
+          </div>
+
+<div class="pr-faq-item" data-category="ingredients">
+            <button class="pr-faq-trigger" aria-expanded="false" aria-controls="faq-ans-3" id="faq-q-3">
+              <span>Are all products 100% organic, cruelty-free, and vegan?</span>
+              <i data-lucide="chevron-down" class="pr-faq-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="pr-faq-content" id="faq-ans-3" role="region" aria-labelledby="faq-q-3">
+              <div class="pr-faq-inner">
+                <div class="pr-faq-body">
+                  Every product in the Haridra Rituals collection is certified 100% organic, cruelty-free, and
+                  handcrafted using sustainably harvested plant oils, French lavender buds, and wild herbs. We never
+                  use synthetic fragrance, parabens, sulfates, or artificial dyes.
+                </div>
+              </div>
+            </div>
+          </div>
+
+<div class="pr-faq-item" data-category="subscriptions">
+            <button class="pr-faq-trigger" aria-expanded="false" aria-controls="faq-ans-4" id="faq-q-4">
+              <span>Can I customize the specific products in my monthly box?</span>
+              <i data-lucide="chevron-down" class="pr-faq-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="pr-faq-content" id="faq-ans-4" role="region" aria-labelledby="faq-q-4">
+              <div class="pr-faq-inner">
+                <div class="pr-faq-body">
+                  Yes! Signature Herbal and Luxury Alchemy VIP members can choose their favorite soap scents (e.g.
+                  Lavender Oat, Neem Leaf, Aloe Vera, Sandalwood) and select hydrosol toners every month before your
+                  renewal date.
+                </div>
+              </div>
+            </div>
+          </div>
+
+<div class="pr-faq-item" data-category="shipping">
+            <button class="pr-faq-trigger" aria-expanded="false" aria-controls="faq-ans-5" id="faq-q-5">
+              <span>How fast is shipping and do you ship internationally?</span>
+              <i data-lucide="chevron-down" class="pr-faq-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="pr-faq-content" id="faq-ans-5" role="region" aria-labelledby="faq-q-5">
+              <div class="pr-faq-inner">
+                <div class="pr-faq-body">
+                  Standard US shipping takes 2-4 business days. Signature and VIP members receive complimentary Express
+                  Shipping (1-2 business days). We also ship worldwide with full tracking and customs clearance
+                  included.
+                </div>
+              </div>
+            </div>
+          </div>
+
+<div class="pr-faq-item" data-category="ingredients">
+            <button class="pr-faq-trigger" aria-expanded="false" aria-controls="faq-ans-6" id="faq-q-6">
+              <span>What if I have sensitive skin or specific plant allergies?</span>
+              <i data-lucide="chevron-down" class="pr-faq-chevron" aria-hidden="true"></i>
+            </button>
+            <div class="pr-faq-content" id="faq-ans-6" role="region" aria-labelledby="faq-q-6">
+              <div class="pr-faq-inner">
+                <div class="pr-faq-body">
+                  Our formulas are specifically crafted for delicate, reactive skin types. We offer fragrance-free oat
+                  bars and hypoallergenic plant oils. You can also consult our herbal specialists free of charge to
+                  tailor a formula to your skin.
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+<section class="pr-cta-section" aria-labelledby="pr-cta-title">
+      <div class="container">
+        <div class="pr-cta-card">
+          <h2 class="pr-cta-title" id="pr-cta-title">Ready to Begin Your Organic Ritual?</h2>
+          <p class="pr-cta-desc">
+            Experience the healing power of wild lavender, cold-pressed elixirs, and cold-cured organic soaps.
+            Join thousands of happy ritual members today.
+          </p>
+          <div class="pr-cta-buttons">
+            <a href="#pr-plans-heading" class="btn btn-primary">
+              Select Your Ritual Plan
+            </a>
+            <a href="contact.html" class="btn btn-outline">
+              Speak to a Specialist
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+<footer class="site-footer" id="contact" role="contentinfo">
+    <div class="footer-top">
+      <div class="container footer-top-inner">
+
+        <div class="footer-brand">
+          <a href="index.html" class="footer-logo" aria-label="Haridra Rituals Home">
+            <div class="logo-mark" aria-hidden="true">
+              <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+            </div>
+            <div class="logo-text">
+              <span class="logo-name">Haridra Rituals</span>
+              <span class="logo-tagline">Rooted in Nature. Crafted with Care.</span>
+            </div>
+          </a>
+          <p class="footer-desc">
+            Thoughtfully crafted skincare and handmade soaps inspired by nature, organic plant actives and everyday
+            self-care rituals.
+          </p>
+
+          <div class="footer-social" aria-label="Social media links">
+            <a href="https://instagram.com" class="social-link" id="social-instagram" aria-label="Instagram"
+              target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+              </svg>
+            </a>
+            <a href="https://facebook.com" class="social-link" id="social-facebook" aria-label="Facebook"
+              target="_blank" rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+              </svg>
+            </a>
+            <a href="https://youtube.com" class="social-link" id="social-youtube" aria-label="YouTube" target="_blank"
+              rel="noopener noreferrer">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path
+                  d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+                </path>
+                <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <nav class="footer-nav-col" aria-label="Explore navigation">
+          <h3 class="footer-col-title">Explore</h3>
+          <ul role="list">
+            <li><a href="index.html" class="footer-link">Home 1</a></li>
+            <li><a href="about.html" class="footer-link">About</a></li>
+            <li><a href="services.html" class="footer-link">Services</a></li>
+            <li><a href="journals.html" class="footer-link">Journals</a></li>
+            <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav-col" aria-label="Customer care navigation">
+          <h3 class="footer-col-title">Customer Care</h3>
+          <ul role="list">
+            <li><a href="contact.html" class="footer-link">Contact</a></li>
+            <li><a href="#pr-faq-heading" class="footer-link">Shipping</a></li>
+            <li><a href="#pr-faq-heading" class="footer-link">Returns</a></li>
+            <li><a href="#pr-faq-heading" class="footer-link">FAQs</a></li>
+            <li><a href="contact.html" class="footer-link">Privacy Policy</a></li>
+          </ul>
+        </nav>
+
+        <nav class="footer-nav-col" aria-label="Additional information navigation">
+          <h3 class="footer-col-title">Additional Information</h3>
+          <ul role="list">
+            <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+            <li><a href="404.html" class="footer-link">404</a></li>
+            <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+          </ul>
+        </nav>
+
+        <div class="footer-contact">
+          <h3 class="footer-col-title">Contact Details</h3>
+          <ul class="contact-list" role="list">
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                  <circle cx="12" cy="10" r="3"></circle>
+                </svg>
+              </span>
+              <span class="contact-text">Online Botanical Apothecary</span>
+            </li>
+            <li class="contact-item">
+              <a href="tel:9999988888" class="contact-link">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                    </path>
+                  </svg>
+                </span>
+                <span class="contact-text">9999988888</span>
+              </a>
+            </li>
+            <li class="contact-item">
+              <a href="mailto:dummy@haridrarituals.com" class="contact-link">
+                <span class="contact-icon" aria-hidden="true">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                    <polyline points="22,6 12,13 2,6"></polyline>
+                  </svg>
+                </span>
+                <span class="contact-text">dummy@haridrarituals.com</span>
+              </a>
+            </li>
+            <li class="contact-item">
+              <span class="contact-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polyline points="12 6 12 12 16 14"></polyline>
+                </svg>
+              </span>
+              <span class="contact-text">Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM PST</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="footer-copy">&copy; 2026 Haridra Rituals. All Rights Reserved.</p>
+        <nav class="footer-legal" aria-label="Legal navigation">
+          <a href="#privacy" class="footer-legal-link">Privacy</a>
+          <span class="legal-dot">&bull;</span>
+          <a href="#terms" class="footer-legal-link">Terms</a>
+          <span class="legal-dot">&bull;</span>
+          <a href="#cookies" class="footer-legal-link">Cookies</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+<div class="quick-modal" id="quick-modal" role="dialog" aria-modal="true" aria-label="Product quick view" hidden>
+    <div class="quick-modal-backdrop" id="quick-modal-backdrop"></div>
+    <div class="quick-modal-content">
+      <button class="quick-modal-close" id="quick-modal-close" aria-label="Close product preview">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+      <div class="quick-modal-grid">
+        <div class="quick-modal-img-wrap">
+          <img id="quick-modal-img" src="assets/soap-lavender-oat.jpg" alt="Product preview" />
+        </div>
+        <div class="quick-modal-info">
+          <span class="quick-modal-cat" id="quick-modal-cat">Handmade Soap</span>
+          <h2 class="quick-modal-title" id="quick-modal-title">Lavender &amp; Oat Bar Soap</h2>
+          <p class="quick-modal-price" id="quick-modal-price">$14.00</p>
+          <p class="quick-modal-desc" id="quick-modal-desc">
+            Cold-cured for 6 weeks with French lavender flowers, colloidal oats, and organic olive oil. Suitable for all
+            skin types, especially delicate skin.
+          </p>
+          <div class="quick-modal-perks">
+            <div><i data-lucide="check" aria-hidden="true"></i> 100% Organic Ingredients</div>
+            <div><i data-lucide="check" aria-hidden="true"></i> Hand-cut &amp; wrapped sustainably</div>
+          </div>
+          <div class="quick-modal-actions">
+            <div class="qty-selector">
+              <button class="qty-btn" id="qty-minus" aria-label="Decrease quantity">-</button>
+              <span id="qty-count">1</span>
+              <button class="qty-btn" id="qty-plus" aria-label="Increase quantity">+</button>
+            </div>
+            <button class="btn btn-primary" id="quick-add-btn">Add to Ritual Bag</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+<div class="toast" id="cart-toast" role="alert" aria-live="polite" aria-atomic="true" hidden>
+    <div class="toast-icon-wrap">
+      <i data-lucide="sparkles" aria-hidden="true"></i>
+    </div>
+    <div class="toast-content">
+      <strong id="toast-title">Added to your Ritual Bag!</strong>
+      <span id="toast-msg">Lavender &amp; Oat Bar Soap</span>
+    </div>
+  </div>
+
+  <script src="home1.js" defer></script>
+  <script src="pricing.js" defer></script>
+</body>
+
+</html>

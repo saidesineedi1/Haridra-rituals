@@ -1,0 +1,770 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Haridra Rituals Journal — Explore organic skincare stories, ingredient deep-dives, rituals, and self-care wisdom rooted in nature." />
+  <meta name="keywords"
+    content="organic skincare journal, herbal rituals, skincare stories, natural beauty tips, herbal ingredients" />
+  <title>Journal — Haridra Rituals | Herbal Skincare Stories</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="journals.css" />
+</head>
+
+<body>
+
+  <header class="site-header" id="site-header" role="banner">
+    <div class="header-inner container">
+      <a href="index.html" class="logo" aria-label="Haridra Rituals Home" id="logo-link">
+        <div class="logo-mark" aria-hidden="true">
+          <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Haridra Rituals</span>
+          <span class="logo-tagline">Rooted in Nature. Crafted with Care.</span>
+        </div>
+      </a>
+
+      <nav class="main-nav" id="main-nav" role="navigation" aria-label="Main navigation">
+        <ul class="nav-list" role="list">
+          <li class="nav-item has-dropdown" id="nav-home-item">
+            <a href="index.html" class="nav-link nav-dropdown-trigger" id="nav-home" aria-expanded="false"
+              aria-haspopup="true">
+              <span>Home</span>
+              <i data-lucide="chevron-down" class="dropdown-chevron" aria-hidden="true"></i>
+            </a>
+            <div class="nav-dropdown-menu" role="menu" aria-label="Home versions">
+              <a href="index.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon"><i data-lucide="sparkles" aria-hidden="true"></i></div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-header"><span class="dropdown-item-title">Home 1</span></div>
+                  <span class="dropdown-item-desc">Haridra Rituals &bull; Organic Skincare</span>
+                </div>
+              </a>
+              <a href="home2.html" class="dropdown-item" role="menuitem">
+                <div class="dropdown-item-icon icon-ayurveda"><i data-lucide="leaf" aria-hidden="true"></i></div>
+                <div class="dropdown-item-text">
+                  <div class="dropdown-item-header">
+                    <span class="dropdown-item-title">Home 2</span>
+                    <span class="dropdown-badge badge-alt">New</span>
+                  </div>
+                  <span class="dropdown-item-desc">GlowVeda &bull; Ayurvedic Formulas</span>
+                </div>
+              </a>
+            </div>
+          </li>
+          <li><a href="about.html" class="nav-link" id="nav-about">About</a></li>
+          <li><a href="services.html" class="nav-link" id="nav-services">Services</a></li>
+          <li><a href="pricing.html" class="nav-link" id="nav-pricing">Pricing</a></li>
+          <li><a href="journals.html" class="nav-link active" id="nav-journal">Journal</a></li>
+          <li><a href="contact.html" class="nav-link" id="nav-contact">Contact</a></li>
+          <li><a href="dashboard.html" class="nav-link" id="nav-dashboard">Dashboard</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-actions" role="toolbar" aria-label="Site actions">
+        <button class="toggle-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle text direction" aria-pressed="false"
+          title="Switch text direction (RTL / LTR)">
+          <span class="toggle-label">RTL</span></button>
+
+        <button class="toggle-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false"
+          title="Toggle light and dark mode">
+          <span class="theme-icon sun-icon"><i data-lucide="sun" aria-hidden="true"></i></span>
+          <span class="theme-icon moon-icon"><i data-lucide="moon" aria-hidden="true"></i></span>
+        </button>
+
+        <a href="login.html" class="nav-login-btn">Login</a>
+
+        <button class="hamburger" id="hamburger-btn" aria-label="Open mobile menu" aria-expanded="false"
+          aria-controls="main-nav">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+    <div class="search-overlay" id="search-overlay" role="dialog" aria-modal="true" aria-label="Search" hidden>
+      <div class="search-inner">
+        <div class="search-input-box">
+          <i data-lucide="search" class="search-input-icon" aria-hidden="true"></i>
+          <input type="search" class="search-input" id="search-input"
+            placeholder="Search soaps, face oils, toners, rituals..." aria-label="Search organic products"
+            autocomplete="off" />
+          <button class="search-close" id="search-close" aria-label="Close search"><i data-lucide="x"
+              aria-hidden="true"></i></button>
+        </div>
+        <div class="search-suggestions" id="search-suggestions">
+          <span class="sugg-label">Popular Searches:</span>
+          <button class="sugg-pill" data-query="Lavender">Lavender Soap</button>
+          <button class="sugg-pill" data-query="Rosehip">Rosehip Oil</button>
+          <button class="sugg-pill" data-query="Body Butter">Body Butter</button>
+          <button class="sugg-pill" data-query="Mist">Forest Mist</button>
+        </div>
+        <div class="search-results-list" id="search-results-list"></div>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-nav-drawer" id="mobile-nav-drawer" aria-hidden="true">
+    <div class="mobile-nav-header">
+      <span class="logo-name">Haridra Rituals</span>
+      <button class="icon-btn mobile-nav-close" id="mobile-nav-close" aria-label="Close menu">
+        <i data-lucide="x" aria-hidden="true"></i>
+      </button>
+    </div>
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-item has-dropdown" id="mobile-nav-home-item">
+        <button class="mobile-nav-link mobile-dropdown-btn" id="mobile-home-toggle" aria-expanded="false">
+          <span>Home</span>
+          <i data-lucide="chevron-down" class="mobile-dropdown-chevron" aria-hidden="true"></i>
+        </button>
+        <ul class="mobile-submenu" id="mobile-home-submenu">
+          <li><a href="index.html" class="mobile-sublink"><i data-lucide="sparkles" aria-hidden="true"></i><span>Home
+                1</span></a></li>
+          <li><a href="home2.html" class="mobile-sublink"><i data-lucide="leaf" aria-hidden="true"></i><span>Home
+                2</span></a></li>
+        </ul>
+      </li>
+      <li><a href="about.html" class="mobile-nav-link">About</a></li>
+      <li><a href="services.html" class="mobile-nav-link">Services</a></li>
+      <li><a href="pricing.html" class="mobile-nav-link">Pricing</a></li>
+      <li><a href="journals.html" class="mobile-nav-link active">Journal</a></li>
+      <li><a href="contact.html" class="mobile-nav-link">Contact</a></li>
+      <li><a href="dashboard.html" class="mobile-nav-link">Dashboard</a></li>
+    </ul>
+
+    <div class="mobile-drawer-actions">
+      <div class="mobile-actions-grid">
+        <button class="mobile-action-card cart-action-card"
+          onclick="if(typeof openCartDrawer==='function')openCartDrawer();" aria-label="Open Shopping Bag">
+          <div class="mobile-card-icon-wrap">
+            <i data-lucide="shopping-bag" aria-hidden="true"></i>
+            <span class="mobile-cart-badge cart-count-badge">0</span>
+          </div>
+          <div class="mobile-card-text">
+            <span class="mobile-card-title">Shopping Bag</span>
+            <span class="mobile-card-sub">View Rituals</span>
+          </div>
+        </button>
+        <a href="login.html" class="mobile-action-card account-action-card" aria-label="Go to Member Portal">
+          <div class="mobile-card-icon-wrap user-icon-wrap">
+            <i data-lucide="user" aria-hidden="true"></i>
+          </div>
+          <div class="mobile-card-text">
+            <span class="mobile-card-title">Member Portal</span>
+            <span class="mobile-card-sub">Log In / Sign Up</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <div class="mobile-nav-footer">
+      <p class="mobile-nav-tagline">"Rooted in Nature. Crafted with Care."</p>
+    </div>
+  </div>
+  <div class="mobile-nav-overlay" id="mobile-nav-overlay" aria-hidden="true"></div>
+
+  <main id="main-content">
+
+    <section class="jn-hero" id="journal-hero" aria-labelledby="jn-hero-heading">
+      <div class="jn-hero-orbs" aria-hidden="true">
+        <div class="jn-orb jn-orb-1"></div>
+        <div class="jn-orb jn-orb-2"></div>
+        <div class="jn-orb jn-orb-3"></div>
+      </div>
+      <div class="jn-particles" aria-hidden="true">
+        <span class="jn-particle"></span><span class="jn-particle"></span>
+        <span class="jn-particle"></span><span class="jn-particle"></span>
+        <span class="jn-particle"></span><span class="jn-particle"></span>
+      </div>
+      <div class="container jn-hero-inner">
+        <div class="jn-hero-content">
+          <div class="jn-hero-eyebrow">
+            <span class="jn-eyebrow-icon"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            <p>HERBAL STORIES &bull; SKIN WISDOM &bull; NATURE RITUALS</p>
+          </div>
+          <h1 class="jn-hero-title" id="jn-hero-title">Stories &amp; Wisdom for <em>Mindful Skin</em></h1>
+          <p class="jn-hero-desc">
+            Dive deep into the world of organic skincare — stories of plants, rituals of renewal, and the ancient
+            wisdom behind every ingredient we use. Your guide to living beautifully, naturally.
+          </p>
+          <div class="jn-hero-actions">
+            <a href="#journal-articles" class="btn btn-primary jn-btn-primary" id="jn-hero-read-btn">
+              Read Latest <i data-lucide="arrow-down" aria-hidden="true"></i>
+            </a>
+            <a href="#journal-categories" class="btn btn-outline jn-btn-outline" id="jn-hero-browse-btn">Browse
+              Topics</a>
+          </div>
+          <div class="jn-hero-stats" aria-label="Journal statistics">
+            <div class="jn-stat"><span class="jn-stat-num">48+</span><span class="jn-stat-label">Articles
+                Published</span></div>
+            <div class="jn-stat-divider" aria-hidden="true"></div>
+            <div class="jn-stat"><span class="jn-stat-num">12k</span><span class="jn-stat-label">Monthly Readers</span>
+            </div>
+            <div class="jn-stat-divider" aria-hidden="true"></div>
+            <div class="jn-stat"><span class="jn-stat-num">6</span><span class="jn-stat-label">Topic Categories</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="jn-hero-5gallery-stage" aria-label="Featured Stories Gallery">
+
+          <div class="jn-5card jn-5card-main" onclick="openJournal('the-lavender-diaries')" tabindex="0" role="button"
+            aria-label="Featured Story: The Lavender Diaries">
+            <div class="jn-5card-img-box">
+              <img src="assets/skin-rosehip-face.jpg" alt="Lavender distillation story" class="jn-5card-img" />
+              <div class="jn-5card-gradient"></div>
+            </div>
+            <div class="jn-5card-body">
+              <span class="jn-5card-badge"><i data-lucide="star" aria-hidden="true"></i> FEATURED STORY</span>
+              <h2 class="jn-5card-title">The Lavender Diaries</h2>
+              <p class="jn-5card-excerpt">From Field to Flask in the French Alps.</p>
+              <div class="jn-5card-read-btn">Read Story <i data-lucide="arrow-right" aria-hidden="true"></i></div>
+            </div>
+          </div>
+
+          <div class="jn-5card jn-5card-tl" onclick="openJournal('rosehip-the-vitamin-c-powerhouse')" tabindex="0"
+            role="button" aria-label="Story: Rosehip Powerhouse">
+            <div class="jn-5card-img-box">
+              <img src="assets/rosehip-elixir.jpg" alt="Rosehip seed oil" class="jn-5card-img" />
+            </div>
+            <div class="jn-5card-tag"><i data-lucide="sparkles" aria-hidden="true"></i> Rosehip Science</div>
+          </div>
+
+          <div class="jn-5card jn-5card-tr" onclick="openJournal('the-5-minute-morning-ritual')" tabindex="0"
+            role="button" aria-label="Story: Morning Ritual">
+            <div class="jn-5card-img-box circle-frame">
+              <img src="assets/skin-mist-face.jpg" alt="Morning facial mist" class="jn-5card-img" />
+            </div>
+            <div class="jn-5card-tag"><i data-lucide="sun" aria-hidden="true"></i> Morning Ritual</div>
+          </div>
+
+          <div class="jn-5card jn-5card-bl" onclick="openJournal('cold-process-soap-making')" tabindex="0" role="button"
+            aria-label="Story: Soap Making">
+            <div class="jn-5card-img-box">
+              <img src="assets/soap-lavender-oat.jpg" alt="Organic lavender soap" class="jn-5card-img" />
+            </div>
+            <div class="jn-5card-tag"><i data-lucide="leaf" aria-hidden="true"></i> Artisanal Soap</div>
+          </div>
+
+          <div class="jn-5card jn-5card-br" onclick="openJournal('slow-beauty-movement')" tabindex="0" role="button"
+            aria-label="Story: Slow Beauty">
+            <div class="jn-5card-img-box">
+              <img src="assets/hero2-cream.jpg" alt="Slow beauty jar" class="jn-5card-img" />
+            </div>
+            <div class="jn-5card-tag"><i data-lucide="heart" aria-hidden="true"></i> Slow Beauty</div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="jn-articles" id="journal-articles" aria-labelledby="jn-articles-heading">
+      <div class="container">
+        <div class="jn-section-header">
+          <p class="section-eyebrow">
+            <span class="eyebrow-sparkle"><i data-lucide="book-open" aria-hidden="true"></i></span>
+            Our Stories
+          </p>
+          <h2 class="jn-section-title" id="jn-articles-heading">Latest from the Journal</h2>
+          <p class="jn-section-desc">Thoughtful reads on ingredients, rituals, and the philosophy of natural beauty.
+            Each article is a window into our world.</p>
+        </div>
+
+        <div class="jn-filter-tabs" id="journal-categories" role="tablist" aria-label="Filter articles by category">
+          <button class="jn-filter-tab active" data-filter="all" role="tab" aria-selected="true" id="filter-all">All
+            Stories</button>
+          <button class="jn-filter-tab" data-filter="ingredients" role="tab" aria-selected="false"
+            id="filter-ingredients">Ingredients</button>
+          <button class="jn-filter-tab" data-filter="rituals" role="tab" aria-selected="false"
+            id="filter-rituals">Rituals</button>
+          <button class="jn-filter-tab" data-filter="science" role="tab" aria-selected="false" id="filter-science">Skin
+            Science</button>
+          <button class="jn-filter-tab" data-filter="lifestyle" role="tab" aria-selected="false"
+            id="filter-lifestyle">Lifestyle</button>
+          <button class="jn-filter-tab" data-filter="diy" role="tab" aria-selected="false" id="filter-diy">DIY &amp;
+            Craft</button>
+        </div>
+
+        <div class="jn-articles-grid" id="jn-articles-grid" role="list">
+
+          <article class="jn-article-card" data-category="ingredients" role="listitem" id="card-lavender-diaries"
+            onclick="openJournal('the-lavender-diaries')" tabindex="0"
+            onkeydown="if(event.key==='Enter')openJournal('the-lavender-diaries')"
+            aria-label="Read: The Lavender Diaries">
+            <div class="jn-card-img-wrap">
+              <img src="assets/soap-lavender-oat.jpg" alt="Lavender organic soap" class="jn-card-real-img" />
+              <span class="jn-card-badge">Ingredients</span>
+              <div class="jn-card-hover-icon" aria-hidden="true"><i data-lucide="arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="jn-card-body">
+              <div class="jn-card-meta">
+                <span><i data-lucide="calendar" aria-hidden="true"></i> Aug 15, 2026</span>
+                <span class="jn-meta-dot">•</span>
+                <span><i data-lucide="clock" aria-hidden="true"></i> 8 min read</span>
+              </div>
+              <h3 class="jn-card-title">The Lavender Diaries: From Field to Flask</h3>
+              <p class="jn-card-excerpt">How we source, distill, and bottle the purest lavender essence in the French
+                Alps — a journey of scent, science, and soul.</p>
+              <div class="jn-card-footer">
+                <div class="jn-card-author">
+                  <img src="assets/founder1.jpg" alt="Aria Fontaine" class="jn-author-avatar-img" />
+                  <span>Aria Fontaine</span>
+                </div>
+                <span class="jn-card-read-link">Read <i data-lucide="arrow-right" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="jn-article-card jn-card-wide" data-category="science" role="listitem"
+            id="card-rosehip-science" onclick="openJournal('rosehip-the-vitamin-c-powerhouse')" tabindex="0"
+            onkeydown="if(event.key==='Enter')openJournal('rosehip-the-vitamin-c-powerhouse')"
+            aria-label="Read: Rosehip The Vitamin C Powerhouse">
+            <div class="jn-card-img-wrap">
+              <img src="assets/rosehip-elixir.jpg" alt="Pure rosehip oil bottle" class="jn-card-real-img" />
+              <span class="jn-card-badge jn-badge-science">Skin Science</span>
+              <div class="jn-card-hover-icon" aria-hidden="true"><i data-lucide="arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="jn-card-body">
+              <div class="jn-card-meta">
+                <span><i data-lucide="calendar" aria-hidden="true"></i> Aug 10, 2026</span>
+                <span class="jn-meta-dot">•</span>
+                <span><i data-lucide="clock" aria-hidden="true"></i> 6 min read</span>
+              </div>
+              <h3 class="jn-card-title">Rosehip: The Vitamin C Powerhouse Your Skin Needs</h3>
+              <p class="jn-card-excerpt">Unpacking the science behind rosehip seed oil — why its fatty acid profile
+                makes it nature's most effective anti-aging ingredient.</p>
+              <div class="jn-card-footer">
+                <div class="jn-card-author">
+                  <img src="assets/founder2.jpg" alt="Dr. Mara Elise" class="jn-author-avatar-img" />
+                  <span>Dr. Mara Elise</span>
+                </div>
+                <span class="jn-card-read-link">Read <i data-lucide="arrow-right" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="jn-article-card" data-category="rituals" role="listitem" id="card-morning-ritual"
+            onclick="openJournal('the-5-minute-morning-ritual')" tabindex="0"
+            onkeydown="if(event.key==='Enter')openJournal('the-5-minute-morning-ritual')"
+            aria-label="Read: The 5-Minute Morning Ritual">
+            <div class="jn-card-img-wrap">
+              <img src="assets/lavender-hydrosol-mist.jpg" alt="Morning facial mist application" class="jn-card-real-img" />
+              <span class="jn-card-badge jn-badge-ritual">Rituals</span>
+              <div class="jn-card-hover-icon" aria-hidden="true"><i data-lucide="arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="jn-card-body">
+              <div class="jn-card-meta">
+                <span><i data-lucide="calendar" aria-hidden="true"></i> Aug 5, 2026</span>
+                <span class="jn-meta-dot">•</span>
+                <span><i data-lucide="clock" aria-hidden="true"></i> 4 min read</span>
+              </div>
+              <h3 class="jn-card-title">The 5-Minute Morning Ritual That Changed Everything</h3>
+              <p class="jn-card-excerpt">A simple organic skincare routine that helps thousands feel grounded,
+                glowing, and ready to face the day.</p>
+              <div class="jn-card-footer">
+                <div class="jn-card-author">
+                  <img src="assets/founder3.jpg" alt="Sage Williams" class="jn-author-avatar-img" />
+                  <span>Sage Williams</span>
+                </div>
+                <span class="jn-card-read-link">Read <i data-lucide="arrow-right" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="jn-article-card" data-category="diy" role="listitem" id="card-cold-process"
+            onclick="openJournal('cold-process-soap-making')" tabindex="0"
+            onkeydown="if(event.key==='Enter')openJournal('cold-process-soap-making')"
+            aria-label="Read: Cold Process Soap Making">
+            <div class="jn-card-img-wrap">
+              <img src="assets/soap-craft.jpg" alt="Cold process handcrafted soaps" class="jn-card-real-img" />
+              <span class="jn-card-badge jn-badge-diy">DIY &amp; Craft</span>
+              <div class="jn-card-hover-icon" aria-hidden="true"><i data-lucide="arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="jn-card-body">
+              <div class="jn-card-meta">
+                <span><i data-lucide="calendar" aria-hidden="true"></i> Jul 28, 2026</span>
+                <span class="jn-meta-dot">•</span>
+                <span><i data-lucide="clock" aria-hidden="true"></i> 10 min read</span>
+              </div>
+              <h3 class="jn-card-title">Cold-Process Soap Making: A Beginner's Artisan Guide</h3>
+              <p class="jn-card-excerpt">From lye to lather — everything you need to craft your first handcrafted bar at
+                home with clays and essential oils.</p>
+              <div class="jn-card-footer">
+                <div class="jn-card-author">
+                  <img src="assets/founder1.jpg" alt="Luna Cassidy" class="jn-author-avatar-img" />
+                  <span>Luna Cassidy</span>
+                </div>
+                <span class="jn-card-read-link">Read <i data-lucide="arrow-right" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="jn-article-card" data-category="lifestyle" role="listitem" id="card-slow-beauty"
+            onclick="openJournal('slow-beauty-movement')" tabindex="0"
+            onkeydown="if(event.key==='Enter')openJournal('slow-beauty-movement')"
+            aria-label="Read: The Slow Beauty Movement">
+            <div class="jn-card-img-wrap">
+              <img src="assets/hero-apothecary.jpg" alt="Botanical moisturizer jar" class="jn-card-real-img" />
+              <span class="jn-card-badge jn-badge-lifestyle">Lifestyle</span>
+              <div class="jn-card-hover-icon" aria-hidden="true"><i data-lucide="arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="jn-card-body">
+              <div class="jn-card-meta">
+                <span><i data-lucide="calendar" aria-hidden="true"></i> Jul 22, 2026</span>
+                <span class="jn-meta-dot">•</span>
+                <span><i data-lucide="clock" aria-hidden="true"></i> 5 min read</span>
+              </div>
+              <h3 class="jn-card-title">The Slow Beauty Movement: Less Products, More Ritual</h3>
+              <p class="jn-card-excerpt">Why minimalist skincare with intentional, high-quality plant actives outperforms
+                any 10-step routine.</p>
+              <div class="jn-card-footer">
+                <div class="jn-card-author">
+                  <img src="assets/founder1.jpg" alt="Aria Fontaine" class="jn-author-avatar-img" />
+                  <span>Aria Fontaine</span>
+                </div>
+                <span class="jn-card-read-link">Read <i data-lucide="arrow-right" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </article>
+
+          <article class="jn-article-card" data-category="ingredients" role="listitem" id="card-shea-butter"
+            onclick="openJournal('shea-butter-ancient-wisdom')" tabindex="0"
+            onkeydown="if(event.key==='Enter')openJournal('shea-butter-ancient-wisdom')"
+            aria-label="Read: Shea Butter Ancient Wisdom">
+            <div class="jn-card-img-wrap">
+              <img src="assets/shea-body-butter.jpg" alt="Natural shea butter application" class="jn-card-real-img" />
+              <span class="jn-card-badge">Ingredients</span>
+              <div class="jn-card-hover-icon" aria-hidden="true"><i data-lucide="arrow-right" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="jn-card-body">
+              <div class="jn-card-meta">
+                <span><i data-lucide="calendar" aria-hidden="true"></i> Jul 15, 2026</span>
+                <span class="jn-meta-dot">•</span>
+                <span><i data-lucide="clock" aria-hidden="true"></i> 7 min read</span>
+              </div>
+              <h3 class="jn-card-title">Shea Butter: Ancient African Wisdom for Modern Skin</h3>
+              <p class="jn-card-excerpt">Tracing the 3,000-year journey of shea — from the Vitellaria paradoxa tree in
+                West Africa to your daily moisturizer.</p>
+              <div class="jn-card-footer">
+                <div class="jn-card-author">
+                  <img src="assets/founder2.jpg" alt="Dr. Mara Elise" class="jn-author-avatar-img" />
+                  <span>Dr. Mara Elise</span>
+                </div>
+                <span class="jn-card-read-link">Read <i data-lucide="arrow-right" aria-hidden="true"></i></span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+
+        <div class="jn-load-more-wrap">
+          <button class="jn-load-more-btn" id="jn-load-more" onclick="loadMoreArticles()">
+            <span>Explore More Stories</span>
+            <i data-lucide="chevron-down" aria-hidden="true"></i>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="jn-faq" id="journal-faq" aria-labelledby="jn-faq-heading">
+      <div class="container">
+        <div class="jn-section-header">
+          <p class="section-eyebrow">
+            <span class="eyebrow-sparkle"><i data-lucide="help-circle" aria-hidden="true"></i></span>
+            Got Questions?
+          </p>
+          <h2 class="jn-section-title" id="jn-faq-heading">Frequently Asked Questions</h2>
+          <p class="jn-section-desc">Everything you need to know about our journal stories, ingredient science, and
+            organic skincare guidance.</p>
+        </div>
+
+        <div class="jn-faq-container">
+
+          <div class="jn-faq-item active">
+            <button class="jn-faq-trigger" onclick="toggleFaq(this)" aria-expanded="true">
+              <span class="jn-faq-question">How often are new journal articles published?</span>
+              <span class="jn-faq-icon"><i data-lucide="chevron-down" aria-hidden="true"></i></span>
+            </button>
+            <div class="jn-faq-content" style="max-height: 200px;">
+              <p class="jn-faq-answer">We publish new herbal stories, ingredient deep-dives, and seasonal self-care
+                rituals every Tuesday morning. Subscribers to our newsletter receive early access before articles go
+                public.</p>
+            </div>
+          </div>
+
+          <div class="jn-faq-item">
+            <button class="jn-faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+              <span class="jn-faq-question">Are the skincare tips and recipes backed by science?</span>
+              <span class="jn-faq-icon"><i data-lucide="chevron-down" aria-hidden="true"></i></span>
+            </button>
+            <div class="jn-faq-content">
+              <p class="jn-faq-answer">Absolutely. Every article is written or reviewed by our team of ethnobotanists,
+                skin biochemists, and master soap artisans, combining centuries-old herbal wisdom with modern
+                peer-reviewed dermatological research.</p>
+            </div>
+          </div>
+
+          <div class="jn-faq-item">
+            <button class="jn-faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+              <span class="jn-faq-question">Can I submit a topic or ingredient request for the journal?</span>
+              <span class="jn-faq-icon"><i data-lucide="chevron-down" aria-hidden="true"></i></span>
+            </button>
+            <div class="jn-faq-content">
+              <p class="jn-faq-answer">Yes! We love community requests. You can submit your questions or requested
+                ingredients via our Contact page or simply reply to any of our weekly email dispatches.</p>
+            </div>
+          </div>
+
+          <div class="jn-faq-item">
+            <button class="jn-faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+              <span class="jn-faq-question">What makes Haridra Rituals's organic formulas unique?</span>
+              <span class="jn-faq-icon"><i data-lucide="chevron-down" aria-hidden="true"></i></span>
+            </button>
+            <div class="jn-faq-content">
+              <p class="jn-faq-answer">Every formulation is rooted in whole-plant synergy — blending 100% certified organic
+                cold-pressed oils, wild-harvested herbs, and steam-distilled floral hydrosols. We never use water fillers or synthetic preservatives; every single ingredient serves a direct
+                herbal purpose.</p>
+            </div>
+          </div>
+
+          <div class="jn-faq-item">
+            <button class="jn-faq-trigger" onclick="toggleFaq(this)" aria-expanded="false">
+              <span class="jn-faq-question">How do I choose the right ritual for my skin type?</span>
+              <span class="jn-faq-icon"><i data-lucide="chevron-down" aria-hidden="true"></i></span>
+            </button>
+            <div class="jn-faq-content">
+              <p class="jn-faq-answer">Explore our Journal categories (Ingredients, Rituals, Skin Science) or visit our
+                Services page to explore our specialized herbal facial and body treatment recommendations tailored to
+                sensitive, dry, or aging skin.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="jn-newsletter" id="journal-newsletter" aria-labelledby="jn-newsletter-heading">
+      <div class="container">
+
+        <div class="jn-cta-luxury-card">
+
+          <div class="jn-cta-card-orbs" aria-hidden="true">
+            <div class="jn-cta-orb jn-cta-orb-1"></div>
+            <div class="jn-cta-orb jn-cta-orb-2"></div>
+          </div>
+
+          <div class="jn-cta-card-content">
+            <div class="jn-cta-header-pill">
+              <span class="jn-cta-pill-icon"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+              <span>WEEKLY HERBAL DISPATCH</span>
+            </div>
+
+            <h2 class="jn-newsletter-heading" id="jn-newsletter-heading">
+              Stories Delivered to<br /><span class="jn-nl-accent">Your Inbox</span>
+            </h2>
+
+            <p class="jn-newsletter-desc">
+              Join 12,000+ conscious readers who receive our weekly dispatches — new articles, seasonal rituals,
+              ingredient spotlights, and exclusive skincare formulations.
+            </p>
+
+            <form class="jn-newsletter-form" id="jn-newsletter-form" onsubmit="handleNewsletterSubmit(event)"
+              novalidate>
+              <div class="jn-form-group">
+                <div class="jn-form-input-wrapper">
+                  <i data-lucide="mail" class="jn-input-icon" aria-hidden="true"></i>
+                  <input type="email" class="jn-nl-input" id="jn-email-input" placeholder="Enter your email address"
+                    aria-label="Enter your email address" required />
+                </div>
+                <button type="submit" class="jn-nl-submit" id="jn-nl-submit-btn">
+                  <span>Subscribe</span>
+                  <i data-lucide="arrow-right" aria-hidden="true"></i>
+                </button>
+              </div>
+              <p class="jn-form-note">
+                <i data-lucide="shield-check" aria-hidden="true"></i>
+                Zero spam, ever. Unsubscribe at any time with one click.
+              </p>
+              <div class="jn-form-success" id="jn-form-success" aria-live="polite" hidden>
+                <i data-lucide="check-circle" aria-hidden="true"></i>
+                <span>Welcome to the ritual! Check your inbox for your first dispatch.</span>
+              </div>
+            </form>
+
+            <div class="jn-nl-trust-badges">
+              <div class="jn-trust-item"><i data-lucide="users" aria-hidden="true"></i><span>12,000+ Readers</span>
+              </div>
+              <div class="jn-trust-item"><i data-lucide="star" aria-hidden="true"></i><span>4.9/5 Rating</span></div>
+              <div class="jn-trust-item"><i data-lucide="heart" aria-hidden="true"></i><span>Free Forever</span></div>
+            </div>
+          </div>
+
+          <div class="jn-cta-card-visual" aria-hidden="true">
+            <div class="jn-cta-visual-ring"></div>
+            <div class="jn-cta-visual-img-box">
+              <img src="assets/hero-apothecary.jpg" alt="Organic ritual preview" class="jn-cta-visual-img" />
+              <div class="jn-cta-visual-overlay"></div>
+              <div class="jn-cta-visual-center-badge">
+                <i data-lucide="book-open" aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="jn-cta-float-badge float-1"><i data-lucide="leaf" aria-hidden="true"></i> 100% Organic</div>
+            <div class="jn-cta-float-badge float-2"><i data-lucide="award" aria-hidden="true"></i> Editor's Pick</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-top-inner">
+      <div class="footer-brand">
+        <a href="index.html" class="footer-logo" aria-label="Haridra Rituals Home">
+          <div class="logo-mark" aria-hidden="true">
+            <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+          </div>
+          <div class="logo-text">
+            <span class="logo-name">Haridra Rituals</span>
+            <span class="logo-tagline">Rooted in Nature. Crafted with Care.</span>
+          </div>
+        </a>
+        <p class="footer-desc">Thoughtfully crafted skincare and handmade soaps inspired by nature, organic plant actives and everyday self-care rituals.</p>
+        <div class="footer-social" aria-label="Social media links">
+          <a href="https://instagram.com" class="social-link" id="social-instagram" aria-label="Instagram"
+            target="_blank" rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+            </svg>
+          </a>
+          <a href="https://facebook.com" class="social-link" id="social-facebook" aria-label="Facebook" target="_blank"
+            rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path>
+            </svg>
+          </a>
+          <a href="https://youtube.com" class="social-link" id="social-youtube" aria-label="YouTube" target="_blank"
+            rel="noopener noreferrer">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+              stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path
+                d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z">
+              </path>
+              <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+            </svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-nav-col" aria-label="Explore navigation">
+        <h3 class="footer-col-title">Explore</h3>
+        <ul role="list">
+          <li><a href="index.html" class="footer-link">Home 1</a></li>
+          <li><a href="about.html" class="footer-link">About</a></li>
+          <li><a href="services.html" class="footer-link">Services</a></li>
+          <li><a href="journals.html" class="footer-link">Journals</a></li>
+          <li><a href="dashboard.html" class="footer-link">Dashboard</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav-col" aria-label="Customer care navigation">
+        <h3 class="footer-col-title">Customer Care</h3>
+        <ul role="list">
+          <li><a href="contact.html" class="footer-link">Contact</a></li>
+          <li><a href="pricing.html#faqs" class="footer-link">Shipping</a></li>
+          <li><a href="pricing.html#faqs" class="footer-link">Returns</a></li>
+          <li><a href="pricing.html#faqs" class="footer-link">FAQs</a></li>
+          <li><a href="contact.html" class="footer-link">Privacy Policy</a></li>
+        </ul>
+      </nav>
+      <nav class="footer-nav-col" aria-label="Additional information navigation">
+        <h3 class="footer-col-title">Additional Information</h3>
+        <ul role="list">
+          <li><a href="coming-soon.html" class="footer-link">Coming Soon</a></li>
+          <li><a href="404.html" class="footer-link">404</a></li>
+          <li><a href="pricing.html" class="footer-link">Pricing</a></li>
+        </ul>
+      </nav>
+      <div class="footer-contact">
+        <h3 class="footer-col-title">Contact Details</h3>
+        <ul class="contact-list" role="list">
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                <circle cx="12" cy="10" r="3"></circle>
+              </svg></span>
+            <span class="contact-text">Online Botanical Apothecary</span>
+          </li>
+          <li class="contact-item">
+            <a href="tel:9999988888" class="contact-link">
+              <span class="contact-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                  </path>
+                </svg></span>
+              <span class="contact-text">9999988888</span>
+            </a>
+          </li>
+          <li class="contact-item">
+            <a href="mailto:dummy@haridrarituals.com" class="contact-link">
+              <span class="contact-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg></span>
+              <span class="contact-text">dummy@haridrarituals.com</span>
+            </a>
+          </li>
+          <li class="contact-item">
+            <span class="contact-icon" aria-hidden="true"><svg width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"></circle>
+                <polyline points="12 6 12 12 16 14"></polyline>
+              </svg></span>
+            <span class="contact-text">Mon &ndash; Fri: 9:00 AM &ndash; 6:00 PM PST</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div class="container footer-bottom-inner">
+        <p class="footer-copy">&copy; 2026 Haridra Rituals. All Rights Reserved.</p>
+        <nav class="footer-legal" aria-label="Legal navigation">
+          <a href="#privacy" class="footer-legal-link">Privacy</a>
+          <span class="legal-dot">&bull;</span>
+          <a href="#terms" class="footer-legal-link">Terms</a>
+          <span class="legal-dot">&bull;</span>
+          <a href="#cookies" class="footer-legal-link">Cookies</a>
+        </nav>
+      </div>
+    </div>
+  </footer>
+
+  <script src="home1.js" defer></script>
+  <script src="journals.js" defer></script>
+</body>
+
+</html>

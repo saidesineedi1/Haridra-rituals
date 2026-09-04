@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr" data-theme="light">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Haridra Rituals Analytics Dashboard — Track sales, herbal inventory, customer insights, and ritual growth metrics." />
+  <title>Dashboard — Haridra Rituals | Skincare Analytics &amp; Inventory</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js" defer></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <link rel="icon" type="image/png" href="assets/favicon.png" />
+  <link rel="shortcut icon" href="assets/favicon.ico" />
+  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="dashboard.css" />
+</head>
+
+<body class="db-body">
+
+  <header class="db-top-header" id="db-top-header" role="banner">
+    <div class="db-header-inner">
+      
+      <div class="db-header-left">
+        <a href="index.html" class="db-brand-logo" id="db-brand-logo" aria-label="Redirect to Haridra Rituals Home 1">
+          <div class="logo-mark" aria-hidden="true">
+            <img src="assets/logo.png" alt="Haridra Rituals Logo" class="logo-img" />
+          </div>
+          <div class="db-logo-text">
+            <span class="db-logo-name">Haridra Rituals</span>
+            <span class="db-logo-sub">Rooted in Nature. Crafted with Care.</span>
+          </div>
+        </a>
+
+        <div class="db-header-divider" aria-hidden="true"></div>
+
+        <div class="db-welcome-box">
+          <span class="db-welcome-badge"><i data-lucide="sparkles" aria-hidden="true"></i> Premium Portal</span>
+          <h1 class="db-welcome-text">Welcome back, <span class="db-user-highlight">Elena</span></h1>
+        </div>
+      </div>
+
+      <div class="db-header-right">
+        
+        <div class="db-search-box">
+          <i data-lucide="search" aria-hidden="true"></i>
+          <input type="text" class="db-search-input" placeholder="Search orders, batches, reports..." aria-label="Search dashboard" />
+        </div>
+
+        <button class="toggle-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle text direction" aria-pressed="false" title="Switch text direction (RTL / LTR)">
+          <span class="toggle-label">RTL</span></button>
+
+        <button class="toggle-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle light and dark mode">
+          <span class="theme-icon sun-icon"><i data-lucide="sun" aria-hidden="true"></i></span>
+          <span class="theme-icon moon-icon"><i data-lucide="moon" aria-hidden="true"></i></span>
+        </button>
+
+        <button class="db-icon-btn" id="db-notif-btn" aria-label="Open notifications" title="Notifications" onclick="toggleNotifications()">
+          <i data-lucide="bell" aria-hidden="true"></i>
+          <span class="db-notif-badge">3</span>
+        </button>
+
+        <div class="db-profile-wrapper">
+          <button class="db-profile-btn" id="db-profile-btn" onclick="toggleProfileDropdown()" aria-expanded="false" aria-haspopup="true" aria-label="Open user profile menu">
+            <img src="assets/founder1.jpg" alt="Elena Vance Profile" class="db-profile-img" />
+            <div class="db-profile-info">
+              <span class="db-profile-name">Elena Vance</span>
+              <span class="db-profile-role">Apothecary Admin</span>
+            </div>
+            <i data-lucide="chevron-down" class="db-profile-chevron" aria-hidden="true"></i>
+          </button>
+
+          <div class="db-profile-dropdown" id="db-profile-dropdown" hidden>
+            <div class="db-pmenu-header">
+              <img src="assets/founder1.jpg" alt="Elena Vance" class="db-pmenu-img" />
+              <div>
+                <strong>Elena Vance</strong>
+                <p>dummy@haridrarituals.com</p>
+              </div>
+            </div>
+            <div class="db-pmenu-divider"></div>
+            <a href="#" class="db-pmenu-item" onclick="switchTab('settings')"><i data-lucide="user" aria-hidden="true"></i> Account Settings</a>
+            <a href="#" class="db-pmenu-item" onclick="switchTab('settings')"><i data-lucide="sliders" aria-hidden="true"></i> Preferences</a>
+            <a href="#" class="db-pmenu-item" onclick="switchTab('inventory')"><i data-lucide="package" aria-hidden="true"></i> Batch Inventory</a>
+            <div class="db-pmenu-divider"></div>
+            <a href="index.html" class="db-pmenu-item db-pmenu-logout"><i data-lucide="log-out" aria-hidden="true"></i> Log Out to Home</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+  <div class="db-notif-drawer" id="db-notif-drawer" hidden aria-label="Notifications Panel">
+    <div class="db-notif-header">
+      <h3><i data-lucide="bell" aria-hidden="true"></i> Notifications</h3>
+      <button class="db-notif-close" onclick="toggleNotifications()"><i data-lucide="x" aria-hidden="true"></i></button>
+    </div>
+    <div class="db-notif-list">
+      <div class="db-notif-item unread">
+        <div class="db-notif-icon icon-purple"><i data-lucide="shopping-bag" aria-hidden="true"></i></div>
+        <div class="db-notif-content">
+          <p><strong>New Order #4829</strong> placed for Lavender Glow Facial ($142.00)</p>
+          <span>5 minutes ago</span>
+        </div>
+      </div>
+      <div class="db-notif-item unread">
+        <div class="db-notif-icon icon-green"><i data-lucide="leaf" aria-hidden="true"></i></div>
+        <div class="db-notif-content">
+          <p><strong>Rosehip Oil Batch #RF-904</strong> quality inspection passed 100%</p>
+          <span>1 hour ago</span>
+        </div>
+      </div>
+      <div class="db-notif-item unread">
+        <div class="db-notif-icon icon-gold"><i data-lucide="alert-triangle" aria-hidden="true"></i></div>
+        <div class="db-notif-content">
+          <p><strong>Low Stock Alert:</strong> Shea Butter Butter Jar (14 units remaining)</p>
+          <span>3 hours ago</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="db-layout-container">
+
+    <aside class="db-sidebar" id="db-sidebar" aria-label="Dashboard Categories Navigation">
+      <div class="db-sidebar-inner">
+        <span class="db-nav-label">MAIN NAVIGATION</span>
+
+        <nav class="db-side-nav" role="tablist">
+          
+          <button class="db-nav-btn active" data-tab="analytics" onclick="switchTab('analytics')" role="tab" aria-selected="true" id="tab-btn-analytics">
+            <span class="db-nav-btn-icon"><i data-lucide="bar-chart-3" aria-hidden="true"></i></span>
+            <span class="db-nav-btn-text">Overview &amp; Analytics</span>
+            <span class="db-nav-badge">Live</span>
+          </button>
+
+          <button class="db-nav-btn" data-tab="orders" onclick="switchTab('orders')" role="tab" aria-selected="false" id="tab-btn-orders">
+            <span class="db-nav-btn-icon"><i data-lucide="shopping-cart" aria-hidden="true"></i></span>
+            <span class="db-nav-btn-text">Orders &amp; Sales</span>
+            <span class="db-nav-count">14</span>
+          </button>
+
+          <button class="db-nav-btn" data-tab="inventory" onclick="switchTab('inventory')" role="tab" aria-selected="false" id="tab-btn-inventory">
+            <span class="db-nav-btn-icon"><i data-lucide="package" aria-hidden="true"></i></span>
+            <span class="db-nav-btn-text">Herbal Inventory</span>
+          </button>
+
+          <button class="db-nav-btn" data-tab="customers" onclick="switchTab('customers')" role="tab" aria-selected="false" id="tab-btn-customers">
+            <span class="db-nav-btn-icon"><i data-lucide="users" aria-hidden="true"></i></span>
+            <span class="db-nav-btn-text">Customer Insights</span>
+          </button>
+
+          <button class="db-nav-btn" data-tab="settings" onclick="switchTab('settings')" role="tab" aria-selected="false" id="tab-btn-settings">
+            <span class="db-nav-btn-icon"><i data-lucide="settings" aria-hidden="true"></i></span>
+            <span class="db-nav-btn-text">Settings &amp; Prefs</span>
+          </button>
+        </nav>
+
+        <div class="db-sidebar-card">
+          <div class="db-scard-icon"><i data-lucide="shield-check" aria-hidden="true"></i></div>
+          <h4>Organic Batch Certified</h4>
+          <p>All Provence &amp; Ojai harvests meet 100% USDA organic compliance.</p>
+          <a href="services.html" class="db-scard-link">View Sourcing Specs →</a>
+        </div>
+
+        <div class="db-sidebar-user-block">
+          <div class="db-suser-info" onclick="switchTab('settings')" role="button" tabindex="0" title="Open Settings & Preferences">
+            <img src="assets/founder1.jpg" alt="Elena Vance" class="db-suser-img" />
+            <div class="db-suser-details">
+              <span class="db-suser-name">Elena Vance</span>
+              <span class="db-suser-role">Settings &amp; Prefs →</span>
+            </div>
+          </div>
+          <button class="db-icon-btn db-suser-notif" aria-label="Open notifications" title="Notifications" onclick="toggleNotifications()">
+            <i data-lucide="bell" aria-hidden="true"></i>
+            <span class="db-notif-badge">3</span>
+          </button>
+        </div>
+      </div>
+    </aside>
+
+    <main class="db-main-content" id="db-main-content">
+
+      <section class="db-tab-pane active" id="pane-analytics" role="tabpanel" aria-labelledby="tab-btn-analytics">
+        
+        <div class="db-kpi-grid">
+          
+          <div class="db-kpi-card">
+            <div class="db-kpi-header">
+              <span class="db-kpi-title">Monthly Revenue</span>
+              <span class="db-kpi-icon icon-purple"><i data-lucide="dollar-sign" aria-hidden="true"></i></span>
+            </div>
+            <div class="db-kpi-val">$48,250.00</div>
+            <div class="db-kpi-footer">
+              <span class="db-kpi-trend trend-up"><i data-lucide="trending-up" aria-hidden="true"></i> +18.4%</span>
+              <span class="db-kpi-note">vs last month</span>
+            </div>
+          </div>
+
+          <div class="db-kpi-card">
+            <div class="db-kpi-header">
+              <span class="db-kpi-title">Total Orders</span>
+              <span class="db-kpi-icon icon-green"><i data-lucide="shopping-bag" aria-hidden="true"></i></span>
+            </div>
+            <div class="db-kpi-val">1,420</div>
+            <div class="db-kpi-footer">
+              <span class="db-kpi-trend trend-up"><i data-lucide="trending-up" aria-hidden="true"></i> +12.1%</span>
+              <span class="db-kpi-note">vs last month</span>
+            </div>
+          </div>
+
+          <div class="db-kpi-card">
+            <div class="db-kpi-header">
+              <span class="db-kpi-title">Active Members</span>
+              <span class="db-kpi-icon icon-gold"><i data-lucide="heart" aria-hidden="true"></i></span>
+            </div>
+            <div class="db-kpi-val">3,890</div>
+            <div class="db-kpi-footer">
+              <span class="db-kpi-trend trend-up"><i data-lucide="trending-up" aria-hidden="true"></i> +24.8%</span>
+              <span class="db-kpi-note">repeat ritual subscribers</span>
+            </div>
+          </div>
+
+          <div class="db-kpi-card">
+            <div class="db-kpi-header">
+              <span class="db-kpi-title">Stock Health</span>
+              <span class="db-kpi-icon icon-blue"><i data-lucide="leaf" aria-hidden="true"></i></span>
+            </div>
+            <div class="db-kpi-val">98.4%</div>
+            <div class="db-kpi-footer">
+              <span class="db-kpi-trend trend-neutral"><i data-lucide="check" aria-hidden="true"></i> Optimal</span>
+              <span class="db-kpi-note">42 active batches</span>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="db-charts-row">
+          
+          <div class="db-chart-card db-chart-large">
+            <div class="db-ccard-header">
+              <div>
+                <h3 class="db-ccard-title">Revenue &amp; Visitor Growth</h3>
+                <p class="db-ccard-sub">Monthly trend comparison for organic formulas &amp; ritual bookings</p>
+              </div>
+              <div class="db-ccard-actions">
+                <button class="db-pill-btn active">6 Months</button>
+                <button class="db-pill-btn">1 Year</button>
+              </div>
+            </div>
+            <div class="db-chart-box">
+              <canvas id="chart-revenue-line"></canvas>
+            </div>
+          </div>
+
+          <div class="db-chart-card db-chart-medium">
+            <div class="db-ccard-header">
+              <div>
+                <h3 class="db-ccard-title">Category Sales</h3>
+                <p class="db-ccard-sub">Sales volume across organic product lines</p>
+              </div>
+            </div>
+            <div class="db-chart-box">
+              <canvas id="chart-category-bar"></canvas>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="db-charts-row">
+          
+          <div class="db-chart-card db-chart-small">
+            <div class="db-ccard-header">
+              <h3 class="db-ccard-title">Phyto Origins</h3>
+              <p class="db-ccard-sub">Sourcing ratio by harvest region</p>
+            </div>
+            <div class="db-chart-box doughnut-box">
+              <canvas id="chart-origin-doughnut"></canvas>
+            </div>
+          </div>
+
+          <div class="db-chart-card db-chart-wide-table">
+            <div class="db-ccard-header">
+              <h3 class="db-ccard-title">Recent Ritual Orders</h3>
+              <a href="#" class="db-ccard-link" onclick="switchTab('orders')">View All Orders →</a>
+            </div>
+            <div class="db-table-wrapper">
+              <table class="db-table">
+                <thead>
+                  <tr>
+                    <th>Order ID</th>
+                    <th>Customer</th>
+                    <th>Product / Service</th>
+                    <th>Amount</th>
+                    <th>Date</th>
+                    <th>Status</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><strong>#RR-4829</strong></td>
+                    <td>
+                      <div class="db-table-user">
+                        <img src="assets/founder1.jpg" alt="Aria F." />
+                        <span>Aria Fontaine</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="db-table-prod">
+                        <img src="assets/lavender-glow-facial.jpg" alt="Lavender Glow Facial Oil" class="db-tprod-img" />
+                        <span>Lavender Glow Facial Oil</span>
+                      </div>
+                    </td>
+                    <td>$89.00</td>
+                    <td>Aug 27, 2026</td>
+                    <td><span class="db-status status-shipped">Shipped</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#RR-4828</strong></td>
+                    <td>
+                      <div class="db-table-user">
+                        <img src="assets/founder2.jpg" alt="Mara E." />
+                        <span>Dr. Mara Elise</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="db-table-prod">
+                        <img src="assets/rosehip-elixir.jpg" alt="Rosehip Vitamin C Elixir" class="db-tprod-img" />
+                        <span>Rosehip Vitamin C Elixir</span>
+                      </div>
+                    </td>
+                    <td>$124.00</td>
+                    <td>Aug 27, 2026</td>
+                    <td><span class="db-status status-processing">Processing</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#RR-4827</strong></td>
+                    <td>
+                      <div class="db-table-user">
+                        <img src="assets/founder3.jpg" alt="Sage W." />
+                        <span>Sage Williams</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="db-table-prod">
+                        <img src="assets/lavender-hydrosol-mist.jpg" alt="Forest Mist Hydrosol Toner" class="db-tprod-img" />
+                        <span>Forest Mist Hydrosol Toner</span>
+                      </div>
+                    </td>
+                    <td>$56.00</td>
+                    <td>Aug 26, 2026</td>
+                    <td><span class="db-status status-delivered">Delivered</span></td>
+                  </tr>
+                  <tr>
+                    <td><strong>#RR-4826</strong></td>
+                    <td>
+                      <div class="db-table-user">
+                        <img src="assets/founder1.jpg" alt="Luna C." />
+                        <span>Luna Cassidy</span>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="db-table-prod">
+                        <img src="assets/soap-lavender-oat.jpg" alt="Lavender & Oat Soap Bar" class="db-tprod-img" />
+                        <span>Lavender &amp; Oat Soap Bar (Set of 3)</span>
+                      </div>
+                    </td>
+                    <td>$42.00</td>
+                    <td>Aug 26, 2026</td>
+                    <td><span class="db-status status-delivered">Delivered</span></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+        </div>
+
+      </section>
+
+      <section class="db-tab-pane" id="pane-orders" role="tabpanel" aria-labelledby="tab-btn-orders" hidden>
+        <div class="db-pane-header">
+          <h2>Orders &amp; Sales Management</h2>
+          <p>Real-time order tracking, fulfillment status, and transaction breakdown.</p>
+        </div>
+
+        <div class="db-charts-row">
+          <div class="db-chart-card db-chart-full">
+            <div class="db-ccard-header">
+              <h3 class="db-ccard-title">Weekly Sales Performance</h3>
+            </div>
+            <div class="db-chart-box">
+              <canvas id="chart-weekly-sales-bar"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="db-chart-card margin-top-24">
+          <div class="db-ccard-header">
+            <h3 class="db-ccard-title">All Recent Transactions</h3>
+            <input type="text" class="db-search-input" placeholder="Filter orders..." />
+          </div>
+          <div class="db-table-wrapper">
+            <table class="db-table">
+              <thead>
+                <tr>
+                  <th>Order</th>
+                  <th>Customer</th>
+                  <th>Formula</th>
+                  <th>Quantity</th>
+                  <th>Total</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>#RR-4825</td>
+                  <td>Clara Bennett</td>
+                  <td>Cold-Pressed Shea Balm</td>
+                  <td>2 Units</td>
+                  <td>$76.00</td>
+                  <td><span class="db-status status-delivered">Delivered</span></td>
+                </tr>
+                <tr>
+                  <td>#RR-4824</td>
+                  <td>Julian Thorne</td>
+                  <td>Ayurvedic GlowVeda Set</td>
+                  <td>1 Set</td>
+                  <td>$165.00</td>
+                  <td><span class="db-status status-processing">Processing</span></td>
+                </tr>
+                <tr>
+                  <td>#RR-4823</td>
+                  <td>Sophie Laurent</td>
+                  <td>Provence Lavender Essential Oil</td>
+                  <td>4 Bottles</td>
+                  <td>$112.00</td>
+                  <td><span class="db-status status-delivered">Delivered</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="db-tab-pane" id="pane-inventory" role="tabpanel" aria-labelledby="tab-btn-inventory" hidden>
+        <div class="db-pane-header">
+          <h2>Herbal Inventory &amp; Raw Batch Extraction</h2>
+          <p>Monitor raw plant biomass, cold-press extraction purity, certified organic yields, and batch depletion alerts.</p>
+        </div>
+
+        <div class="db-kpi-grid">
+          <div class="db-kpi-card">
+            <div class="db-kpi-header">
+              <span class="db-kpi-title">Raw Plant Biomass</span>
+              <span class="db-kpi-icon icon-green"><i data-lucide="leaf" aria-hidden="true"></i></span>
+            </div>
+            <div class="db-kpi-val">4,850 kg</div>
+            <div class="db-kpi-footer">
+              <span class="db-kpi-trend trend-up"><i data-lucide="trending-up" aria-hidden="true"></i> +12.4%</span>
+              <span class="db-kpi-note">vs summer harvest</span>
+            </div>
+          </div>
+
+          <div class="db-kpi-card">
+            <div class="db-kpi-header">
+              <span class="db-kpi-title">Active Batches</span>
+              <span class="db-kpi-icon icon-purple"><i data-lucide="package" aria-hidden="true"></i></span>
+            </div>
+            <div class="db-kpi-val">42 Batches</div>
+            <div class="db-kpi-footer">
+              <span class="db-kpi-trend trend-neutral"><i data-lucide="shield-check" aria-hidden="true"></i> 100% USDA</span>
+              <span class="db-kpi-note">Organic certified</span>
+            </div>
+          </div>
+
+          <div class="db-kpi-card">
+            <div class="db-kpi-header">
+              <span class="db-kpi-title">Extraction Purity</span>
+              <span class="db-kpi-icon icon-gold"><i data-lucide="sparkles" aria-hidden="true"></i></span>
+            </div>
+            <div class="db-kpi-val">99.8%</div>
+            <div class="db-kpi-footer">
+              <span class="db-kpi-trend trend-up"><i data-lucide="check" aria-hidden="true"></i> Lab Passed</span>
+              <span class="db-kpi-note">zero synthetic additives</span>
+            </div>
+          </div>
+
+          <div class="db-kpi-card">
+            <div class="db-kpi-header">
+              <span class="db-kpi-title">Low Stock Alerts</span>
+              <span class="db-kpi-icon icon-blue"><i data-lucide="alert-triangle" aria-hidden="true"></i></span>
+            </div>
+            <div class="db-kpi-val">2 Items</div>
+            <div class="db-kpi-footer">
+              <span class="db-kpi-trend trend-neutral" style="background: rgba(231,76,60,0.15); color: #c0392b;">Action Required</span>
+              <span class="db-kpi-note">Shea &amp; Oat Kernel</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="db-inventory-grid margin-bottom-28">
+          <div class="db-inv-card">
+            <div class="db-inv-header">
+              <h4>French Alps Lavender Oil</h4>
+              <span class="db-status status-delivered">88% Stocked</span>
+            </div>
+            <div class="db-progress-bar"><div class="db-pfill" style="width: 88%;"></div></div>
+            <p class="db-inv-meta">Batch #LA-2026-B9 &bull; Steam Distilled &bull; 410 Liters Remaining</p>
+          </div>
+
+          <div class="db-inv-card">
+            <div class="db-inv-header">
+              <h4>Chambery Rosehip Seed Extract</h4>
+              <span class="db-status status-delivered">94% Stocked</span>
+            </div>
+            <div class="db-progress-bar"><div class="db-pfill" style="width: 94%;"></div></div>
+            <p class="db-inv-meta">Batch #RH-2026-A1 &bull; Cold-Pressed &bull; 540 Liters Remaining</p>
+          </div>
+
+          <div class="db-inv-card">
+            <div class="db-inv-header">
+              <h4>West African Raw Shea Butter</h4>
+              <span class="db-status status-processing">14% Low Stock</span>
+            </div>
+            <div class="db-progress-bar"><div class="db-pfill pfill-warn" style="width: 14%;"></div></div>
+            <p class="db-inv-meta">Batch #SB-2026-C4 &bull; Unrefined &bull; Reorder Order Pending</p>
+          </div>
+        </div>
+
+        <div class="db-chart-card">
+          <div class="db-ccard-header">
+            <div>
+              <h3 class="db-ccard-title">Certified Raw Herbal Harvest Batches</h3>
+              <p class="db-ccard-sub">Detailed breakdown of cold-pressed oils, hydrosols, and unrefined extracts</p>
+            </div>
+            <button class="btn btn-primary jn-btn-primary" style="padding: 6px 14px; font-size: 0.8rem;" onclick="alert('Initiating new herbal harvest batch order!')">+ Add Harvest Batch</button>
+          </div>
+          <div class="db-table-wrapper">
+            <table class="db-table">
+              <thead>
+                <tr>
+                  <th>Batch Ref</th>
+                  <th>Botanical Name</th>
+                  <th>Harvest Region</th>
+                  <th>Extraction Method</th>
+                  <th>Cert Status</th>
+                  <th>Quality Score</th>
+                  <th>Stock Vol</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong>#RH-2026-A1</strong></td>
+                  <td>Rosa Canina (Rosehip Seed)</td>
+                  <td>Provence, France</td>
+                  <td>First Cold-Press</td>
+                  <td><span class="db-status status-delivered">USDA Organic</span></td>
+                  <td><strong>99.9% Purity</strong></td>
+                  <td>540 Liters</td>
+                </tr>
+                <tr>
+                  <td><strong>#LA-2026-B9</strong></td>
+                  <td>Lavandula Angustifolia</td>
+                  <td>French Alps</td>
+                  <td>Steam Distillation</td>
+                  <td><span class="db-status status-delivered">ECOCERT</span></td>
+                  <td><strong>99.7% Purity</strong></td>
+                  <td>410 Liters</td>
+                </tr>
+                <tr>
+                  <td><strong>#FM-2026-C2</strong></td>
+                  <td>Hamamelis &amp; Forest Mist</td>
+                  <td>Ojai Valley, USA</td>
+                  <td>Double-Filtered Hydrosol</td>
+                  <td><span class="db-status status-shipped">Certified Bio</span></td>
+                  <td><strong>99.5% Purity</strong></td>
+                  <td>290 Liters</td>
+                </tr>
+                <tr>
+                  <td><strong>#SB-2026-D4</strong></td>
+                  <td>Vitellaria Paradoxa (Shea)</td>
+                  <td>Northern Ghana</td>
+                  <td>Traditional Hand-Churn</td>
+                  <td><span class="db-status status-processing">Fair Trade</span></td>
+                  <td><strong>99.2% Purity</strong></td>
+                  <td><strong style="color: #e74c3c;">45 kg (Low)</strong></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="db-tab-pane" id="pane-customers" role="tabpanel" aria-labelledby="tab-btn-customers" hidden>
+        <div class="db-pane-header">
+          <h2>Customer Insights &amp; Ritual Demographics</h2>
+          <p>Analyze skin profile preferences, member retention trajectories, and high-value subscriber analytics.</p>
+        </div>
+
+        <div class="db-kpi-grid">
+          <div class="db-kpi-card">
+            <div class="db-kpi-header">
+              <span class="db-kpi-title">Net Promoter Score</span>
+              <span class="db-kpi-icon icon-purple"><i data-lucide="award" aria-hidden="true"></i></span>
+            </div>
+            <div class="db-kpi-val">94 / 100</div>
+            <div class="db-kpi-footer">
+              <span class="db-kpi-trend trend-up"><i data-lucide="trending-up" aria-hidden="true"></i> +3.2 pts</span>
+              <span class="db-kpi-note">World-Class Rating</span>
+            </div>
+          </div>
+
+          <div class="db-kpi-card">
+            <div class="db-kpi-header">
+              <span class="db-kpi-title">Repeat Ritual Rate</span>
+              <span class="db-kpi-icon icon-green"><i data-lucide="repeat" aria-hidden="true"></i></span>
+            </div>
+            <div class="db-kpi-val">84.6%</div>
+            <div class="db-kpi-footer">
+              <span class="db-kpi-trend trend-up"><i data-lucide="trending-up" aria-hidden="true"></i> +6.8%</span>
+              <span class="db-kpi-note">30-day reorder rate</span>
+            </div>
+          </div>
+
+          <div class="db-kpi-card">
+            <div class="db-kpi-header">
+              <span class="db-kpi-title">Avg Order Value (AOV)</span>
+              <span class="db-kpi-icon icon-gold"><i data-lucide="shopping-cart" aria-hidden="true"></i></span>
+            </div>
+            <div class="db-kpi-val">$118.50</div>
+            <div class="db-kpi-footer">
+              <span class="db-kpi-trend trend-up"><i data-lucide="trending-up" aria-hidden="true"></i> +15.2%</span>
+              <span class="db-kpi-note">per transaction</span>
+            </div>
+          </div>
+
+          <div class="db-kpi-card">
+            <div class="db-kpi-header">
+              <span class="db-kpi-title">Active VIP Members</span>
+              <span class="db-kpi-icon icon-blue"><i data-lucide="users" aria-hidden="true"></i></span>
+            </div>
+            <div class="db-kpi-val">3,890</div>
+            <div class="db-kpi-footer">
+              <span class="db-kpi-trend trend-neutral"><i data-lucide="heart" aria-hidden="true"></i> Obsidian &amp; Gold</span>
+              <span class="db-kpi-note">Ritual Subscribers</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="db-charts-row">
+          <div class="db-chart-card db-chart-large">
+            <div class="db-ccard-header">
+              <div>
+                <h3 class="db-ccard-title">Member Retention &amp; Annual Renewal Trajectory</h3>
+                <p class="db-ccard-sub">Subscription retention percentage over an 8-month cohort period</p>
+              </div>
+            </div>
+            <div class="db-chart-box">
+              <canvas id="chart-retention-line"></canvas>
+            </div>
+          </div>
+
+          <div class="db-chart-card db-chart-medium">
+            <div class="db-ccard-header">
+              <div>
+                <h3 class="db-ccard-title">Skin Concern Demographics</h3>
+                <p class="db-ccard-sub">Primary skin profile distribution of survey respondents</p>
+              </div>
+            </div>
+            <div class="db-chart-box">
+              <canvas id="chart-skintype-bar"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <div class="db-chart-card">
+          <div class="db-ccard-header">
+            <h3 class="db-ccard-title">Top Obsidian &amp; Gold Ritual Members</h3>
+            <span class="db-welcome-badge"><i data-lucide="sparkles" aria-hidden="true"></i> VIP Cohort</span>
+          </div>
+          <div class="db-table-wrapper">
+            <table class="db-table">
+              <thead>
+                <tr>
+                  <th>Member Name</th>
+                  <th>Ritual Tier</th>
+                  <th>Favorite Formula</th>
+                  <th>Total Orders</th>
+                  <th>Lifetime Spend</th>
+                  <th>Member Since</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <div class="db-table-user">
+                      <img src="assets/founder1.jpg" alt="Aria F." />
+                      <div>
+                        <strong>Aria Fontaine</strong>
+                        <p style="margin:0; font-size:0.72rem; color:var(--text-muted);">aria.fontaine@luxury.com</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="db-status status-shipped" style="background: rgba(107,79,138,0.2); color: var(--deep-lavender);">Obsidian VIP</span></td>
+                  <td>Rosehip Vitamin C Elixir</td>
+                  <td>34 Orders</td>
+                  <td><strong>$3,420.00</strong></td>
+                  <td>Jan 2024</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="db-table-user">
+                      <img src="assets/founder2.jpg" alt="Dr. Mara E." />
+                      <div>
+                        <strong>Dr. Mara Elise</strong>
+                        <p style="margin:0; font-size:0.72rem; color:var(--text-muted);">mara.elise@dermatology.org</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="db-status status-delivered">Gold Member</span></td>
+                  <td>Lavender Glow Facial Oil</td>
+                  <td>26 Orders</td>
+                  <td><strong>$2,890.00</strong></td>
+                  <td>May 2024</td>
+                </tr>
+                <tr>
+                  <td>
+                    <div class="db-table-user">
+                      <img src="assets/founder3.jpg" alt="Sage W." />
+                      <div>
+                        <strong>Sage Williams</strong>
+                        <p style="margin:0; font-size:0.72rem; color:var(--text-muted);">sage.williams@artisan.co</p>
+                      </div>
+                    </div>
+                  </td>
+                  <td><span class="db-status status-delivered">Gold Member</span></td>
+                  <td>Forest Mist Toner</td>
+                  <td>19 Orders</td>
+                  <td><strong>$1,940.00</strong></td>
+                  <td>Nov 2024</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
+
+      <section class="db-tab-pane" id="pane-settings" role="tabpanel" aria-labelledby="tab-btn-settings" hidden>
+        <div class="db-pane-header">
+          <h2>Settings &amp; Dashboard Preferences</h2>
+          <p>Manage admin account settings, notifications, and portal theme preferences.</p>
+        </div>
+
+        <div class="db-settings-card">
+          <form class="db-settings-form" onsubmit="event.preventDefault(); alert('Preferences saved successfully!');">
+            <div class="db-sgroup">
+              <label>Admin Full Name</label>
+              <input type="text" value="Elena Vance" class="db-sinput" />
+            </div>
+            <div class="db-sgroup">
+              <label>Email Address</label>
+              <input type="email" value="dummy@haridrarituals.com" class="db-sinput" />
+            </div>
+            <div class="db-sgroup">
+              <label>Batch Low Stock Alert Threshold</label>
+              <select class="db-sinput">
+                <option>Below 15% (Recommended)</option>
+                <option>Below 25%</option>
+                <option>Below 10%</option>
+              </select>
+            </div>
+            <button type="submit" class="btn btn-primary jn-btn-primary">Save Preferences</button>
+          </form>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script src="home1.js" defer></script>
+  <script src="dashboard.js" defer></script>
+</body>
+</html>
