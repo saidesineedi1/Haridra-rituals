@@ -1,13 +1,15 @@
-﻿
-
-.pr-hero {
+﻿.pr-hero {
   position: relative;
-  background: var(--bg-hero);
-  padding: 80px 0 70px;
+  background: linear-gradient(135deg, rgba(254, 249, 243, 0.973), rgba(254, 249, 243, 0.559)), url('assets/hero-apothecary.jpg') center/cover no-repeat;
+  padding: 155px 0 80px;
   overflow: hidden;
   text-align: center;
   border-bottom: 1px solid var(--border-color);
-  transition: background-color var(--transition-norm);
+  transition: background var(--transition-norm);
+}
+
+[data-theme="dark"] .pr-hero {
+  background: linear-gradient(135deg, rgba(23, 17, 31, 0.9), rgba(30, 24, 42, 0.94)), url('assets/hero-apothecary.jpg') center/cover no-repeat;
 }
 
 .pr-hero-orbs {
@@ -21,7 +23,7 @@
   position: absolute;
   border-radius: 50%;
   filter: blur(60px);
-  opacity: 0.45;
+  opacity: 0.30;
   animation: orbFloat 14s ease-in-out infinite alternate;
 }
 
@@ -53,9 +55,17 @@
 }
 
 @keyframes orbFloat {
-  0% { transform: translate(0, 0) scale(1); }
-  50% { transform: translate(30px, -20px) scale(1.08); }
-  100% { transform: translate(-20px, 25px) scale(0.95); }
+  0% {
+    transform: translate(0, 0) scale(1);
+  }
+
+  50% {
+    transform: translate(30px, -20px) scale(1.08);
+  }
+
+  100% {
+    transform: translate(-20px, 25px) scale(0.95);
+  }
 }
 
 .pr-hero-inner {
@@ -164,7 +174,8 @@
   flex-direction: column;
   align-items: center;
   gap: 12px;
-  margin-top: 10px;
+  margin-top: 0;
+  margin-bottom: 36px;
 }
 
 .pr-billing-toggle {
@@ -566,23 +577,26 @@
 }
 
 .pr-wholesale-btn {
-  background: var(--white);
-  color: var(--deep-lavender);
-  border: none;
+  background-color: var(--deep-lavender, #6B4F8A) !important;
+  color: #ffffff !important;
+  border: 1.5px solid rgba(255, 255, 255, 0.4) !important;
   font-weight: 700;
   padding: 14px 28px;
   border-radius: var(--radius-full);
   white-space: nowrap;
   transition: all var(--transition-fast);
-  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
   position: relative;
   z-index: 2;
+  text-decoration: none;
 }
 
 .pr-wholesale-btn:hover {
-  background: var(--cream-beige);
+  background-color: var(--soft-lavender, #bb9af7) !important;
+  color: #000000 !important;
+  border-color: var(--soft-lavender, #bb9af7) !important;
   transform: translateY(-2px);
-  color: var(--black);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
 }
 
 .pr-compare-section {
@@ -1083,12 +1097,6 @@
   }
 }
 
-
-
-/* ==========================================================================
-   PRIMARY NAV LOGIN BUTTON & HEADER / FOOTER CONSISTENCY STYLES
-   ========================================================================== */
-
 .nav-login-btn {
   display: inline-flex !important;
   align-items: center !important;
@@ -1136,7 +1144,6 @@ body.dark-mode .nav-login-btn:hover {
   background: linear-gradient(135deg, #caa9ff 0%, #ab7ff7 100%) !important;
 }
 
-/* --- HEADER & FOOTER CONSISTENCY --- */
 .site-header {
   background-color: var(--header-bg) !important;
   backdrop-filter: blur(16px) !important;
@@ -1162,10 +1169,6 @@ body.dark-mode .nav-login-btn:hover {
   color: #e2d5f8 !important;
   border-top: 1px solid rgba(187, 154, 247, 0.15) !important;
 }
-
-/* ==========================================================================
-   UNIFORM HEADER BUTTON SIZING (RTL, THEME TOGGLE, & LOGIN BUTTON)
-   ========================================================================== */
 
 .toggle-btn,
 .nav-login-btn,
@@ -1196,7 +1199,6 @@ body.dark-mode .nav-login-btn:hover {
   letter-spacing: 0.05em !important;
 }
 
-/* RTL & Theme Toggle Styling */
 .toggle-btn {
   border: 1px solid var(--border-color, rgba(107, 79, 138, 0.2)) !important;
   background-color: var(--bg-card, #ffffff) !important;
@@ -1226,7 +1228,6 @@ body.dark-mode .toggle-btn:hover {
   background-color: rgba(185, 167, 214, 0.2) !important;
 }
 
-/* Primary Login Button (Sized Identical to RTL Button) */
 .nav-login-btn {
   color: #ffffff !important;
   background: linear-gradient(135deg, #6b4f8a 0%, #4a3461 100%) !important;
@@ -1264,11 +1265,6 @@ body.dark-mode .nav-login-btn:hover {
   background: linear-gradient(135deg, #caa9ff 0%, #ab7ff7 100%) !important;
 }
 
-/* ==========================================================================
-   CTA CARD DYNAMIC HOVER COLOR EFFECTS (PRIMARY & SECONDARY BUTTONS)
-   ========================================================================== */
-
-/* Light Mode Primary Button */
 .cta-btn-primary {
   display: inline-flex !important;
   align-items: center !important;
@@ -1306,7 +1302,6 @@ body.dark-mode .nav-login-btn:hover {
   color: #2b183b !important;
 }
 
-/* Light Mode Secondary Button */
 .cta-btn-ghost {
   display: inline-flex !important;
   align-items: center !important;
@@ -1334,7 +1329,6 @@ body.dark-mode .nav-login-btn:hover {
   box-shadow: 0 8px 22px rgba(107, 79, 138, 0.35) !important;
 }
 
-/* Dark Mode Button Hover States */
 [data-theme="dark"] .cta-btn-primary,
 body.dark-theme .cta-btn-primary,
 body.dark-mode .cta-btn-primary {
@@ -1372,10 +1366,6 @@ body.dark-mode .cta-btn-ghost:hover {
   transform: translateY(-3px) scale(1.03) !important;
   box-shadow: 0 0 24px rgba(187, 154, 247, 0.7) !important;
 }
-
-/* ==========================================================================
-   HIDE NATIVE BROWSER PASSWORD REVEAL EYE ICONS (PREVENT DUPLICATE EYE ICONS)
-   ========================================================================== */
 
 input::-ms-reveal,
 input::-ms-clear {

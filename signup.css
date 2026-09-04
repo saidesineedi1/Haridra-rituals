@@ -21,11 +21,6 @@
   }
 }
 
-
-/* ==========================================================================
-   HARIDRA RITUALS - BRAND LOGO ALIGNMENT & DARK MODE ENHANCEMENTS
-   ========================================================================== */
-
 .logo,
 .footer-logo,
 .auth-brand-logo,
@@ -106,7 +101,6 @@
   transition: color 0.3s ease !important;
 }
 
-/* --- DARK MODE BRAND LOGO STYLING --- */
 [data-theme="dark"] .logo-mark img,
 [data-theme="dark"] .logo-img,
 [data-theme="dark"] .footer-logo .logo-img,
@@ -144,10 +138,6 @@ body.dark-mode .logo-tagline {
   letter-spacing: 0.06em !important;
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8) !important;
 }
-
-/* ==========================================================================
-   PRIMARY NAV LOGIN BUTTON & HEADER / FOOTER CONSISTENCY STYLES
-   ========================================================================== */
 
 .nav-login-btn {
   display: inline-flex !important;
@@ -196,7 +186,6 @@ body.dark-mode .nav-login-btn:hover {
   background: linear-gradient(135deg, #caa9ff 0%, #ab7ff7 100%) !important;
 }
 
-/* --- HEADER & FOOTER CONSISTENCY --- */
 .site-header {
   background-color: var(--header-bg) !important;
   backdrop-filter: blur(16px) !important;
@@ -222,10 +211,6 @@ body.dark-mode .nav-login-btn:hover {
   color: #e2d5f8 !important;
   border-top: 1px solid rgba(187, 154, 247, 0.15) !important;
 }
-
-/* ==========================================================================
-   UNIFORM HEADER BUTTON SIZING (RTL, THEME TOGGLE, & LOGIN BUTTON)
-   ========================================================================== */
 
 .toggle-btn,
 .nav-login-btn,
@@ -256,7 +241,6 @@ body.dark-mode .nav-login-btn:hover {
   letter-spacing: 0.05em !important;
 }
 
-/* RTL & Theme Toggle Styling */
 .toggle-btn {
   border: 1px solid var(--border-color, rgba(107, 79, 138, 0.2)) !important;
   background-color: var(--bg-card, #ffffff) !important;
@@ -286,7 +270,6 @@ body.dark-mode .toggle-btn:hover {
   background-color: rgba(185, 167, 214, 0.2) !important;
 }
 
-/* Primary Login Button (Sized Identical to RTL Button) */
 .nav-login-btn {
   color: #ffffff !important;
   background: linear-gradient(135deg, #6b4f8a 0%, #4a3461 100%) !important;
@@ -324,11 +307,6 @@ body.dark-mode .nav-login-btn:hover {
   background: linear-gradient(135deg, #caa9ff 0%, #ab7ff7 100%) !important;
 }
 
-/* ==========================================================================
-   CTA CARD DYNAMIC HOVER COLOR EFFECTS (PRIMARY & SECONDARY BUTTONS)
-   ========================================================================== */
-
-/* Light Mode Primary Button */
 .cta-btn-primary {
   display: inline-flex !important;
   align-items: center !important;
@@ -366,7 +344,6 @@ body.dark-mode .nav-login-btn:hover {
   color: #2b183b !important;
 }
 
-/* Light Mode Secondary Button */
 .cta-btn-ghost {
   display: inline-flex !important;
   align-items: center !important;
@@ -394,7 +371,6 @@ body.dark-mode .nav-login-btn:hover {
   box-shadow: 0 8px 22px rgba(107, 79, 138, 0.35) !important;
 }
 
-/* Dark Mode Button Hover States */
 [data-theme="dark"] .cta-btn-primary,
 body.dark-theme .cta-btn-primary,
 body.dark-mode .cta-btn-primary {
@@ -432,10 +408,6 @@ body.dark-mode .cta-btn-ghost:hover {
   transform: translateY(-3px) scale(1.03) !important;
   box-shadow: 0 0 24px rgba(187, 154, 247, 0.7) !important;
 }
-
-/* ==========================================================================
-   HIDE NATIVE BROWSER PASSWORD REVEAL EYE ICONS (PREVENT DUPLICATE EYE ICONS)
-   ========================================================================== */
 
 input::-ms-reveal,
 input::-ms-clear {

@@ -4,7 +4,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Haridra Rituals Analytics Dashboard — Track sales, herbal inventory, customer insights, and ritual growth metrics." />
+  <meta name="description"
+    content="Haridra Rituals Analytics Dashboard — Track sales, herbal inventory, customer insights, and ritual growth metrics." />
   <title>Dashboard — Haridra Rituals | Skincare Analytics &amp; Inventory</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -27,7 +28,7 @@
 
   <header class="db-top-header" id="db-top-header" role="banner">
     <div class="db-header-inner">
-      
+
       <div class="db-header-left">
         <a href="index.html" class="db-brand-logo" id="db-brand-logo" aria-label="Redirect to Haridra Rituals Home 1">
           <div class="logo-mark" aria-hidden="true">
@@ -43,32 +44,37 @@
 
         <div class="db-welcome-box">
           <span class="db-welcome-badge"><i data-lucide="sparkles" aria-hidden="true"></i> Premium Portal</span>
-          <h1 class="db-welcome-text">Welcome back, <span class="db-user-highlight">Elena</span></h1>
+          <h1 class="db-welcome-text">Welcome back ,<span class="db-user-highlight">Dashboard</span></h1>
         </div>
       </div>
 
       <div class="db-header-right">
-        
+
         <div class="db-search-box">
           <i data-lucide="search" aria-hidden="true"></i>
-          <input type="text" class="db-search-input" placeholder="Search orders, batches, reports..." aria-label="Search dashboard" />
+          <input type="text" class="db-search-input" placeholder="Search orders, batches, reports..."
+            aria-label="Search dashboard" />
         </div>
 
-        <button class="toggle-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle text direction" aria-pressed="false" title="Switch text direction (RTL / LTR)">
+        <button class="toggle-btn rtl-toggle" id="rtl-toggle" aria-label="Toggle text direction" aria-pressed="false"
+          title="Switch text direction (RTL / LTR)">
           <span class="toggle-label">RTL</span></button>
 
-        <button class="toggle-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false" title="Toggle light and dark mode">
+        <button class="toggle-btn theme-toggle" id="theme-toggle" aria-label="Toggle dark mode" aria-pressed="false"
+          title="Toggle light and dark mode">
           <span class="theme-icon sun-icon"><i data-lucide="sun" aria-hidden="true"></i></span>
           <span class="theme-icon moon-icon"><i data-lucide="moon" aria-hidden="true"></i></span>
         </button>
 
-        <button class="db-icon-btn" id="db-notif-btn" aria-label="Open notifications" title="Notifications" onclick="toggleNotifications()">
+        <button class="db-icon-btn" id="db-notif-btn" aria-label="Open notifications" title="Notifications"
+          onclick="toggleNotifications()">
           <i data-lucide="bell" aria-hidden="true"></i>
           <span class="db-notif-badge">3</span>
         </button>
 
         <div class="db-profile-wrapper">
-          <button class="db-profile-btn" id="db-profile-btn" onclick="toggleProfileDropdown()" aria-expanded="false" aria-haspopup="true" aria-label="Open user profile menu">
+          <button class="db-profile-btn" id="db-profile-btn" onclick="toggleProfileDropdown()" aria-expanded="false"
+            aria-haspopup="true" aria-label="Open user profile menu">
             <img src="assets/founder1.jpg" alt="Elena Vance Profile" class="db-profile-img" />
             <div class="db-profile-info">
               <span class="db-profile-name">Elena Vance</span>
@@ -86,11 +92,15 @@
               </div>
             </div>
             <div class="db-pmenu-divider"></div>
-            <a href="#" class="db-pmenu-item" onclick="switchTab('settings')"><i data-lucide="user" aria-hidden="true"></i> Account Settings</a>
-            <a href="#" class="db-pmenu-item" onclick="switchTab('settings')"><i data-lucide="sliders" aria-hidden="true"></i> Preferences</a>
-            <a href="#" class="db-pmenu-item" onclick="switchTab('inventory')"><i data-lucide="package" aria-hidden="true"></i> Batch Inventory</a>
+            <a href="#" class="db-pmenu-item" onclick="switchTab('settings')"><i data-lucide="user"
+                aria-hidden="true"></i> Account Settings</a>
+            <a href="#" class="db-pmenu-item" onclick="switchTab('settings')"><i data-lucide="sliders"
+                aria-hidden="true"></i> Preferences</a>
+            <a href="#" class="db-pmenu-item" onclick="switchTab('inventory')"><i data-lucide="package"
+                aria-hidden="true"></i> Batch Inventory</a>
             <div class="db-pmenu-divider"></div>
-            <a href="index.html" class="db-pmenu-item db-pmenu-logout"><i data-lucide="log-out" aria-hidden="true"></i> Log Out to Home</a>
+            <a href="index.html" class="db-pmenu-item db-pmenu-logout"><i data-lucide="log-out" aria-hidden="true"></i>
+              Log Out to Home</a>
           </div>
         </div>
 
@@ -135,30 +145,35 @@
         <span class="db-nav-label">MAIN NAVIGATION</span>
 
         <nav class="db-side-nav" role="tablist">
-          
-          <button class="db-nav-btn active" data-tab="analytics" onclick="switchTab('analytics')" role="tab" aria-selected="true" id="tab-btn-analytics">
+
+          <button class="db-nav-btn active" data-tab="analytics" onclick="switchTab('analytics')" role="tab"
+            aria-selected="true" id="tab-btn-analytics">
             <span class="db-nav-btn-icon"><i data-lucide="bar-chart-3" aria-hidden="true"></i></span>
             <span class="db-nav-btn-text">Overview &amp; Analytics</span>
             <span class="db-nav-badge">Live</span>
           </button>
 
-          <button class="db-nav-btn" data-tab="orders" onclick="switchTab('orders')" role="tab" aria-selected="false" id="tab-btn-orders">
+          <button class="db-nav-btn" data-tab="orders" onclick="switchTab('orders')" role="tab" aria-selected="false"
+            id="tab-btn-orders">
             <span class="db-nav-btn-icon"><i data-lucide="shopping-cart" aria-hidden="true"></i></span>
             <span class="db-nav-btn-text">Orders &amp; Sales</span>
             <span class="db-nav-count">14</span>
           </button>
 
-          <button class="db-nav-btn" data-tab="inventory" onclick="switchTab('inventory')" role="tab" aria-selected="false" id="tab-btn-inventory">
+          <button class="db-nav-btn" data-tab="inventory" onclick="switchTab('inventory')" role="tab"
+            aria-selected="false" id="tab-btn-inventory">
             <span class="db-nav-btn-icon"><i data-lucide="package" aria-hidden="true"></i></span>
             <span class="db-nav-btn-text">Herbal Inventory</span>
           </button>
 
-          <button class="db-nav-btn" data-tab="customers" onclick="switchTab('customers')" role="tab" aria-selected="false" id="tab-btn-customers">
+          <button class="db-nav-btn" data-tab="customers" onclick="switchTab('customers')" role="tab"
+            aria-selected="false" id="tab-btn-customers">
             <span class="db-nav-btn-icon"><i data-lucide="users" aria-hidden="true"></i></span>
             <span class="db-nav-btn-text">Customer Insights</span>
           </button>
 
-          <button class="db-nav-btn" data-tab="settings" onclick="switchTab('settings')" role="tab" aria-selected="false" id="tab-btn-settings">
+          <button class="db-nav-btn" data-tab="settings" onclick="switchTab('settings')" role="tab"
+            aria-selected="false" id="tab-btn-settings">
             <span class="db-nav-btn-icon"><i data-lucide="settings" aria-hidden="true"></i></span>
             <span class="db-nav-btn-text">Settings &amp; Prefs</span>
           </button>
@@ -172,14 +187,16 @@
         </div>
 
         <div class="db-sidebar-user-block">
-          <div class="db-suser-info" onclick="switchTab('settings')" role="button" tabindex="0" title="Open Settings & Preferences">
+          <div class="db-suser-info" onclick="switchTab('settings')" role="button" tabindex="0"
+            title="Open Settings & Preferences">
             <img src="assets/founder1.jpg" alt="Elena Vance" class="db-suser-img" />
             <div class="db-suser-details">
               <span class="db-suser-name">Elena Vance</span>
               <span class="db-suser-role">Settings &amp; Prefs →</span>
             </div>
           </div>
-          <button class="db-icon-btn db-suser-notif" aria-label="Open notifications" title="Notifications" onclick="toggleNotifications()">
+          <button class="db-icon-btn db-suser-notif" aria-label="Open notifications" title="Notifications"
+            onclick="toggleNotifications()">
             <i data-lucide="bell" aria-hidden="true"></i>
             <span class="db-notif-badge">3</span>
           </button>
@@ -190,9 +207,9 @@
     <main class="db-main-content" id="db-main-content">
 
       <section class="db-tab-pane active" id="pane-analytics" role="tabpanel" aria-labelledby="tab-btn-analytics">
-        
+
         <div class="db-kpi-grid">
-          
+
           <div class="db-kpi-card">
             <div class="db-kpi-header">
               <span class="db-kpi-title">Monthly Revenue</span>
@@ -244,7 +261,7 @@
         </div>
 
         <div class="db-charts-row">
-          
+
           <div class="db-chart-card db-chart-large">
             <div class="db-ccard-header">
               <div>
@@ -276,7 +293,7 @@
         </div>
 
         <div class="db-charts-row">
-          
+
           <div class="db-chart-card db-chart-small">
             <div class="db-ccard-header">
               <h3 class="db-ccard-title">Phyto Origins</h3>
@@ -315,7 +332,8 @@
                     </td>
                     <td>
                       <div class="db-table-prod">
-                        <img src="assets/lavender-glow-facial.jpg" alt="Lavender Glow Facial Oil" class="db-tprod-img" />
+                        <img src="assets/lavender-glow-facial.jpg" alt="Lavender Glow Facial Oil"
+                          class="db-tprod-img" />
                         <span>Lavender Glow Facial Oil</span>
                       </div>
                     </td>
@@ -351,7 +369,8 @@
                     </td>
                     <td>
                       <div class="db-table-prod">
-                        <img src="assets/lavender-hydrosol-mist.jpg" alt="Forest Mist Hydrosol Toner" class="db-tprod-img" />
+                        <img src="assets/lavender-hydrosol-mist.jpg" alt="Forest Mist Hydrosol Toner"
+                          class="db-tprod-img" />
                         <span>Forest Mist Hydrosol Toner</span>
                       </div>
                     </td>
@@ -454,7 +473,8 @@
       <section class="db-tab-pane" id="pane-inventory" role="tabpanel" aria-labelledby="tab-btn-inventory" hidden>
         <div class="db-pane-header">
           <h2>Herbal Inventory &amp; Raw Batch Extraction</h2>
-          <p>Monitor raw plant biomass, cold-press extraction purity, certified organic yields, and batch depletion alerts.</p>
+          <p>Monitor raw plant biomass, cold-press extraction purity, certified organic yields, and batch depletion
+            alerts.</p>
         </div>
 
         <div class="db-kpi-grid">
@@ -477,7 +497,8 @@
             </div>
             <div class="db-kpi-val">42 Batches</div>
             <div class="db-kpi-footer">
-              <span class="db-kpi-trend trend-neutral"><i data-lucide="shield-check" aria-hidden="true"></i> 100% USDA</span>
+              <span class="db-kpi-trend trend-neutral"><i data-lucide="shield-check" aria-hidden="true"></i> 100%
+                USDA</span>
               <span class="db-kpi-note">Organic certified</span>
             </div>
           </div>
@@ -501,7 +522,8 @@
             </div>
             <div class="db-kpi-val">2 Items</div>
             <div class="db-kpi-footer">
-              <span class="db-kpi-trend trend-neutral" style="background: rgba(231,76,60,0.15); color: #c0392b;">Action Required</span>
+              <span class="db-kpi-trend trend-neutral" style="background: rgba(231,76,60,0.15); color: #c0392b;">Action
+                Required</span>
               <span class="db-kpi-note">Shea &amp; Oat Kernel</span>
             </div>
           </div>
@@ -513,7 +535,9 @@
               <h4>French Alps Lavender Oil</h4>
               <span class="db-status status-delivered">88% Stocked</span>
             </div>
-            <div class="db-progress-bar"><div class="db-pfill" style="width: 88%;"></div></div>
+            <div class="db-progress-bar">
+              <div class="db-pfill" style="width: 88%;"></div>
+            </div>
             <p class="db-inv-meta">Batch #LA-2026-B9 &bull; Steam Distilled &bull; 410 Liters Remaining</p>
           </div>
 
@@ -522,7 +546,9 @@
               <h4>Chambery Rosehip Seed Extract</h4>
               <span class="db-status status-delivered">94% Stocked</span>
             </div>
-            <div class="db-progress-bar"><div class="db-pfill" style="width: 94%;"></div></div>
+            <div class="db-progress-bar">
+              <div class="db-pfill" style="width: 94%;"></div>
+            </div>
             <p class="db-inv-meta">Batch #RH-2026-A1 &bull; Cold-Pressed &bull; 540 Liters Remaining</p>
           </div>
 
@@ -531,7 +557,9 @@
               <h4>West African Raw Shea Butter</h4>
               <span class="db-status status-processing">14% Low Stock</span>
             </div>
-            <div class="db-progress-bar"><div class="db-pfill pfill-warn" style="width: 14%;"></div></div>
+            <div class="db-progress-bar">
+              <div class="db-pfill pfill-warn" style="width: 14%;"></div>
+            </div>
             <p class="db-inv-meta">Batch #SB-2026-C4 &bull; Unrefined &bull; Reorder Order Pending</p>
           </div>
         </div>
@@ -542,7 +570,8 @@
               <h3 class="db-ccard-title">Certified Raw Herbal Harvest Batches</h3>
               <p class="db-ccard-sub">Detailed breakdown of cold-pressed oils, hydrosols, and unrefined extracts</p>
             </div>
-            <button class="btn btn-primary jn-btn-primary" style="padding: 6px 14px; font-size: 0.8rem;" onclick="alert('Initiating new herbal harvest batch order!')">+ Add Harvest Batch</button>
+            <button class="btn btn-primary jn-btn-primary" style="padding: 6px 14px; font-size: 0.8rem;"
+              onclick="alert('Initiating new herbal harvest batch order!')">+ Add Harvest Batch</button>
           </div>
           <div class="db-table-wrapper">
             <table class="db-table">
@@ -650,7 +679,8 @@
             </div>
             <div class="db-kpi-val">3,890</div>
             <div class="db-kpi-footer">
-              <span class="db-kpi-trend trend-neutral"><i data-lucide="heart" aria-hidden="true"></i> Obsidian &amp; Gold</span>
+              <span class="db-kpi-trend trend-neutral"><i data-lucide="heart" aria-hidden="true"></i> Obsidian &amp;
+                Gold</span>
               <span class="db-kpi-note">Ritual Subscribers</span>
             </div>
           </div>
@@ -710,7 +740,8 @@
                       </div>
                     </div>
                   </td>
-                  <td><span class="db-status status-shipped" style="background: rgba(107,79,138,0.2); color: var(--deep-lavender);">Obsidian VIP</span></td>
+                  <td><span class="db-status status-shipped"
+                      style="background: rgba(107,79,138,0.2); color: var(--deep-lavender);">Obsidian VIP</span></td>
                   <td>Rosehip Vitamin C Elixir</td>
                   <td>34 Orders</td>
                   <td><strong>$3,420.00</strong></td>
@@ -789,4 +820,5 @@
   <script src="home1.js" defer></script>
   <script src="dashboard.js" defer></script>
 </body>
+
 </html>
